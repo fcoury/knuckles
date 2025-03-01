@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "build": "ergogen ./ergogen/ --output ./ --clear && npx @jscad/cli cases/zeph_bottom_tray.jscad -of stla -o cases/zeph_bottom_tray.stl",
+    "debug": "ergogen ./ergogen/ --output ./ --clear --debug && npx @jscad/cli cases/zeph_bottom_tray.jscad -of stla -o cases/zeph_bottom_tray.stl",
+    "watch:build": "nodemon -e yaml,js -x \"npm run build\"",
+    "watch:debug": "nodemon -e yaml,js -x \"npm run debug\""
+  },
+  "dependencies": {
+    "ergogen": "^4.1.0",
+    "nodemon": "^3.0.1",
+    "@jscad/cli": "1.10.0"
+  },
+  "nodemonConfig": {
+    "delay": 2500
+  }
+}

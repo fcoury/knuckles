@@ -1,0 +1,72 @@
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/*.yaml'
+      - '.github/actions/*/action.yaml'
+      - 'ergogen/footprints/*.js'
+      - 'ergogen/config.yaml'
+      - 'kibot/*'
+      - 'freerouting/*'
+      - 'package.json'
+
+name: Build
+jobs:
+  board:
+    runs-on: ubuntu-latest
+    name: Generate
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Docker Cache
+        uses: ScribeMD/docker-cache@0.3.7
+        with:
+          key: docker-${{ runner.os }}
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm install
+      - name: Generate unrouted PCBs with Ergogen (definition in package.json)
+        run: npm run build
+      - name: Run KiBot to generate images, gerbers for the plates
+        uses: ./.github/actions/kibot
+        with:
+          boards: frontplate backplate controller_overlay
+          config: default
+      - name: Run KiBot to generate images, gerbers for the unrouted board
+        uses: ./.github/actions/kibot
+        with:
+          boards: corney_island corney_island_wireless 
+          config: default
+      - name: Export DSN file for Freerouting
+        uses: ./.github/actions/export-dsn
+        with:
+          boards: corney_island corney_island_wireless
+      - name: Autoroute PCB
+        uses: ./.github/actions/autoroute
+        with:
+          boards: corney_island corney_island_wireless
+      - name: Import SES
+        uses: ./.github/actions/import-ses
+        with:
+          boards: corney_island corney_island_wireless
+      - name: Run KiBot to generate images, gerbers for the autorouted board
+        uses: ./.github/actions/kibot
+        with:
+          boards: corney_island_autorouted corney_island_wireless_autorouted
+          config: boards
+      - name: Persist output
+        uses: actions/upload-artifact@v4
+        with:
+          name: not_about_money
+          path:  |
+            cases
+            gerbers
+            images
+            outlines
+            pcbs

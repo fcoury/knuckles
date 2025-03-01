@@ -1,0 +1,21 @@
+name: 'Run KiBot'
+description: 'Run KiBot automation to generate images and gerbers'
+inputs:
+  boards:
+    description: 'KiCad PCB names'
+    required: true
+  config:
+    description: 'KiBot config file'
+    required: true
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/inti-cmnb/kicad8_auto:latest'
+  entrypoint: '/bin/bash'
+  args:
+    - '-c'
+    - |
+      for board in ${{ inputs.boards }};
+      do
+        echo "Processing $board";
+        kibot -b $GITHUB_WORKSPACE/pcbs/${board}.kicad_pcb -c $GITHUB_WORKSPACE/kibot/${{ inputs.config }}.kibot.yaml
+      done
