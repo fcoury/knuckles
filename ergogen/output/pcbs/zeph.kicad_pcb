@@ -3958,7 +3958,7 @@
         
     
 
-  (gr_text "JLCJLCJLCJLC"
+  (gr_text "Zeph v1.0"
     (at 137 107.4 0)
     (layer "F.SilkS" )
     (effects
@@ -3972,7 +3972,7 @@
     )
   )
       
-  (gr_text "JLCJLCJLCJLC"
+  (gr_text "Zeph v1.0"
     (at 137 107.4 0)
     (layer "B.SilkS" )
     (effects

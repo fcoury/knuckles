@@ -868,7 +868,7 @@ pcbs:
         what: ceoloide/utility_text
         where: matrix_ring_bottom
         params:
-          text: JLCJLCJLCJLC
+          text: Zeph v1.0
           reversible: true
         adjust:
           shift: [0, -0.65 kp]
