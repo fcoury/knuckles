@@ -5,7 +5,7 @@ meta:
   ref: &kb_ref "Zeph v0.1"
   author: ceoloide
   url: &kb_url https://github.com/ceoloide/zeph
-  footprint: &switch_footprint "pg1316s"
+  footprint: &switch_footprint "pg1316s_reversible"
   # footprint: &switch_footprint "ceoloide/switch_mx"
   # footprint: &switch_footprint "ceoloide/switch_choc_v1_v2"
   switch:
@@ -34,9 +34,9 @@ presets:
     led_pos_y: 4.7 # Led Y position relative to the switch center
     led_rotation: 0 # Led rotation
     vertical_underglow_shift: -kp + 7.8 # How much to shift underglow leds tied to keys
-    vertical_diode_shift: 1.5 # How much to shift to avoid overlap
-    horizontal_diode_shift: -0.5 kcow - 0.85
-    diode_rotation: 0 # Diode rotation
+    vertical_diode_shift: 2.5 # How much to shift to avoid overlap
+    horizontal_diode_shift: -0.5
+    diode_rotation: -90 # Diode rotation
     switch_rotation: 0
   mx:
     # Key and keycap measures
@@ -96,7 +96,8 @@ units:
   screw_diameter: screw_radius * 2
   screw_head_radius: 2.05
   screw_head_diameter: screw_head_radius * 2
-  spacer_radius: 2.15 # M2 standoffs
+  # spacer_radius: 2.15 # M2 standoffs
+  spacer_radius: 1.725 # M2 standoffs
   spacer_diameter: spacer_radius * 2
   fillet_radius: 0.5
   pwr_trace_width: 0.25
@@ -427,7 +428,7 @@ points:
         - helper
         - screw
       anchor:
-        - ref: matrix_pinky_top
+        - ref: matrix_pinky_numbers
           shift: [-0.5 ks, -0.5 kp]
     screw_pcb_left_bottom:
       key.tags:
@@ -441,7 +442,7 @@ points:
         - helper
         - screw
       anchor:
-        - ref: matrix_inner_top
+        - ref: matrix_inner_numbers
           shift: [-0.5 ks -0.032, -0.5 kp +1.139]
     screw_pcb_thumbfan_left:
       key.tags:
@@ -776,7 +777,6 @@ pcbs:
         where: /key/
         params:
           side: B
-          # reversible: false
           from: "{{column_net}}"
           to: "{{colrow}}_B"
           # The following are specific for mx

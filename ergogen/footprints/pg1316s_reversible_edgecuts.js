@@ -6,7 +6,6 @@ module.exports = {
     from: { type: "net", value: undefined },
     to: { type: "net", value: undefined },
     P3: { type: "net", value: "" },
-    keycap: { type: "number", value: 16 }, // Default keycap size in mm (16×16mm)
   },
   body: (p) => {
     const fp = [];
@@ -23,7 +22,8 @@ module.exports = {
     fp.push(`(attr smd)`);
 
     fp.push(
-      `(property "Reference" "${p.ref}" ${p.ref_hide} (at 0 0 ${p.r}) (layer "${p.side}.SilkS") (effects (font (size 1 1) (thickness 0.15))${p.side === "B" ? " (justify mirror)" : ""
+      `(property "Reference" "${p.ref}" ${p.ref_hide} (at 0 0 ${p.r}) (layer "${p.side}.SilkS") (effects (font (size 1 1) (thickness 0.15))${
+        p.side === "B" ? " (justify mirror)" : ""
       }))`,
     );
 
@@ -46,8 +46,8 @@ module.exports = {
           : -6.35)} -6 ${p.r}) (size 2 2) (layers "${(flip
             ? "B"
             : "F")}.Cu" "${(flip ? "B" : "F")}.Paste" "${(flip
-              ? "B"
-              : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
+            ? "B"
+            : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
       );
       fp.push(
         `(pad "3" smd rect (at ${(flip
@@ -55,8 +55,8 @@ module.exports = {
           : -6.35)} -6 ${p.r}) (size 2 2) (layers "${(flip
             ? "F"
             : "B")}.Cu" "${(flip ? "F" : "B")}.Paste" "${(flip
-              ? "F"
-              : "B")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
+            ? "F"
+            : "B")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
       );
       fp.push(
         `(pad "3" smd rect (at ${(flip
@@ -64,8 +64,8 @@ module.exports = {
           : -6.35)} 6 ${p.r}) (size 2 2) (layers "${(flip
             ? "B"
             : "F")}.Cu" "${(flip ? "B" : "F")}.Paste" "${(flip
-              ? "B"
-              : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
+            ? "B"
+            : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
       );
       fp.push(
         `(pad "3" smd rect (at ${(flip
@@ -73,8 +73,8 @@ module.exports = {
           : -6.35)} 6 ${p.r}) (size 2 2) (layers "${(flip
             ? "F"
             : "B")}.Cu" "${(flip ? "F" : "B")}.Paste" "${(flip
-              ? "F"
-              : "B")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
+            ? "F"
+            : "B")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
       );
       fp.push(
         `(pad "3" smd rect (at ${(flip
@@ -82,8 +82,8 @@ module.exports = {
           : 6.35)} -6 ${p.r}) (size 2 2) (layers "${(flip
             ? "B"
             : "F")}.Cu" "${(flip ? "B" : "F")}.Paste" "${(flip
-              ? "B"
-              : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
+            ? "B"
+            : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
       );
       fp.push(
         `(pad "3" smd rect (at ${(flip
@@ -91,8 +91,8 @@ module.exports = {
           : 6.35)} -6 ${p.r}) (size 2 2) (layers "${(flip
             ? "F"
             : "B")}.Cu" "${(flip ? "F" : "B")}.Paste" "${(flip
-              ? "F"
-              : "B")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
+            ? "F"
+            : "B")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
       );
       fp.push(
         `(pad "3" smd rect (at ${(flip
@@ -100,8 +100,8 @@ module.exports = {
           : 6.35)} 6 ${p.r}) (size 2 2) (layers "${(flip
             ? "B"
             : "F")}.Cu" "${(flip ? "B" : "F")}.Paste" "${(flip
-              ? "B"
-              : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
+            ? "B"
+            : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
       );
       fp.push(
         `(pad "3" smd rect (at ${(flip
@@ -109,8 +109,8 @@ module.exports = {
           : 6.35)} 6 ${p.r}) (size 2 2) (layers "${(flip
             ? "F"
             : "B")}.Cu" "${(flip ? "F" : "B")}.Paste" "${(flip
-              ? "F"
-              : "B")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
+            ? "F"
+            : "B")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
       );
     } else {
       // Only add P3 pads for current side when not reversible
@@ -120,8 +120,8 @@ module.exports = {
           : -6.35)} -6 ${p.r}) (size 2 2) (layers "${(flip
             ? "B"
             : "F")}.Cu" "${(flip ? "B" : "F")}.Paste" "${(flip
-              ? "B"
-              : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
+            ? "B"
+            : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
       );
       fp.push(
         `(pad "3" smd rect (at ${(flip
@@ -129,8 +129,8 @@ module.exports = {
           : -6.35)} 6 ${p.r}) (size 2 2) (layers "${(flip
             ? "B"
             : "F")}.Cu" "${(flip ? "B" : "F")}.Paste" "${(flip
-              ? "B"
-              : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
+            ? "B"
+            : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
       );
       fp.push(
         `(pad "3" smd rect (at ${(flip
@@ -138,8 +138,8 @@ module.exports = {
           : 6.35)} -6 ${p.r}) (size 2 2) (layers "${(flip
             ? "B"
             : "F")}.Cu" "${(flip ? "B" : "F")}.Paste" "${(flip
-              ? "B"
-              : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
+            ? "B"
+            : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
       );
       fp.push(
         `(pad "3" smd rect (at ${(flip
@@ -147,27 +147,27 @@ module.exports = {
           : 6.35)} 6 ${p.r}) (size 2 2) (layers "${(flip
             ? "B"
             : "F")}.Cu" "${(flip ? "B" : "F")}.Paste" "${(flip
-              ? "B"
-              : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
+            ? "B"
+            : "F")}.Mask") (thermal_bridge_angle 45) ${p.P3})`,
       );
     }
 
-    // Replaced Edge.Cuts circles with NPTH pads
-    // NPTH pad 1
+    // FIXED Edge.Cuts - Using consistent radius calculations regardless of side
+    // Circle 1
     fp.push(
-      `(pad "" np_thru_hole circle (at -5.8 2.75 ${p.r}) (size 1 1) (drill 1) (layers *.Cu *.Mask))`,
+      `(fp_circle (center -5.8 2.75) (end -5.3 2.75) (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts"))`,
     );
-    // NPTH pad 2
+    // Circle 2
     fp.push(
-      `(pad "" np_thru_hole circle (at -5.781 -2.773 ${p.r}) (size 1.2 1.2) (drill 1.2) (layers *.Cu *.Mask))`,
+      `(fp_circle (center -5.781 -2.773) (end -5.181 -2.773) (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts"))`,
     );
-    // NPTH pad 3
+    // Circle 3
     fp.push(
-      `(pad "" np_thru_hole circle (at 5.8 -2.75 ${p.r}) (size 1.2 1.2) (drill 1.2) (layers *.Cu *.Mask))`,
+      `(fp_circle (center 5.8 -2.75) (end 6.4 -2.75) (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts"))`,
     );
-    // NPTH pad 4
+    // Circle 4
     fp.push(
-      `(pad "" np_thru_hole circle (at 5.819 2.727 ${p.r}) (size 1 1) (drill 1) (layers *.Cu *.Mask))`,
+      `(fp_circle (center 5.819 2.727) (end 5.319 2.727) (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts"))`,
     );
 
     // Fabrication layers - add both sides only when reversible
@@ -193,12 +193,12 @@ module.exports = {
           : -3.781)} -1.673) (xy ${(flip ? 3.281 : -3.281)} -1.173) (xy ${(flip
             ? -2.219
             : 2.219)} -1.173) (xy ${(flip ? -2.219 : 2.219)} -3.923) (xy ${(flip
-              ? 2.181
-              : -2.181)} -3.923) (xy ${(flip
-                ? 2.181
-                : -2.181)} -3.523)) (stroke (width 0.1) (type solid)) (fill none) (layer ${(flip
-                  ? "F.Fab"
-                  : "B.Fab")}))`,
+            ? 2.181
+            : -2.181)} -3.923) (xy ${(flip
+            ? 2.181
+            : -2.181)} -3.523)) (stroke (width 0.1) (type solid)) (fill none) (layer ${(flip
+            ? "F.Fab"
+            : "B.Fab")}))`,
       );
 
       // F.Fab (will be B.Fab when flipped)
@@ -222,12 +222,12 @@ module.exports = {
           : 3.8)} -1.65) (xy ${(flip ? -3.3 : 3.3)} -1.15) (xy ${(flip
             ? 2.2
             : -2.2)} -1.15) (xy ${(flip ? 2.2 : -2.2)} -3.9) (xy ${(flip
-              ? -2.2
-              : 2.2)} -3.9) (xy ${(flip
-                ? -2.2
-                : 2.2)} -3.5)) (stroke (width 0.1) (type solid)) (fill none) (layer ${(flip
-                  ? "B.Fab"
-                  : "F.Fab")}))`,
+            ? -2.2
+            : 2.2)} -3.9) (xy ${(flip
+            ? -2.2
+            : 2.2)} -3.5)) (stroke (width 0.1) (type solid)) (fill none) (layer ${(flip
+            ? "B.Fab"
+            : "F.Fab")}))`,
       );
     } else {
       // Only add fabrication layer for current side when not reversible
@@ -251,12 +251,12 @@ module.exports = {
           : 3.8)} -1.65) (xy ${(flip ? -3.3 : 3.3)} -1.15) (xy ${(flip
             ? 2.2
             : -2.2)} -1.15) (xy ${(flip ? 2.2 : -2.2)} -3.9) (xy ${(flip
-              ? -2.2
-              : 2.2)} -3.9) (xy ${(flip
-                ? -2.2
-                : 2.2)} -3.5)) (stroke (width 0.1) (type solid)) (fill none) (layer ${(flip
-                  ? "B.Fab"
-                  : "F.Fab")}))`,
+            ? -2.2
+            : 2.2)} -3.9) (xy ${(flip
+            ? -2.2
+            : 2.2)} -3.5)) (stroke (width 0.1) (type solid)) (fill none) (layer ${(flip
+            ? "B.Fab"
+            : "F.Fab")}))`,
       );
     }
 
@@ -266,31 +266,6 @@ module.exports = {
     fp.push(
       `(model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))`,
     );
-
-    // Add keycap outline to silkscreen if keycap size is provided
-    if (p.keycap && p.keycap > 0) {
-      const halfSize = p.keycap / 2;
-
-      // Draw keycap outline as a square on silkscreen
-      fp.push(
-        `(fp_rect (start ${-halfSize} ${-halfSize}) (end ${halfSize} ${halfSize}) (stroke (width 0.12) (type default)) (fill none) (layer "${p.side}.SilkS"))`,
-      );
-
-      // Add a cross to mark the center
-      fp.push(
-        `(fp_line (start -2 0) (end 2 0) (stroke (width 0.12) (type default)) (layer "${p.side}.SilkS"))`,
-      );
-      fp.push(
-        `(fp_line (start 0 -2) (end 0 2) (stroke (width 0.12) (type default)) (layer "${p.side}.SilkS"))`,
-      );
-
-      // Add keycap size text in silkscreen
-      // fp.push(
-      //   `(fp_text user "${p.keycap}×${p.keycap}" (at 0 ${halfSize + 1.5} ${p.r}) (layer "${p.side}.SilkS")
-      //     (effects (font (size 0.8 0.8) (thickness 0.1))${p.side === "B" ? " (justify mirror)" : ""})
-      //   )`,
-      // );
-    }
 
     fp.push(`)`);
 

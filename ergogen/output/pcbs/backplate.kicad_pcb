@@ -11,7 +11,7 @@
   (paper "A3")
   (title_block
     (title "backplate")
-    (date "2025-03-01")
+    (date "2025-03-02")
     (rev "0.2")
     (company "ceoloide")
   )
@@ -86,7 +86,7 @@
   
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 109.25 72.25 0)
+    (at 109.25 53.75 0)
     (property "Reference" "MH1"
       (at 0 2.55 0)
       (layer "F.SilkS")
@@ -122,7 +122,7 @@
 
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 183.218 68.7985 0)
+    (at 183.218 50.298500000000004 0)
     (property "Reference" "MH3"
       (at 0 2.55 0)
       (layer "F.SilkS")
@@ -210,9 +210,9 @@
 (gr_arc (start 155.91860906469594 123.2255654726414) (mid 156.06772676469595 123.36182467264142) (end 156.25858876469596 123.42796367264141) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_arc (start 145.75722675324377 109.20164075082414) (mid 145.57961185324376 109.04964965082414) (end 145.35231675324377 108.99501175082413) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_arc (start 91.31698635159206 108.49749067528336) (mid 91.46344595159206 108.85104337528337) (end 91.81700935159206 108.99747697528336) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_circle (center 109.25 72.25) (end 110.35 72.25) (layer Edge.Cuts) (stroke (width 0.15) (type default)) (fill none))
+(gr_circle (center 109.25 53.75) (end 110.35 53.75) (layer Edge.Cuts) (stroke (width 0.15) (type default)) (fill none))
 (gr_circle (center 109.25 90.75) (end 110.35 90.75) (layer Edge.Cuts) (stroke (width 0.15) (type default)) (fill none))
-(gr_circle (center 183.218 68.7985) (end 184.31799999999998 68.7985) (layer Edge.Cuts) (stroke (width 0.15) (type default)) (fill none))
+(gr_circle (center 183.218 50.298500000000004) (end 184.31799999999998 50.298500000000004) (layer Edge.Cuts) (stroke (width 0.15) (type default)) (fill none))
 (gr_circle (center 151.157 107.615) (end 152.257 107.615) (layer Edge.Cuts) (stroke (width 0.15) (type default)) (fill none))
 (gr_circle (center 196.7245951 115.0067481) (end 197.82459509999998 115.0067481) (layer Edge.Cuts) (stroke (width 0.15) (type default)) (fill none))
 

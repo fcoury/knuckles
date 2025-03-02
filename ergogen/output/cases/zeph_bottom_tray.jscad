@@ -23,11 +23,11 @@ function _screws_extrude_1_outline_fn(){
 .union(
     CAG.circle({"center":[151.157,-107.615],"radius":1.1})
 ).union(
-    CAG.circle({"center":[183.218,-68.7985],"radius":1.1})
+    CAG.circle({"center":[183.218,-50.2985],"radius":1.1})
 ).union(
     CAG.circle({"center":[109.25,-90.75],"radius":1.1})
 ).union(
-    CAG.circle({"center":[109.25,-72.25],"radius":1.1})
+    CAG.circle({"center":[109.25,-53.75],"radius":1.1})
 ).extrude({ offset: [0, 0, 1] });
 }
 
