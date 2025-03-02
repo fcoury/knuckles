@@ -270,7 +270,7 @@ points:
               led_next: LED_1
       rows:
         home:
-          row_net: R3
+          row_net: R4
 
     # Helper points
     underglow_led_1:
@@ -854,6 +854,7 @@ pcbs:
           P6: R1
           P7: R2
           P8: R3
+          P9: R4
           reversible: true
           include_traces: true
           show_silk_labels: true

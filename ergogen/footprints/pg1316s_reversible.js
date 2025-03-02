@@ -27,17 +27,29 @@ module.exports = {
       }))`,
     );
 
-    // Pads
+    // SMD Pads
     fp.push(
-      `(pad "1" thru_hole rect (at ${(flip
+      `(pad "1" smd rect (at ${(flip
         ? 2.5
-        : -2.5)} 2.65 ${p.r}) (size 1.55 2) (drill 0.5) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (thermal_bridge_angle 45) ${p.from})`,
+        : -2.5)} 2.65 ${p.r}) (size 1.55 2) (layers "${p.side}.Cu" "${p.side}.Mask") (remove_unused_layers no) (thermal_bridge_angle 45) ${p.from})`,
     );
     fp.push(
-      `(pad "2" thru_hole rect (at ${(flip
+      `(pad "2" smd rect (at ${(flip
         ? -2.5
-        : 2.5)} 2.65 ${p.r}) (size 1.55 2) (drill 0.5) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (thermal_bridge_angle 45) ${p.to})`,
+        : 2.5)} 2.65 ${p.r}) (size 1.55 2) (layers "${p.side}.Cu" "${p.side}.Mask") (remove_unused_layers no) (thermal_bridge_angle 45) ${p.to})`,
     );
+
+    // // Thru-hole Pads
+    // fp.push(
+    //   `(pad "1" thru_hole rect (at ${(flip
+    //     ? 2.5
+    //     : -2.5)} 2.65 ${p.r}) (size 1.55 2) (drill 0.5) (layers "${p.side}.Cu" "${p.side}.Mask") (remove_unused_layers no) (thermal_bridge_angle 45) ${p.from})`,
+    // );
+    // fp.push(
+    //   `(pad "2" thru_hole rect (at ${(flip
+    //     ? -2.5
+    //     : 2.5)} 2.65 ${p.r}) (size 1.55 2) (drill 0.5) (layers "${p.side}.Cu" "${p.side}.Mask") (remove_unused_layers no) (thermal_bridge_angle 45) ${p.to})`,
+    // );
 
     if (p.reversible) {
       fp.push(
@@ -283,13 +295,6 @@ module.exports = {
       fp.push(
         `(fp_line (start 0 -2) (end 0 2) (stroke (width 0.12) (type default)) (layer "${p.side}.SilkS"))`,
       );
-
-      // Add keycap size text in silkscreen
-      // fp.push(
-      //   `(fp_text user "${p.keycap}×${p.keycap}" (at 0 ${halfSize + 1.5} ${p.r}) (layer "${p.side}.SilkS")
-      //     (effects (font (size 0.8 0.8) (thickness 0.1))${p.side === "B" ? " (justify mirror)" : ""})
-      //   )`,
-      // );
     }
 
     fp.push(`)`);
