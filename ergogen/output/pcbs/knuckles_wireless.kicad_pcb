@@ -10,7 +10,7 @@
   )
   (paper "A3")
   (title_block
-    (title "zeph_wireless")
+    (title "knuckles_wireless")
     (date "2025-03-17")
     (rev "0.2")
     (company "ceoloide")
@@ -3934,7 +3934,7 @@
         
     
 
-  (gr_text "Zeph v1.0"
+  (gr_text "knuckles v1.0"
     (at 137 107.4 0)
     (layer "F.SilkS" )
     (effects
@@ -3948,7 +3948,7 @@
     )
   )
       
-  (gr_text "Zeph v1.0"
+  (gr_text "knuckles v1.0"
     (at 137 107.4 0)
     (layer "B.SilkS" )
     (effects

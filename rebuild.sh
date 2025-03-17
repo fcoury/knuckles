@@ -5,7 +5,7 @@ container_cmd=docker
 container_args="-w /board -v $(pwd):/board --rm"
 
 # Define the boards to autoroute and export, and the plates
-boards="zeph zeph_wireless"
+boards="knuckles knuckles_wireless"
 kicad_auto_image="ghcr.io/inti-cmnb/kicad8_auto:latest"
 freerouting_cli_image="ceoloide/ergogen-freerouting:latest"
 
