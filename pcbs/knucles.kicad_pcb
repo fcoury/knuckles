@@ -10,10 +10,10 @@
   )
   (paper "A3")
   (title_block
-    (title "zeph")
-    (date "2025-03-02")
+    (title "knucles")
+    (date "2025-03-17")
     (rev "0.2")
-    (company "ceoloide")
+    (company "fcoury")
   )
 
   (layers
@@ -3958,7 +3958,7 @@
         
     
 
-  (gr_text "Zeph v1.0"
+  (gr_text "knucles v1.0"
     (at 137 107.4 0)
     (layer "F.SilkS" )
     (effects
@@ -3972,7 +3972,7 @@
     )
   )
       
-  (gr_text "Zeph v1.0"
+  (gr_text "knucles v1.0"
     (at 137 107.4 0)
     (layer "B.SilkS" )
     (effects

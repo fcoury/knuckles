@@ -1,10 +1,10 @@
 meta:
   engine: 4.1.0
-  name: zeph
+  name: knuckles
   version: 0.2
-  ref: &kb_ref "Zeph v0.1"
+  ref: &kb_ref "knuckles v0.1"
   author: ceoloide
-  url: &kb_url https://github.com/ceoloide/zeph
+  url: &kb_url https://github.com/ceoloide/knuckles
   footprint: &switch_footprint "pg1316s_reversible"
   # footprint: &switch_footprint "ceoloide/switch_mx"
   # footprint: &switch_footprint "ceoloide/switch_choc_v1_v2"
@@ -749,7 +749,7 @@ pcbs:
           hole_size: screw_diameter
           hole_drill: screw_diameter
 
-  _zeph_baseline:
+  _knuckles_baseline:
     template: kicad8
     outlines: &basepcb_outlines
       main:
@@ -868,12 +868,12 @@ pcbs:
         what: ceoloide/utility_text
         where: matrix_ring_bottom
         params:
-          text: Zeph v1.0
+          text: knuckles v1.0
           reversible: true
         adjust:
           shift: [0, -0.65 kp]
 
-  zeph:
+  knuckles:
     template: kicad8
 
     outlines:
@@ -957,7 +957,7 @@ pcbs:
         adjust:
           rotate: 180
 
-  zeph_wireless:
+  knuckles_wireless:
     template: kicad8
 
     outlines:
@@ -1011,7 +1011,7 @@ pcbs:
           shift: [0.5 ks + 7.25, 0.375 kp -45.25]
           rotate: 90
 cases:
-  zeph_bottom_tray:
+  knuckles_bottom_tray:
     - what: outline
       name: _bottom_case_walls
       extrude: bottom_plate_thickness + internal_distance_between_plates + top_plate_thickness

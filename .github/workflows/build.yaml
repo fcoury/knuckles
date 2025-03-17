@@ -41,29 +41,29 @@ jobs:
       - name: Run KiBot to generate images, gerbers for the unrouted board
         uses: ./.github/actions/kibot
         with:
-          boards: zeph_wireless
+          boards: knuckles_wireless
           config: default
       - name: Export DSN file for Freerouting
         uses: ./.github/actions/export-dsn
         with:
-          boards: zeph_wireless
+          boards: knuckles_wireless
       - name: Autoroute PCB
         uses: ./.github/actions/autoroute
         with:
-          boards: zeph_wireless
+          boards: knuckles_wireless
       - name: Import SES
         uses: ./.github/actions/import-ses
         with:
-          boards: zeph_wireless
+          boards: knuckles_wireless
       - name: Run KiBot to generate images, gerbers for the autorouted board
         uses: ./.github/actions/kibot
         with:
-          boards: zeph_wireless_autorouted
+          boards: knuckles_wireless_autorouted
           config: boards
       - name: Persist output
         uses: actions/upload-artifact@v4
         with:
-          name: zeph
+          name: knuckles
           path: |
             cases
             gerbers

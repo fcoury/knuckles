@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build": "ergogen ./ergogen/ --output ./ --clear && npx @jscad/cli cases/zeph_bottom_tray.jscad -of stla -o cases/zeph_bottom_tray.stl",
-    "debug": "ergogen ./ergogen/ --output ./ --clear --debug && npx @jscad/cli cases/zeph_bottom_tray.jscad -of stla -o cases/zeph_bottom_tray.stl",
+    "build": "ergogen ./ergogen/ --output ./ --clear && npx @jscad/cli cases/knuckles_bottom_tray.jscad -of stla -o cases/knuckles_bottom_tray.stl",
+    "debug": "ergogen ./ergogen/ --output ./ --clear --debug && npx @jscad/cli cases/knuckles_bottom_tray.jscad -of stla -o cases/knuckles_bottom_tray.stl",
     "watch:build": "nodemon -e yaml,js -x \"npm run build\"",
     "watch:debug": "nodemon -e yaml,js -x \"npm run debug\""
   },

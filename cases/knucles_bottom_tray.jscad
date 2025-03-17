@@ -34,70 +34,70 @@ function _screws_extrude_1_outline_fn(){
 
 
 
-                function zeph_bottom_tray_case_fn() {
+                function knucles_bottom_tray_case_fn() {
                     
 
-                // creating part 0 of case zeph_bottom_tray
-                let zeph_bottom_tray__part_0 = _bottom_case_walls_extrude_6_6_outline_fn();
+                // creating part 0 of case knucles_bottom_tray
+                let knucles_bottom_tray__part_0 = _bottom_case_walls_extrude_6_6_outline_fn();
 
                 // make sure that rotations are relative
-                let zeph_bottom_tray__part_0_bounds = zeph_bottom_tray__part_0.getBounds();
-                let zeph_bottom_tray__part_0_x = zeph_bottom_tray__part_0_bounds[0].x + (zeph_bottom_tray__part_0_bounds[1].x - zeph_bottom_tray__part_0_bounds[0].x) / 2
-                let zeph_bottom_tray__part_0_y = zeph_bottom_tray__part_0_bounds[0].y + (zeph_bottom_tray__part_0_bounds[1].y - zeph_bottom_tray__part_0_bounds[0].y) / 2
-                zeph_bottom_tray__part_0 = translate([-zeph_bottom_tray__part_0_x, -zeph_bottom_tray__part_0_y, 0], zeph_bottom_tray__part_0);
-                zeph_bottom_tray__part_0 = rotate([0,0,0], zeph_bottom_tray__part_0);
-                zeph_bottom_tray__part_0 = translate([zeph_bottom_tray__part_0_x, zeph_bottom_tray__part_0_y, 0], zeph_bottom_tray__part_0);
+                let knucles_bottom_tray__part_0_bounds = knucles_bottom_tray__part_0.getBounds();
+                let knucles_bottom_tray__part_0_x = knucles_bottom_tray__part_0_bounds[0].x + (knucles_bottom_tray__part_0_bounds[1].x - knucles_bottom_tray__part_0_bounds[0].x) / 2
+                let knucles_bottom_tray__part_0_y = knucles_bottom_tray__part_0_bounds[0].y + (knucles_bottom_tray__part_0_bounds[1].y - knucles_bottom_tray__part_0_bounds[0].y) / 2
+                knucles_bottom_tray__part_0 = translate([-knucles_bottom_tray__part_0_x, -knucles_bottom_tray__part_0_y, 0], knucles_bottom_tray__part_0);
+                knucles_bottom_tray__part_0 = rotate([0,0,0], knucles_bottom_tray__part_0);
+                knucles_bottom_tray__part_0 = translate([knucles_bottom_tray__part_0_x, knucles_bottom_tray__part_0_y, 0], knucles_bottom_tray__part_0);
 
-                zeph_bottom_tray__part_0 = translate([-75,0,0], zeph_bottom_tray__part_0);
-                let result = zeph_bottom_tray__part_0;
+                knucles_bottom_tray__part_0 = translate([-75,0,0], knucles_bottom_tray__part_0);
+                let result = knucles_bottom_tray__part_0;
                 
             
 
-                // creating part 1 of case zeph_bottom_tray
-                let zeph_bottom_tray__part_1 = _mcu_wall_cutout_extrude_2_2_outline_fn();
+                // creating part 1 of case knucles_bottom_tray
+                let knucles_bottom_tray__part_1 = _mcu_wall_cutout_extrude_2_2_outline_fn();
 
                 // make sure that rotations are relative
-                let zeph_bottom_tray__part_1_bounds = zeph_bottom_tray__part_1.getBounds();
-                let zeph_bottom_tray__part_1_x = zeph_bottom_tray__part_1_bounds[0].x + (zeph_bottom_tray__part_1_bounds[1].x - zeph_bottom_tray__part_1_bounds[0].x) / 2
-                let zeph_bottom_tray__part_1_y = zeph_bottom_tray__part_1_bounds[0].y + (zeph_bottom_tray__part_1_bounds[1].y - zeph_bottom_tray__part_1_bounds[0].y) / 2
-                zeph_bottom_tray__part_1 = translate([-zeph_bottom_tray__part_1_x, -zeph_bottom_tray__part_1_y, 0], zeph_bottom_tray__part_1);
-                zeph_bottom_tray__part_1 = rotate([0,0,0], zeph_bottom_tray__part_1);
-                zeph_bottom_tray__part_1 = translate([zeph_bottom_tray__part_1_x, zeph_bottom_tray__part_1_y, 0], zeph_bottom_tray__part_1);
+                let knucles_bottom_tray__part_1_bounds = knucles_bottom_tray__part_1.getBounds();
+                let knucles_bottom_tray__part_1_x = knucles_bottom_tray__part_1_bounds[0].x + (knucles_bottom_tray__part_1_bounds[1].x - knucles_bottom_tray__part_1_bounds[0].x) / 2
+                let knucles_bottom_tray__part_1_y = knucles_bottom_tray__part_1_bounds[0].y + (knucles_bottom_tray__part_1_bounds[1].y - knucles_bottom_tray__part_1_bounds[0].y) / 2
+                knucles_bottom_tray__part_1 = translate([-knucles_bottom_tray__part_1_x, -knucles_bottom_tray__part_1_y, 0], knucles_bottom_tray__part_1);
+                knucles_bottom_tray__part_1 = rotate([0,0,0], knucles_bottom_tray__part_1);
+                knucles_bottom_tray__part_1 = translate([knucles_bottom_tray__part_1_x, knucles_bottom_tray__part_1_y, 0], knucles_bottom_tray__part_1);
 
-                zeph_bottom_tray__part_1 = translate([-75,0,1], zeph_bottom_tray__part_1);
-                result = result.subtract(zeph_bottom_tray__part_1);
+                knucles_bottom_tray__part_1 = translate([-75,0,1], knucles_bottom_tray__part_1);
+                result = result.subtract(knucles_bottom_tray__part_1);
                 
             
 
-                // creating part 2 of case zeph_bottom_tray
-                let zeph_bottom_tray__part_2 = _bottom_case_outer_outline_extrude_1_outline_fn();
+                // creating part 2 of case knucles_bottom_tray
+                let knucles_bottom_tray__part_2 = _bottom_case_outer_outline_extrude_1_outline_fn();
 
                 // make sure that rotations are relative
-                let zeph_bottom_tray__part_2_bounds = zeph_bottom_tray__part_2.getBounds();
-                let zeph_bottom_tray__part_2_x = zeph_bottom_tray__part_2_bounds[0].x + (zeph_bottom_tray__part_2_bounds[1].x - zeph_bottom_tray__part_2_bounds[0].x) / 2
-                let zeph_bottom_tray__part_2_y = zeph_bottom_tray__part_2_bounds[0].y + (zeph_bottom_tray__part_2_bounds[1].y - zeph_bottom_tray__part_2_bounds[0].y) / 2
-                zeph_bottom_tray__part_2 = translate([-zeph_bottom_tray__part_2_x, -zeph_bottom_tray__part_2_y, 0], zeph_bottom_tray__part_2);
-                zeph_bottom_tray__part_2 = rotate([0,0,0], zeph_bottom_tray__part_2);
-                zeph_bottom_tray__part_2 = translate([zeph_bottom_tray__part_2_x, zeph_bottom_tray__part_2_y, 0], zeph_bottom_tray__part_2);
+                let knucles_bottom_tray__part_2_bounds = knucles_bottom_tray__part_2.getBounds();
+                let knucles_bottom_tray__part_2_x = knucles_bottom_tray__part_2_bounds[0].x + (knucles_bottom_tray__part_2_bounds[1].x - knucles_bottom_tray__part_2_bounds[0].x) / 2
+                let knucles_bottom_tray__part_2_y = knucles_bottom_tray__part_2_bounds[0].y + (knucles_bottom_tray__part_2_bounds[1].y - knucles_bottom_tray__part_2_bounds[0].y) / 2
+                knucles_bottom_tray__part_2 = translate([-knucles_bottom_tray__part_2_x, -knucles_bottom_tray__part_2_y, 0], knucles_bottom_tray__part_2);
+                knucles_bottom_tray__part_2 = rotate([0,0,0], knucles_bottom_tray__part_2);
+                knucles_bottom_tray__part_2 = translate([knucles_bottom_tray__part_2_x, knucles_bottom_tray__part_2_y, 0], knucles_bottom_tray__part_2);
 
-                zeph_bottom_tray__part_2 = translate([-75,0,0], zeph_bottom_tray__part_2);
-                result = result.union(zeph_bottom_tray__part_2);
+                knucles_bottom_tray__part_2 = translate([-75,0,0], knucles_bottom_tray__part_2);
+                result = result.union(knucles_bottom_tray__part_2);
                 
             
 
-                // creating part 3 of case zeph_bottom_tray
-                let zeph_bottom_tray__part_3 = _screws_extrude_1_outline_fn();
+                // creating part 3 of case knucles_bottom_tray
+                let knucles_bottom_tray__part_3 = _screws_extrude_1_outline_fn();
 
                 // make sure that rotations are relative
-                let zeph_bottom_tray__part_3_bounds = zeph_bottom_tray__part_3.getBounds();
-                let zeph_bottom_tray__part_3_x = zeph_bottom_tray__part_3_bounds[0].x + (zeph_bottom_tray__part_3_bounds[1].x - zeph_bottom_tray__part_3_bounds[0].x) / 2
-                let zeph_bottom_tray__part_3_y = zeph_bottom_tray__part_3_bounds[0].y + (zeph_bottom_tray__part_3_bounds[1].y - zeph_bottom_tray__part_3_bounds[0].y) / 2
-                zeph_bottom_tray__part_3 = translate([-zeph_bottom_tray__part_3_x, -zeph_bottom_tray__part_3_y, 0], zeph_bottom_tray__part_3);
-                zeph_bottom_tray__part_3 = rotate([0,0,0], zeph_bottom_tray__part_3);
-                zeph_bottom_tray__part_3 = translate([zeph_bottom_tray__part_3_x, zeph_bottom_tray__part_3_y, 0], zeph_bottom_tray__part_3);
+                let knucles_bottom_tray__part_3_bounds = knucles_bottom_tray__part_3.getBounds();
+                let knucles_bottom_tray__part_3_x = knucles_bottom_tray__part_3_bounds[0].x + (knucles_bottom_tray__part_3_bounds[1].x - knucles_bottom_tray__part_3_bounds[0].x) / 2
+                let knucles_bottom_tray__part_3_y = knucles_bottom_tray__part_3_bounds[0].y + (knucles_bottom_tray__part_3_bounds[1].y - knucles_bottom_tray__part_3_bounds[0].y) / 2
+                knucles_bottom_tray__part_3 = translate([-knucles_bottom_tray__part_3_x, -knucles_bottom_tray__part_3_y, 0], knucles_bottom_tray__part_3);
+                knucles_bottom_tray__part_3 = rotate([0,0,0], knucles_bottom_tray__part_3);
+                knucles_bottom_tray__part_3 = translate([knucles_bottom_tray__part_3_x, knucles_bottom_tray__part_3_y, 0], knucles_bottom_tray__part_3);
 
-                zeph_bottom_tray__part_3 = translate([-75,0,0], zeph_bottom_tray__part_3);
-                result = result.subtract(zeph_bottom_tray__part_3);
+                knucles_bottom_tray__part_3 = translate([-75,0,0], knucles_bottom_tray__part_3);
+                result = result.subtract(knucles_bottom_tray__part_3);
                 
             
                     return result;
@@ -106,7 +106,7 @@ function _screws_extrude_1_outline_fn(){
             
         
             function main() {
-                return zeph_bottom_tray_case_fn();
+                return knucles_bottom_tray_case_fn();
             }
 
         
