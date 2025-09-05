@@ -107,7 +107,7 @@ Use the KiBot-produced ZIP under `ergogen/output/gerbers/<board>` for JLCPCB. Th
 
 ## License
 
-MIT © 2024 Marco Massarelli (see `LICENSE`).
+MIT © 2024 Felipe Coury (see `LICENSE`).
 
 ## Credits
 
