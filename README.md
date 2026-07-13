@@ -64,6 +64,7 @@ Notes:
 ## Outputs
 
 - `pcbs/` — KiCad 8 `.kicad_pcb` files for boards and plates.
+- `kicad/projects/` — canonical KiCad project settings copied into `pcbs/` after generation.
 - `outlines/` — DXF/SVG outlines used by the PCBs and case.
 - `cases/` — JSCAD source and generated STL for a bottom tray.
 - `ergogen/output/images` — board renders (from KiBot/PCBDraw).
@@ -94,6 +95,8 @@ A GitHub Actions workflow (`.github/workflows/build.yaml`) reproduces the full p
 ## Manufacturing
 
 Use the KiBot-produced ZIP under `ergogen/output/gerbers/<board>` for JLCPCB. The KiBot configs (`kibot/default.kibot.yaml`, `kibot/boards.kibot.yaml`) are tuned for JLCPCB and include common filters for autorouted boards.
+
+KiCad project settings under `pcbs/` are generated and ignored. Edit the canonical files under `kicad/projects/`; `npm run build` and `npm run debug` copy them beside the generated boards. The wireless board uses a `0.25 mm` minimum copper-to-edge clearance for JLCPCB routed outlines.
 
 ## Folder Structure (high level)
 

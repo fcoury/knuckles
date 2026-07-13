@@ -10,7 +10,7 @@
   )
   (paper "A3")
   (title_block
-    (title "knucles_wireless")
+    (title "knuckles_wireless")
     (date "2025-03-17")
     (rev "0.2")
     (company "fcoury")
@@ -3934,7 +3934,7 @@
         
     
 
-  (gr_text "knucles v1.0"
+  (gr_text "knuckles v1.0"
     (at 137 107.4 0)
     (layer "F.SilkS" )
     (effects
@@ -3948,7 +3948,7 @@
     )
   )
       
-  (gr_text "knucles v1.0"
+  (gr_text "knuckles v1.0"
     (at 137 107.4 0)
     (layer "B.SilkS" )
     (effects
@@ -4413,4 +4413,3 @@
 (gr_arc (start 91.31698635159206 108.49749067528336) (mid 91.46344595159206 108.85104337528337) (end 91.81700935159206 108.99747697528336) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 
 )
-
