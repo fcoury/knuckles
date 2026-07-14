@@ -808,6 +808,8 @@ pcbs:
         where: /key/
         params:
           side: F
+          # Only one side gets a model so the 3D viewer represents a populated board.
+          switch_3dmodel_filename: ${KIPRJMOD}/../models/PG1316S.step
           # reversible: false
           from: "{{column_net}}"
           to: "{{colrow}}_F"

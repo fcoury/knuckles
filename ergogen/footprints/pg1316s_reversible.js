@@ -7,6 +7,10 @@ module.exports = {
     to: { type: "net", value: undefined },
     P3: { type: "net", value: "" },
     keycap: { type: "number", value: 16 }, // Default keycap size in mm (16×16mm)
+    switch_3dmodel_filename: "",
+    switch_3dmodel_xyz_offset: [-4.75, -6.25, -10.25],
+    switch_3dmodel_xyz_rotation: [0, 0, 0],
+    switch_3dmodel_xyz_scale: [1, 1, 1],
   },
   body: (p) => {
     const fp = [];
@@ -275,9 +279,11 @@ module.exports = {
     fp.push(`(version 20240108)`);
     fp.push(`(generator "pcbnew")`);
     fp.push(`(generator_version "8.0")`);
-    fp.push(
-      `(model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))`,
-    );
+    if (p.switch_3dmodel_filename) {
+      fp.push(
+        `(model "${p.switch_3dmodel_filename}" (offset (xyz ${p.switch_3dmodel_xyz_offset.join(" ")})) (scale (xyz ${p.switch_3dmodel_xyz_scale.join(" ")})) (rotate (xyz ${p.switch_3dmodel_xyz_rotation.join(" ")})))`,
+      );
+    }
 
     // Add keycap outline to silkscreen if keycap size is provided
     if (p.keycap && p.keycap > 0) {
