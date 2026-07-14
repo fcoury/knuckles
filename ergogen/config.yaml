@@ -22,8 +22,8 @@ presets:
     # Key and keycap measures
     kx: 13.5 # spacing between key centers (X-axis)
     ky: 13 # spacing between key centers (Y-axis)
-    ks: 18.5 # horizontal space between columns (default: 19)
-    kp: 18.5 # vertical padding between keys (deafult: 19)
+    ks: 19.5 # horizontal center-to-center spacing
+    kp: 19.5 # vertical center-to-center spacing
     kpx: ks * 0.5 # x padding for the outline
     kpy: kp * 0.5 # y padding for the outline
     kcow: 13.8 # key cutout hole width (cherry, choc v2: 14, choc v1: 13.8)
@@ -985,6 +985,7 @@ pcbs:
           from: BAT_P
           to: RAW
           reversible: true
+          invert_behavior: false
         adjust:
           shift: [1.5 ks -0.5, 0.375 kp -46.50]
 
