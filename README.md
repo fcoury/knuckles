@@ -7,7 +7,8 @@ An open-source, column-staggered ergonomic keyboard. This repo contains everythi
 It includes two PCB variants defined in `ergogen/config.yaml`:
 
 - `knuckles`: wired variant (TRRS, small display)
-- `knuckles_wireless`: wireless-ready variant (power switch, battery connector, e-paper display)
+- `knuckles_wireless`: wireless-ready variant (power switch, battery connector,
+  and a display-free controller area compatible with the HolyKeebs TPS43 module)
 
 Both variants use reversible footprints and support per-key LEDs (SK6812mini-E) plus a small underglow chain. FR4 front/back plates and a controller overlay are also generated.
 
@@ -54,6 +55,7 @@ There are two ways to build, depending on how much automation you want.
     - Runs KiBot again for the autorouted board
     - Outputs live in `pcbs/`, `outlines/`, `ergogen/output/images`, `ergogen/output/gerbers`
   - `./rebuild.sh` → re-export/autoroute existing boards in `pcbs/` without regenerating from Ergogen.
+  - `npm run route` → route only `knuckles_wireless`, remove KiCad-confirmed dead-end branches, retry up to three times, and accept only a result with zero unconnected items, zero dangling tracks, and zero KiCad DRC errors.
   - `./watch.sh` (macOS) → regenerates PCB on config change and opens the result.
 
 Notes:
@@ -64,6 +66,7 @@ Notes:
 ## Outputs
 
 - `pcbs/` — KiCad 8 `.kicad_pcb` files for boards and plates.
+- `pcbs/autoroute/<board>/` — generated DSN, SES, router log, DRC report, and selection metrics for the accepted route.
 - `kicad/projects/` — canonical KiCad project settings copied into `pcbs/` after generation.
 - `outlines/` — DXF/SVG outlines used by the PCBs and case.
 - `cases/` — JSCAD source and generated STL for a bottom tray.
@@ -78,6 +81,9 @@ Edit `ergogen/config.yaml`:
 - Layout: matrix and thumb-fan are under `points.zones.*` (spacing, splay, stagger).
 - Switch footprint: set `meta.footprint` and optionally switch `presets` (`mx`, `choc_v1`, `choc_v2`, or the provided low-profile/reversible footprints).
 - Electrical nets: column/row nets are assigned per zone; MCU pins are mapped in the `mcu` footprint section.
+- Touchpad: the HolyKeebs TPS43 adapter mounts directly on a top-mounted
+  nice!nano and uses its VCC, GND, SDA, and SCL pins. It does not need a second
+  footprint on the keyboard PCB.
 - LEDs: per‑key and underglow chains can be tweaked (trace widths, via sizes, positions).
 - Case: see `cases/` and the outlines under `outlines/_bottom_case*` to adapt walls and cutouts.
 
@@ -89,12 +95,15 @@ A GitHub Actions workflow (`.github/workflows/build.yaml`) reproduces the full p
 
 - Ergogen generation
 - KiBot renders + Gerbers (plates and board)
-- DSN export → Freerouting autoroute → SES import
+- Pinned KiCad 8 DSN export → pinned Freerouting 2.1.0 autoroute → SES import
+- Up to three routing attempts with a mandatory KiCad connectivity/DRC gate
 - Artifacts: `cases`, `gerbers`, `images`, `outlines`, `pcbs`
 
 ## Manufacturing
 
 Use the KiBot-produced ZIP under `ergogen/output/gerbers/<board>` for JLCPCB. The KiBot configs (`kibot/default.kibot.yaml`, `kibot/boards.kibot.yaml`) are tuned for JLCPCB and include common filters for autorouted boards.
+
+Manufacturing output is generated only from `pcbs/knuckles_wireless_autorouted.kicad_pcb`. The shared `scripts/autoroute.sh` command is used both locally and in CI so both environments use the same KiCad image, Freerouting JAR, rules, pass count, and single-threaded optimizer settings. Freerouting 2.1.0 can produce different trace geometry between runs, so the pipeline validates the electrical result rather than comparing routed files byte-for-byte.
 
 KiCad project settings under `pcbs/` are generated and ignored. Edit the canonical files under `kicad/projects/`; `npm run build` and `npm run debug` copy them beside the generated boards. The wireless board uses a `0.25 mm` minimum copper-to-edge clearance for JLCPCB routed outlines.
 

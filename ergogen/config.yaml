@@ -968,18 +968,6 @@ pcbs:
     footprints:
       <<: *basepcb_footprints
 
-      nice_view:
-        what: ceoloide/display_nice_view
-        where: matrix_inner_top
-        params:
-          MOSI: SDA
-          SCK: SCL
-          reversible: true
-          include_labels: false
-          invert_jumpers_position: true
-        adjust:
-          shift: [0.5 ks + 10.147, 0.375 kp -20.75]
-
       on_off_switch:
         what: ceoloide/power_switch_smd_side
         where: matrix_inner_top

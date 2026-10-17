@@ -6,7 +6,7 @@ preflight:
   drc:
     dir: kibot/drc
     enabled: true
-    ignore_unconnected: true  # Auto-routing doesn't always connect all traces
+    ignore_unconnected: false
     filters:
       - filter: 'Ignore library warnings'
         error: 'lib_footprint_issues'

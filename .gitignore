@@ -36,6 +36,11 @@ logs
 # Autorouter files (exported from Pcbnew)
 *.dsn
 *.ses
+pcbs/*_autorouted.kicad_pcb
+pcbs/autoroute/
+pcbs/.history/
+pcbs/*_preview.kicad_pcb
+pcbs/*_preview-drc.rpt
 
 # Exported BOM files
 *.xml
@@ -51,6 +56,9 @@ outlines/*.yaml
 pcbs/_*.*
 points
 source
+cases/*.stl
+ergogen/output/gerbers/
+ergogen/output/images/
 
 # npm
 node_modules
