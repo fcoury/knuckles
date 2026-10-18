@@ -968,6 +968,35 @@ pcbs:
     footprints:
       <<: *basepcb_footprints
 
+      # The art is mirrored on B.SilkS so either assembled hand reads correctly.
+      knuckles_badge:
+        what: knuckles_artwork
+        where: matrix_inner_top
+        params:
+          variant: badge
+        adjust:
+          shift: [20, -46.8375]
+
+      knuckles_wordmark:
+        what: knuckles_artwork
+        where: matrix_ring_bottom
+        params:
+          variant: wordmark
+        adjust:
+          shift: [1, -10.675]
+
+      jlcpcb_order_number_text:
+        what: ceoloide/utility_text
+        where: matrix_ring_bottom
+        params:
+          text: v1.0
+          height: 0.8
+          width: 0.8
+          thickness: 0.12
+          reversible: true
+        adjust:
+          shift: [1, -13.475]
+
       on_off_switch:
         what: ceoloide/power_switch_smd_side
         where: matrix_inner_top

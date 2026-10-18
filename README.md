@@ -12,6 +12,10 @@ It includes two PCB variants defined in `ergogen/config.yaml`:
 
 Both variants use reversible footprints and support per-key LEDs (SK6812mini-E) plus a small underglow chain. FR4 front/back plates and a controller overlay are also generated.
 
+The wireless board includes a Knuckles-inspired badge and wordmark on both
+silkscreen faces. See [the artwork and PCB previews](artwork/knuckles/README.md)
+for source assets, placement, and regeneration instructions.
+
 **Images**
 
 - Front plate: `images/frontplate-top.png`, `images/frontplate-bottom.png`
