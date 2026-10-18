@@ -1,6 +1,18 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/pointing.h>
+
+// The pointing-enabled central handles key positions from both halves.
+#if defined(KNUCKLES_MOUSE_BUTTONS)
+#define MOUSE_LEFT &mkp LCLK
+#define MOUSE_RIGHT &mkp RCLK
+#define MOUSE_MIDDLE &mkp MCLK
+#else
+#define MOUSE_LEFT &trans
+#define MOUSE_RIGHT &trans
+#define MOUSE_MIDDLE &trans
+#endif
 
 #define A_SHFT &hm LSHIFT A
 #define S_CTRL &hm LCTRL S
@@ -56,13 +68,13 @@
 // ------------------------------------------------------------------------------------------------------------
 // |  `    |   F1  |   F2  |   F3  |   F4  |   F5  |          |  F6   |  F7   |  F8   |  F9   |  F10  |       |
 // |       |       |       |       |       |       |          |       |       |       |       |       |       |
-// |       |       |       |       |       |       |          |   =   |   -   |       |       |   '   |       |
+// |       |       | MOUSE3| MOUSE2| MOUSE1|       |          |   =   |   -   |       |       |   '   |       |
 // |       |       |       |       |       |       |          |       |       |   [   |   ]   |   /   |       |
 // |       |       |       |       |       |       |          |       |       |       |       |       |       |
                         bindings = <
    &kp GRAVE &kp F1  &kp F2  &kp F3  &kp F4   &kp F5           &kp F6    &kp F7     &kp F8     &kp F9    &kp F10   &trans
    &trans    &trans  &trans  &trans  &trans   &trans           &trans    &trans     &trans     &trans    &trans    &trans
-   &trans    &trans  &trans  &trans  &trans   &trans           &kp EQUAL &kp MINUS  &trans     &trans    &kp APOS  &trans
+   &trans    &trans  MOUSE_MIDDLE MOUSE_RIGHT MOUSE_LEFT &trans &kp EQUAL &kp MINUS  &trans     &trans    &kp APOS  &trans
    &trans    &trans  &trans  &trans  &trans   &trans           &trans    &trans     &kp LBKT   &kp RBKT  &kp BSLH  &trans
                              &trans  &trans   &trans           &trans    &trans     &trans
                         >;

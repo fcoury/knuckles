@@ -17,7 +17,7 @@
       "start_address": "0x26000"
     },
     "knuckles-integrated-right.uf2": {
-      "sha256": "02bc350118df09615e4d645c1861b3f8099b38f39d7f1cdb411066c3ef7f5d89",
+      "sha256": "a113f550ef98875167ddf82bf8c33367b598a71bb77f8ee1741977b5d11911ae",
       "bytes": 448000,
       "start_address": "0x26000"
     },

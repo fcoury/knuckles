@@ -1,1 +1,2 @@
+#define KNUCKLES_MOUSE_BUTTONS
 #include "knuckles.keymap"

@@ -9,8 +9,13 @@ bootloader uses **S140 6.1.1**, with the bootloader at 0xF4000 and storage reser
 at 0xEC000–0xF3FFF. Do not substitute a different SoftDevice version without
 reviewing the application offset and partitions.
 
-The existing working Knuckles shields and keymap were copied from
-`fcoury/zmk-config` commit `abe5c7cbc6e37160c0a2e482b239e15af5ac9588`.
+The existing working Knuckles shields were copied from `fcoury/zmk-config`
+commit `abe5c7cbc6e37160c0a2e482b239e15af5ac9588`. The keymap is synchronized
+with `e2d5f00709c8f5c56e89969ca355f46744d4bbc7`: hold left thumb Space
+(EXTRA), then F/D/S for left/right/middle click. Hold F while moving on the
+right touchpad to drag. Only the keymap was synchronized; this integrated
+board retains its own pin assignments, power policy and bootloader. The
+optional nice!nano idle-polling diagnostic is not enabled here.
 The IQS5xx driver is pinned at `e19e55deaf8eeb0d32d9c2fe17e3f87f5287a5a5` with
 the previously validated polling wake/retry patch retained in `patches/`.
 Only the integrated board enables the new power policy.
