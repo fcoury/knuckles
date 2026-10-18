@@ -1,0 +1,24 @@
+{
+  "board": {
+    "design_settings": {
+      "defaults": {},
+      "diff_pair_dimensions": [],
+      "drc_exclusions": [],
+      "meta": {
+        "version": 2
+      },
+      "rule_severities": {},
+      "rules": {
+        "min_copper_edge_clearance": 0.25
+      },
+      "track_widths": [],
+      "via_dimensions": []
+    },
+    "layer_presets": [],
+    "viewports": []
+  },
+  "meta": {
+    "filename": "knuckles_wireless.kicad_pro",
+    "version": 1
+  }
+}
