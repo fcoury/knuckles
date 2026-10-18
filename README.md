@@ -4,180 +4,167 @@
   <img src="artwork/knuckles/concept.png" alt="Knuckles echidna badge and wordmark" width="420">
 </p>
 
-An open-source, column-staggered ergonomic keyboard. This repo contains everything to generate the PCBs, plates, renders/gerbers, and a simple printable bottom case tray.
+There are a lot of split keyboards out there, but most of the ones that piqued
+my interest don't have a number row, and I really like having one. I also
+wanted a slim ergo split that feels somewhat like a Magic Keyboard. Knuckles is
+my attempt at both.
 
-![Knuckles with Case](images/photo.png)
+![Knuckles with case](images/photo.png)
 
-It includes two PCB variants defined in `ergogen/config.yaml`:
+Each half has 27 keys: a column-staggered 6×4 grid that includes the number row,
+plus a three-key thumb fan. It uses Kailh PG1316S low-profile switches on
+reversible footprints, a nice!nano controller, a JST-PH battery connector, and a
+power switch. The controller area also fits the HolyKeebs TPS43 touchpad module.
 
-- `knuckles`: wired variant (TRRS, small display)
-- `knuckles_wireless`: wireless-ready variant (power switch, battery connector,
-  and a display-free controller area compatible with the HolyKeebs TPS43 module)
-
-Both variants use reversible footprints and support per-key LEDs (SK6812mini-E) plus a small underglow chain. FR4 front/back plates and a controller overlay are also generated.
-
-The wireless board includes a Knuckles-inspired badge and wordmark on both
-silkscreen faces. See [the artwork and PCB previews](artwork/knuckles/README.md)
-for source assets, placement, and regeneration instructions.
+The first wireless PCB was ordered from JLCPCB on 2026-10-18. The exact files
+are archived in [`manufacturing/`](manufacturing/2026-10-18-knuckles-wireless-18.5mm/README.md).
 
 ![Compact 18.5 mm wireless PCB with the Knuckles badge and wordmark](artwork/knuckles/pcb-18.5-render.png)
 
-**Images**
+`ergogen/config.yaml` also still defines the original wired `knuckles` board
+(TRRS, small display). It's no longer supported. `knuckles_wireless` is the
+board to build.
 
-- Front plate: `images/frontplate-top.png`, `images/frontplate-bottom.png`
-- Back plate: `images/backplate-top.png`, `images/backplate-bottom.png`
-- Controller overlay: `images/controller_overlay-top.png`, `images/controller_overlay-bottom.png`
+## Build it
 
-## Requirements
-
-- Node.js 18+ (CI uses Node 20)
-- Docker (for the KiCad/KiBot/Freerouting pipeline in the shell scripts)
-- Git with submodules (footprints are vendored as a submodule)
-- Optional: macOS `fswatch` for `watch.sh` live-regeneration
-
-Clone with submodules:
-
-```
-git clone --recursive <repo-url>
-```
-
-Install JS deps:
-
-```
-npm install
-```
-
-## Quick Start
-
-There are two ways to build, depending on how much automation you want.
-
-- Ergogen-only (local, fast):
-  - `npm run build` → generates PCBs/plates from `ergogen/config.yaml` and the case STL.
-  - `npm run debug` → same as build but with Ergogen debug output.
-  - `npm run watch:build` / `npm run watch:debug` → rebuild on YAML/JS changes.
-
-- Full pipeline (Docker, KiCad + Freerouting):
-  - `./build.sh` →
-    - Cleans previous outputs
-    - Runs Ergogen (unrouted boards + plates)
-    - Runs KiBot to export renders/gerbers for plates and unrouted board
-    - Exports DSN, autoroutes with Freerouting, imports SES back into KiCad
-    - Runs KiBot again for the autorouted board
-    - Outputs live in `pcbs/`, `outlines/`, `ergogen/output/images`, `ergogen/output/gerbers`
-  - `./rebuild.sh` → re-export/autoroute existing boards in `pcbs/` without regenerating from Ergogen.
-  - `npm run route` → route only `knuckles_wireless`, remove KiCad-confirmed dead-end branches, retry up to three times, and accept only a result with zero unconnected items, zero dangling tracks, and zero KiCad DRC errors.
-  - `./watch.sh` (macOS) → regenerates PCB on config change and opens the result.
-
-Notes:
-
-- If case STL generation fails, check the path in `package.json` (`cases/knuckles_bottom_tray.jscad`) vs the file in `cases/`.
-- Shell scripts expect Docker to be available and will pull/use containers automatically.
-
-## Choosing key spacing
-
-The PG1316S layout supports **18.5 mm** (compact, matching the older key layout)
-and **19.5 mm** center-to-center spacing in both directions. Both builds include
-the updated power switch, TPS43 controller area, and reversible silkscreen.
-The default is 18.5 mm, as set in `ergogen/config.yaml`.
+You'll need Node.js 18+ (CI uses Node 20) and Git. Footprints live in a
+submodule, so clone recursively:
 
 ```sh
-# Generate into the usual pcbs/, outlines/, and cases/ folders.
-npm run build -- --spacing 18.5
-npm run build -- --spacing 19.5
-
-# Keep both sets of boards, plates, and the generated case in separate folders.
-npm run debug -- --spacing 18.5 --output build/18.5
-npm run debug -- --spacing 19.5 --output build/19.5
-
-# Use the same selection with the full Docker routing/export pipeline.
-KNUCKLES_SPACING=18.5 ./build.sh
+git clone --recursive https://github.com/fcoury/knuckles.git
+cd knuckles
+npm install
+npm run build
 ```
 
-`--spacing` takes precedence over `KNUCKLES_SPACING`; otherwise the preset default
-is used. The source YAML is never rewritten. Other switch presets retain their
-own spacing. `pcbs/build-info.json` in each output directory records the selected
-spacing. Custom output directories also receive KiCad project settings and a 3D
-model reference pointing back to this checkout's models.
+`npm run build` runs Ergogen on `ergogen/config.yaml` and writes the PCBs,
+plates, outlines, and bottom tray STL. `npm run debug` does the same with
+Ergogen's debug output. `npm run watch:build` and `npm run watch:debug` rebuild
+whenever the YAML or scripts change.
 
-The silkscreen shifts to clear the compact board's edge, mounting hole, and thumb
-keys. Plates, holes, and the generated bottom tray follow the selected layout;
-changing spacing requires matching plates and cases. This selection does not
-alter the separately designed `cases/thin/` prototypes for the older boards.
+### Key spacing
 
-The full pipeline always uses the usual root output folders. For isolated
-generation, use `npm run build` or `npm run debug` with `--output`; do not mix
-routed boards or Gerbers from different spacing builds. `./rebuild.sh` routes
-the PCB already in `pcbs/` and does not change its spacing. The older
-`ergogen/output/pcbs/` snapshots are not refreshed by builds into the root;
-use the output directory selected by the command.
+The default is 18.5 mm center to center. That's the compact layout and the one
+that was ordered. 19.5 mm is also available:
 
-`KNUCKLES_SPACING=18.5 npm run watch:debug` and `./watch.sh --spacing 18.5`
-also honor the selection. To check the build options, run `npm run build -- --help`.
+```sh
+npm run build -- --spacing 19.5
 
-## Outputs
+# Keep both layouts side by side
+npm run debug -- --spacing 18.5 --output build/18.5
+npm run debug -- --spacing 19.5 --output build/19.5
+```
 
-- `pcbs/` — KiCad 8 `.kicad_pcb` files for boards and plates.
-- `pcbs/autoroute/<board>/` — generated DSN, SES, router log, DRC report, and selection metrics for the accepted route.
-- `kicad/projects/` — canonical KiCad project settings copied into `pcbs/` after generation.
-- `outlines/` — DXF/SVG outlines used by the PCBs and case.
-- `cases/` — JSCAD source and generated STL for a bottom tray.
-- `ergogen/output/images` — board renders (from KiBot/PCBDraw).
-- `ergogen/output/gerbers/<board>` — JLCPCB-ready Gerbers and drills (zipped by KiBot).
-- `images/` — reference renders checked into the repo.
+Plates, holes, the silkscreen artwork, and the bottom tray all follow the
+selected spacing. Run `npm run build -- --help` for all options. The
+[gotchas](#gotchas) cover how spacing interacts with the other scripts.
 
-## Customizing
+## Full pipeline
 
-Edit `ergogen/config.yaml`:
+The full pipeline also needs Docker. It runs KiCad 8, KiBot, and Freerouting in
+containers, pulling the images on first run.
 
-- Layout: matrix and thumb-fan are under `points.zones.*` (spacing, splay, stagger).
-- Switch footprint: set `meta.footprint` and optionally switch `presets` (`mx`, `choc_v1`, `choc_v2`, or the provided low-profile/reversible footprints).
-- Electrical nets: column/row nets are assigned per zone; MCU pins are mapped in the `mcu` footprint section.
-- Touchpad: the HolyKeebs TPS43 adapter mounts directly on a top-mounted
-  nice!nano and uses its VCC, GND, SDA, and SCL pins. It does not need a second
-  footprint on the keyboard PCB.
-- LEDs: per‑key and underglow chains can be tweaked (trace widths, via sizes, positions).
-- Case: see `cases/` and the outlines under `outlines/_bottom_case*` to adapt walls and cutouts.
+`./build.sh`:
 
-After changes, rebuild via Ergogen (`npm run build`) or run the full pipeline (`./build.sh`).
+1. Cleans previous outputs.
+2. Runs Ergogen to generate the unrouted board and plates.
+3. Exports renders and Gerbers for the plates and unrouted board with KiBot.
+4. Exports a DSN, autoroutes it with Freerouting, and imports the SES back into KiCad.
+5. Runs KiBot again on the autorouted board.
 
-## CI
+Other entry points:
 
-A GitHub Actions workflow (`.github/workflows/build.yaml`) reproduces the full pipeline in containers:
-
-The workflow runs both spacings, with separate `knuckles-18.5mm` and
-`knuckles-19.5mm` artifacts. `npm test` checks real builds of both layouts,
-including spacing selection, generated outputs, and invalid-value handling.
-
-- Ergogen generation
-- KiBot renders + Gerbers (plates and board)
-- Pinned KiCad 8 DSN export → pinned Freerouting 2.1.0 autoroute → SES import
-- Up to three routing attempts with a mandatory KiCad connectivity/DRC gate
-- Artifacts: `cases`, `gerbers`, `images`, `outlines`, `pcbs`
+- `./rebuild.sh` re-exports and autoroutes the boards already in `pcbs/`
+  without running Ergogen.
+- `npm run route` autoroutes only `knuckles_wireless`. It prunes dead-end
+  traces and tries up to three times. A route is accepted only if KiCad reports
+  no unconnected items, no dangling tracks, and no DRC errors.
+- `./watch.sh` (macOS, needs `fswatch`) regenerates the PCB when the config
+  changes and opens the result.
 
 ## Manufacturing
 
-Use the KiBot-produced ZIP under `ergogen/output/gerbers/<board>` for JLCPCB. The KiBot configs (`kibot/default.kibot.yaml`, `kibot/boards.kibot.yaml`) are tuned for JLCPCB and include common filters for autorouted boards.
+Upload the KiBot ZIP from `ergogen/output/gerbers/knuckles_wireless/` to
+JLCPCB. Manufacturing output comes only from
+`pcbs/knuckles_wireless_autorouted.kicad_pcb`. The KiBot configs
+(`kibot/default.kibot.yaml`, `kibot/boards.kibot.yaml`) are tuned for JLCPCB.
+The board uses a 0.25 mm copper-to-edge clearance for routed outlines.
 
-Manufacturing output is generated only from `pcbs/knuckles_wireless_autorouted.kicad_pcb`. The shared `scripts/autoroute.sh` command is used both locally and in CI so both environments use the same KiCad image, Freerouting JAR, rules, pass count, and single-threaded optimizer settings. Freerouting 2.1.0 can produce different trace geometry between runs, so the pipeline validates the electrical result rather than comparing routed files byte-for-byte.
+Local builds and CI both route through `scripts/autoroute.sh`, with the same
+KiCad image, Freerouting 2.1.0 JAR, rules, and optimizer settings. Freerouting
+can still produce different trace geometry from run to run. That's why the
+pipeline checks connectivity and DRC instead of comparing files byte for byte.
 
-KiCad project settings under `pcbs/` are generated and ignored. Edit the canonical files under `kicad/projects/`; `npm run build` and `npm run debug` copy them beside the generated boards. The wireless board uses a `0.25 mm` minimum copper-to-edge clearance for JLCPCB routed outlines.
+Each board that gets ordered goes in its own dated folder under
+`manufacturing/`. Don't modify those files once they're archived.
 
-## Folder Structure (high level)
+## CI
 
-- `ergogen/` — main Ergogen project (`config.yaml`, footprints, generated output)
-- `pcbs/` — KiCad boards (unrouted and autorouted variants)
-- `kibot/` — KiBot configs and helper scripts (DSN export / SES import)
-- `freerouting/` — rules, JARs, and logging for autorouting
-- `cases/` — JSCAD for the printed bottom tray
-- `images/` — reference images of plates
-- `build.sh`, `rebuild.sh`, `watch.sh` — automation scripts
+`.github/workflows/build.yaml` runs the full pipeline for both spacings. Each
+run uploads a `knuckles-18.5mm` and a `knuckles-19.5mm` artifact containing
+cases, Gerbers, images, outlines, and PCBs. `npm test` runs real builds of both
+layouts and checks spacing selection, the generated outputs, and rejection of
+invalid values.
+
+## Customizing
+
+Everything starts in `ergogen/config.yaml`:
+
+- **Layout:** the key matrix and thumb fan are under `points.zones.*`
+  (spacing, splay, stagger).
+- **Switches:** set `meta.footprint` and pick a preset (`mx`, `choc_v1`,
+  `choc_v2`, or the low-profile reversible footprints).
+- **Wiring:** column and row nets are assigned per zone. MCU pins are mapped in
+  the `mcu` footprint section.
+- **Touchpad:** the TPS43 adapter sits on top of the nice!nano and uses its
+  VCC, GND, SDA, and SCL pins, so the PCB doesn't need its own touchpad
+  footprint.
+- **Case:** edit `cases/knuckles_bottom_tray.jscad` and the
+  `outlines/_bottom_case*` outlines to change walls and cutouts.
+
+KiCad project settings in `pcbs/` are generated, so edit
+`kicad/projects/knuckles_wireless.kicad_pro` instead. The build copies it next
+to the board.
+
+The silkscreen badge and wordmark are documented in
+[`artwork/knuckles/`](artwork/knuckles/README.md).
+
+## Repository layout
+
+| Path | Contents |
+| --- | --- |
+| `ergogen/` | Ergogen config, footprints submodule, generated images and Gerbers |
+| `pcbs/` | Generated KiCad boards and plates; `autoroute/<board>/` holds DSN, SES, router log, and DRC report |
+| `outlines/` | DXF/SVG outlines for the PCB, plates, and case |
+| `cases/` | JSCAD bottom tray and generated STL; `thin/` has slim case prototypes for older 18.5 mm boards |
+| `kicad/projects/` | Canonical KiCad project settings |
+| `kibot/` | KiBot configs and DSN/SES helper scripts |
+| `freerouting/` | Autorouter rules and JAR |
+| `manufacturing/` | Archived files for each ordered board |
+| `artwork/` | Badge and wordmark sources and PCB renders |
+| `images/` | Reference renders of the plates and controller overlay |
+| `scripts/` | Build, autoroute, artwork, and case scripts |
+
+## Gotchas
+
+- `--spacing` overrides `KNUCKLES_SPACING`, which overrides the config
+  default. The YAML is never rewritten. `pcbs/build-info.json` records which
+  spacing was used.
+- Changing spacing means you need matching plates and a matching case. Don't
+  mix routed boards or Gerbers from different spacing builds.
+- `./build.sh` (`KNUCKLES_SPACING=19.5 ./build.sh`) always writes to the root
+  output folders. Use `npm run build -- --output` if you want them kept apart.
+- `./rebuild.sh` routes whatever board is already in `pcbs/` and keeps its
+  spacing.
+- `ergogen/output/pcbs/` contains old snapshots that builds don't update.
 
 ## License
 
-MIT © 2024 Felipe Coury (see `LICENSE`).
+MIT. See [`LICENSE`](LICENSE).
 
 ## Credits
 
-- Ergogen 4 and community for the generation engine.
-- Custom footprints from `ergogen/footprints/ceoloide` (submodule) and related authors.
-- Freerouting for autorouting; KiBot + PCBDraw for renders/exports.
+- [Ergogen](https://github.com/ergogen/ergogen) and its community.
+- Footprints from [ceoloide](https://github.com/ceoloide/ergogen-footprints)
+  (`ergogen/footprints/ceoloide`) and related authors.
+- Freerouting for autorouting, KiBot and PCBDraw for renders and exports.
