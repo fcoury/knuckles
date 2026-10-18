@@ -1,0 +1,13 @@
+{
+  "holderAcrossPcbEdgeMm": 46.96,
+  "holderAlongPcbEdgeMm": 43.95,
+  "touchSurfaceAbovePcbTopMm": 11.6,
+  "glassTopToScrewBottomMm": 7.6,
+  "screwBottomAbovePcbTopMm": 4.0,
+  "overhangBeyondPcbEdgeMm": 28.55,
+  "glassTopToHolderUndersideMm": 5.6,
+  "holderUndersideAbovePcbTopMm": 6.0,
+  "holderCenterY": -72.12,
+  "positionStatus": "Provisional: centered along the nice!nano; verify against assembled board",
+  "measurementSource": "User calipers, IMG_3688.HEIC (46.96), IMG_3687.HEIC (43.95), and user-reported height and overhang"
+}

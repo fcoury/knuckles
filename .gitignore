@@ -57,6 +57,7 @@ pcbs/_*.*
 points
 source
 cases/*.stl
+cases/thin/output/
 ergogen/output/gerbers/
 ergogen/output/images/
 
