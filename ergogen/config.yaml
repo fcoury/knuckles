@@ -22,9 +22,9 @@ presets:
     # Key and keycap measures
     kx: 13.5 # spacing between key centers (X-axis)
     ky: 13 # spacing between key centers (Y-axis)
-    # Build-time override for this preset: npm run build -- --spacing 18.5
-    ks: 19.5 # horizontal center-to-center spacing
-    kp: 19.5 # vertical center-to-center spacing
+    # Build-time override for this preset: npm run build -- --spacing 19.5
+    ks: 18.5 # horizontal center-to-center spacing
+    kp: 18.5 # vertical center-to-center spacing
     kpx: ks * 0.5 # x padding for the outline
     kpy: kp * 0.5 # y padding for the outline
     kcow: 13.8 # key cutout hole width (cherry, choc v2: 14, choc v1: 13.8)

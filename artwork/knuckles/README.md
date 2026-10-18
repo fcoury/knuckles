@@ -7,8 +7,9 @@ forward-slanted wordmark, and paired speed stripes around the revision label.
 - `badge.svg`: simplified single-color badge, placed at 12.5 mm nominal width.
 - `wordmark.svg`: 22 mm nominal wordmark with speed stripes.
 - `pcb-front.svg` / `pcb-back.svg`: actual silkscreen, mask openings, and board
-  outline exported from KiCad. The back preview is viewed from the back.
-- `pcb-render.png`: KiCad top-view render of the updated PCB.
+  outline for the default 18.5 mm layout exported from KiCad. The back preview
+  is viewed from the back.
+- `pcb-render.png`: KiCad top-view render of the 19.5 mm PCB option.
 - `pcb-18.5-render.png`: KiCad top-view render of the compact spacing option.
 
 The wireless board places the badge between the battery connector and thumb
@@ -34,8 +35,9 @@ reviewing that separation and checking the final artwork at its physical size.
 
 ## Validation
 
-Generated the wireless PCB with Ergogen 4.1.0 and loaded it with the pinned
-KiCad 8 toolchain. Compared with base commit `4ea2e15`:
+For the original 19.5 mm artwork change, generated the wireless PCB with
+Ergogen 4.1.0 and loaded it with the pinned KiCad 8 toolchain. Compared with
+base commit `4ea2e15`:
 
 - All pre-existing electrical geometry and the board outline are identical.
 - Changes are limited to two artwork footprints, the existing revision text,
@@ -47,15 +49,16 @@ KiCad 8 toolchain. Compared with base commit `4ea2e15`:
 
 This is the generated **unrouted** board, not a refreshed manufacturing package.
 The routed board and Gerbers must be regenerated through the usual pipeline
-before fabrication. The older `ergogen/output/pcbs/` snapshots were left alone;
-the current updated board is `pcbs/knuckles_wireless.kicad_pcb`.
+before fabrication. Both `pcbs/` and the tracked `ergogen/output/pcbs/` snapshots
+now contain the default 18.5 mm layout. Subsequent builds write only to the
+selected output directory; the main board is `pcbs/knuckles_wireless.kicad_pcb`.
 
 ## Spacing variants
 
 `npm run build -- --spacing 18.5` and `--spacing 19.5` share these assets. The
 compact board moves the badge up and left, and moves the wordmark/revision up,
-to clear its mounting hole, thumb-key outline, and board edge. The default
-19.5 mm artwork placement stays the same. See the repository README for separate
+to clear its mounting hole, thumb-key outline, and board edge. The 19.5 mm artwork
+placement stays the same. The default is 18.5 mm. See the repository README for separate
 output folders and full routing/export commands.
 
 KiCad 8 also checked the 18.5 mm generated board against an otherwise identical

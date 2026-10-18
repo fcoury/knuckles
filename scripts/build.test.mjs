@@ -53,3 +53,18 @@ test("reject unsupported spacing before writing outputs", async t => {
   assert.match(result.stderr, /Unsupported spacing/);
   assert.equal(await readFile(join(output, "sentinel"), "utf8"), "keep");
 });
+
+test("default build uses 18.5 mm without flags or environment override", async t => {
+  const output = await mkdtemp(join(tmpdir(), "knuckles-default-spacing-"));
+  t.after(() => rm(output, { recursive: true, force: true }));
+  const env = { ...process.env };
+  delete env.KNUCKLES_SPACING;
+  const result = spawnSync(process.execPath, [script, "--debug", "--output", output], {
+    cwd: root, encoding: "utf8", env,
+  });
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+  const points = yaml.safeLoad(await readFile(join(output, "points/points.yaml"), "utf8"));
+  assert.equal(points.matrix_pinky_bottom.x - points.matrix_outer_bottom.x, 18.5);
+  assert.equal(points.matrix_outer_home.y - points.matrix_outer_bottom.y, 18.5);
+  assert.deepEqual(JSON.parse(await readFile(join(output, "pcbs/build-info.json"), "utf8")), { spacing_mm: 18.5 });
+});

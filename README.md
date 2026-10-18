@@ -72,7 +72,7 @@ Notes:
 The PG1316S layout supports **18.5 mm** (compact, matching the older key layout)
 and **19.5 mm** center-to-center spacing in both directions. Both builds include
 the updated power switch, TPS43 controller area, and reversible silkscreen.
-The default remains 19.5 mm, as set in `ergogen/config.yaml`.
+The default is 18.5 mm, as set in `ergogen/config.yaml`.
 
 ```sh
 # Generate into the usual pcbs/, outlines/, and cases/ folders.
