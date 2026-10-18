@@ -6,7 +6,9 @@
     "route": "./scripts/autoroute.sh knuckles_wireless",
     "sync:kicad-projects": "node scripts/sync-kicad-projects.mjs",
     "watch:build": "nodemon -e yaml,js,mjs -x \"npm run build\"",
-    "watch:debug": "nodemon -e yaml,js,mjs -x \"npm run debug\""
+    "watch:debug": "nodemon -e yaml,js,mjs -x \"npm run debug\"",
+    "build:integrated": "node scripts/build-integrated.mjs",
+    "check:integrated": "python3 -B hardware/integrated-controller/validate.py"
   },
   "dependencies": {
     "js-yaml": "^3.14.1",

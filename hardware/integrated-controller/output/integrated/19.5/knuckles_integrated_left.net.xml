@@ -1,0 +1,3655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/repo/hardware/integrated-controller/output/integrated/19.5/knuckles_integrated_left.kicad_sch</source>
+    <date>2026-10-18T03:39:44+0000</date>
+    <tool>Eeschema 8.0.8+1</tool>
+    <sheet number="1" name="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/">
+      <title_block>
+        <title>Knuckles integrated controller — core</title>
+        <company>Knuckles</company>
+        <rev>0.2 REVIEW</rev>
+        <date/>
+        <source>knuckles_integrated_left-core.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/">
+      <title_block>
+        <title>Knuckles integrated controller — power</title>
+        <company>Knuckles</company>
+        <rev>0.2 REVIEW</rev>
+        <date/>
+        <source>knuckles_integrated_left-power.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/">
+      <title_block>
+        <title>Knuckles integrated controller — matrix1</title>
+        <company>Knuckles</company>
+        <rev>0.2 REVIEW</rev>
+        <date/>
+        <source>knuckles_integrated_left-matrix1.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/">
+      <title_block>
+        <title>Knuckles integrated controller — matrix2</title>
+        <company>Knuckles</company>
+        <rev>0.2 REVIEW</rev>
+        <date/>
+        <source>knuckles_integrated_left-matrix2.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/">
+      <title_block>
+        <title>Knuckles integrated controller — matrix3</title>
+        <company>Knuckles</company>
+        <rev>0.2 REVIEW</rev>
+        <date/>
+        <source>knuckles_integrated_left-matrix3.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/" tstamps="/">
+      <title_block>
+        <title>knuckles_integrated_left</title>
+        <company/>
+        <rev>0.2 REVIEW</rev>
+        <date/>
+        <source>knuckles_integrated_left.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100nF</value>
+      <footprint>Knuckles:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+        <field name="Footprint">Knuckles:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="C1" description=""/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>5c8a8153-1025-5c7f-87d4-2ce242d2d4fa</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>22uF</value>
+      <footprint>Knuckles:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="LCSC">C45783</field>
+        <field name="Footprint">Knuckles:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="C2" description=""/>
+      <property name="LCSC" value="C45783"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>6e3f2d4f-9d53-5b87-8a6f-037e2b84ff44</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>4.7uF</value>
+      <footprint>Knuckles:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C19666</field>
+        <field name="Footprint">Knuckles:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="C3" description=""/>
+      <property name="LCSC" value="C19666"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>4894bca9-470c-57e8-921d-99ce5b8e6d4a</tstamps>
+    </comp>
+    <comp ref="C13">
+      <value>100nF</value>
+      <footprint>Knuckles:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+        <field name="Footprint">Knuckles:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="C13" description=""/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>a963bba1-2ac9-5005-b4bd-5fad80d2a53e</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>TYPE-C-31-M-12</value>
+      <footprint>Knuckles:USB_C_Receptacle_HRO_TYPE-C-31-M-12</footprint>
+      <fields>
+        <field name="LCSC">C165948</field>
+        <field name="Footprint">Knuckles:USB_C_Receptacle_HRO_TYPE-C-31-M-12</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="J1" description=""/>
+      <property name="LCSC" value="C165948"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>fe6811d5-2273-5fe9-9651-e26bab7626a3</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>SWD pogo interface</value>
+      <footprint>Knuckles:SWD_2x3_P1.27_NoHoles</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:SWD_2x3_P1.27_NoHoles</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="J5" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>6ccfc532-8dc4-5a1e-8f75-dcd711f0dfb1</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>5.1k</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C23186</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R1" description=""/>
+      <property name="LCSC" value="C23186"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>024ec0b0-ab5d-56cc-93c1-9789399353cb</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>5.1k</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C23186</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R2" description=""/>
+      <property name="LCSC" value="C23186"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>9e6de483-f5d4-5bd0-af24-150fc2102f9b</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>10k</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C25804</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R3" description=""/>
+      <property name="LCSC" value="C25804"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>572b87f9-e28e-567e-8e94-37e751a81d3a</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10k</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C25804</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R6" description=""/>
+      <property name="LCSC" value="C25804"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>74728a08-d4f3-5335-9ead-ffeaf0b8d161</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10k</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C25804</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R7" description=""/>
+      <property name="LCSC" value="C25804"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>254f8ed4-42b1-525f-8fac-113bb73a08d9</tstamps>
+    </comp>
+    <comp ref="R18">
+      <value>27R</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C25190</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R18" description=""/>
+      <property name="LCSC" value="C25190"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>554a41a5-39c6-5b2b-88f3-e285227957fa</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>27R</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C25190</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R19" description=""/>
+      <property name="LCSC" value="C25190"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>b53d7c6c-48bf-5a9f-9671-e71478c62161</tstamps>
+    </comp>
+    <comp ref="SW2">
+      <value>SKRPANE010</value>
+      <footprint>Knuckles:SKRPANE010</footprint>
+      <fields>
+        <field name="LCSC">C470426</field>
+        <field name="Footprint">Knuckles:SKRPANE010</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="SW2" description=""/>
+      <property name="LCSC" value="C470426"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>df10a64b-1da2-5193-b988-a8c5dc730879</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>MDBT50Q-1MV2</value>
+      <footprint>Knuckles:Raytac_MDBT50Q</footprint>
+      <fields>
+        <field name="LCSC">C5118826</field>
+        <field name="Footprint">Knuckles:Raytac_MDBT50Q</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="U1" description=""/>
+      <property name="LCSC" value="C5118826"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>6442fe64-911d-56eb-b4da-1d26f82f50ed</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>USBLC6-2SC6</value>
+      <footprint>Knuckles:SOT-23-6</footprint>
+      <fields>
+        <field name="LCSC">C7519</field>
+        <field name="Footprint">Knuckles:SOT-23-6</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="U4" description=""/>
+      <property name="LCSC" value="C7519"/>
+      <property name="Sheetname" value="core"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-core.kicad_sch"/>
+      <sheetpath names="/core/" tstamps="/c788f0cb-701d-5ed9-a481-57a6a8edfe46/"/>
+      <tstamps>e5ab6bd7-243a-5567-93b6-73a13cf1b4de</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>2.2uF</value>
+      <footprint>Knuckles:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C23630</field>
+        <field name="Footprint">Knuckles:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="C4" description=""/>
+      <property name="LCSC" value="C23630"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>f7143756-f906-5cc5-a7dc-67496668b322</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>2.2uF</value>
+      <footprint>Knuckles:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C23630</field>
+        <field name="Footprint">Knuckles:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="C5" description=""/>
+      <property name="LCSC" value="C23630"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>5fb8f12b-5410-5317-915a-dcf1e8b4923e</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>22uF</value>
+      <footprint>Knuckles:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="LCSC">C45783</field>
+        <field name="Footprint">Knuckles:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="C6" description=""/>
+      <property name="LCSC" value="C45783"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>044fe795-30f5-5f67-8632-440ca7d18c78</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>22uF</value>
+      <footprint>Knuckles:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="LCSC">C45783</field>
+        <field name="Footprint">Knuckles:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="C8" description=""/>
+      <property name="LCSC" value="C45783"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>9cc9b6da-3cbe-57a6-b3f6-2843ce42c94f</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>100nF</value>
+      <footprint>Knuckles:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+        <field name="Footprint">Knuckles:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="C9" description=""/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>3ceb8dc9-2528-55e1-bbef-a4eb7d0ed698</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>22uF</value>
+      <footprint>Knuckles:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="LCSC">C45783</field>
+        <field name="Footprint">Knuckles:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="C10" description=""/>
+      <property name="LCSC" value="C45783"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>22a41685-2393-5715-8c30-be569e1e4a8d</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>22uF</value>
+      <footprint>Knuckles:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="LCSC">C45783</field>
+        <field name="Footprint">Knuckles:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="C11" description=""/>
+      <property name="LCSC" value="C45783"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>6d184c73-99c2-5846-bc12-b35065a31847</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>100nF</value>
+      <footprint>Knuckles:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+        <field name="Footprint">Knuckles:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="C12" description=""/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>ff1d9164-f5e2-52b8-bfcc-af02bdb1671f</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>S2B-PH-SM4-TB(LF)(SN)</value>
+      <footprint>Knuckles:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal</footprint>
+      <fields>
+        <field name="LCSC">C295747</field>
+        <field name="Footprint">Knuckles:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="J2" description=""/>
+      <property name="LCSC" value="C295747"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>723b3b08-8ab1-5691-928c-610a1f028904</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>External 10k NTC pads</value>
+      <footprint>Knuckles:NTC_WirePads</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:NTC_WirePads</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="J6" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>1a603d14-b6dd-5826-9922-9e0ff0023b23</tstamps>
+    </comp>
+    <comp ref="L1">
+      <value>1.5uH SWPA3015S1R5MT</value>
+      <footprint>Knuckles:L_Sunlord_SWPA3015S</footprint>
+      <fields>
+        <field name="LCSC">C83434</field>
+        <field name="Footprint">Knuckles:L_Sunlord_SWPA3015S</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="L1" description=""/>
+      <property name="LCSC" value="C83434"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>ec4abd38-c66e-5093-91c8-94188a8404e6</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>AO3401A</value>
+      <footprint>Knuckles:SOT-23</footprint>
+      <fields>
+        <field name="LCSC">C15127</field>
+        <field name="Footprint">Knuckles:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="Q1" description=""/>
+      <property name="LCSC" value="C15127"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>f7f1bfeb-094b-5f32-9de9-a1707bda6cd1</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>2N7002</value>
+      <footprint>Knuckles:SOT-23</footprint>
+      <fields>
+        <field name="LCSC">C8545</field>
+        <field name="Footprint">Knuckles:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="Q2" description=""/>
+      <property name="LCSC" value="C8545"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>0e3152d5-2d7b-56a7-b820-457e48973085</tstamps>
+    </comp>
+    <comp ref="Q3">
+      <value>2N7002</value>
+      <footprint>Knuckles:SOT-23</footprint>
+      <fields>
+        <field name="LCSC">C8545</field>
+        <field name="Footprint">Knuckles:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="Q3" description=""/>
+      <property name="LCSC" value="C8545"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>6308fe89-21c6-59c4-84c0-f29ac97c8691</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>10k</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C25804</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R8" description=""/>
+      <property name="LCSC" value="C25804"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>c204dc24-41d3-57d3-895e-9c38751f1327</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>10k</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C25804</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R9" description=""/>
+      <property name="LCSC" value="C25804"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>2691867d-2ebf-50da-82b2-5cc11e742dbc</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>100k</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C25803</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R10" description=""/>
+      <property name="LCSC" value="C25803"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>d3ebf856-82ff-589f-8978-1b47fd2af3a2</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>100k</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C25803</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R11" description=""/>
+      <property name="LCSC" value="C25803"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>79f9e20b-d8c5-54d4-99cd-f33abb394d0d</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>0R</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C21189</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R12" description=""/>
+      <property name="LCSC" value="C21189"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>25d65611-037c-5d10-94ef-06a86c028ced</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>1M</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C22935</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R13" description=""/>
+      <property name="LCSC" value="C22935"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>158e72c1-0f76-5f9d-af9e-42a0d8b492eb</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>1M</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C22935</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R14" description=""/>
+      <property name="LCSC" value="C22935"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>72dc2d75-318a-5374-bafd-f36b07f7ee59</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>10k</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C25804</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R15" description=""/>
+      <property name="LCSC" value="C25804"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>f3693b30-3648-5e46-9e20-f95651ef5be4</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>10k</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C25804</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R16" description=""/>
+      <property name="LCSC" value="C25804"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>13ee4e5d-4040-57ed-8d54-357e82ed5e23</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>1M</value>
+      <footprint>Knuckles:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C22935</field>
+        <field name="Footprint">Knuckles:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="R17" description=""/>
+      <property name="LCSC" value="C22935"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>a6981a3a-c9f5-5785-b626-3682efaa4754</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SSSS811101</value>
+      <footprint>Knuckles:SSSS811101</footprint>
+      <fields>
+        <field name="LCSC">C109335</field>
+        <field name="Footprint">Knuckles:SSSS811101</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="SW1" description=""/>
+      <property name="LCSC" value="C109335"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>bb4b168e-b87d-5e4a-81fc-8a5a5e1d8ec9</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>BQ25186DLHR</value>
+      <footprint>Knuckles:TI_WSON_DLH0010A</footprint>
+      <fields>
+        <field name="LCSC">C44639442</field>
+        <field name="Footprint">Knuckles:TI_WSON_DLH0010A</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="U2" description=""/>
+      <property name="LCSC" value="C44639442"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>e8e5a458-39e0-543e-bebd-f58779b0587b</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>TPS63031DSKR</value>
+      <footprint>Knuckles:WSON-10-1EP_2.5x2.5mm_P0.5mm_EP1.2x2mm</footprint>
+      <fields>
+        <field name="LCSC">C15516</field>
+        <field name="Footprint">Knuckles:WSON-10-1EP_2.5x2.5mm_P0.5mm_EP1.2x2mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="U3" description=""/>
+      <property name="LCSC" value="C15516"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/1a101bea-c6ec-5ec2-9ae4-9f22d02fcd47/"/>
+      <tstamps>c843a285-6f56-5632-9a71-7d095f868da5</tstamps>
+    </comp>
+    <comp ref="D28">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D28" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>a187cc60-96d5-5245-b531-cf39841c7403</tstamps>
+    </comp>
+    <comp ref="D29">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D29" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>d34006d9-38c9-5bfb-856f-88b7d3a5060a</tstamps>
+    </comp>
+    <comp ref="D30">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D30" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>5c4f83d3-b6f6-53a9-a280-1a7758c0ad71</tstamps>
+    </comp>
+    <comp ref="D31">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D31" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>9d6d43bc-9270-51d4-8d53-aa7ca19e0234</tstamps>
+    </comp>
+    <comp ref="D32">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D32" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>2bfc3723-c77c-5053-8c0d-65974f6f68c6</tstamps>
+    </comp>
+    <comp ref="D33">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D33" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>c88807ba-4b4e-507c-a9b0-a811f646e087</tstamps>
+    </comp>
+    <comp ref="D34">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D34" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>e2e80570-f136-5679-8200-f197576ead28</tstamps>
+    </comp>
+    <comp ref="D35">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D35" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>ebefeae9-4a88-5828-a2d4-3838017da16c</tstamps>
+    </comp>
+    <comp ref="D36">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D36" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>065991bb-8653-5746-9ef2-9d1f2fc4e7a4</tstamps>
+    </comp>
+    <comp ref="S28">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S28" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>e288a9aa-2754-5434-92e7-92cd06757247</tstamps>
+    </comp>
+    <comp ref="S29">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S29" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>ca28cead-c2a5-5679-bd19-0ccd9abeb0f8</tstamps>
+    </comp>
+    <comp ref="S30">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S30" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>1ca593e5-0b95-5446-813b-7ccc85b699b6</tstamps>
+    </comp>
+    <comp ref="S31">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S31" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>65bb4b97-730f-56d4-a530-4c578a562c0d</tstamps>
+    </comp>
+    <comp ref="S32">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S32" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>0afc457c-a9eb-568e-b35b-df27f1bcd9cf</tstamps>
+    </comp>
+    <comp ref="S33">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S33" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>868fe824-1b84-5714-bbba-0d410f677835</tstamps>
+    </comp>
+    <comp ref="S34">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S34" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>42138b88-3743-55d4-8370-da8e15b3a8a4</tstamps>
+    </comp>
+    <comp ref="S35">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S35" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>9a898a34-6814-5af3-a611-16d2fa6de5d7</tstamps>
+    </comp>
+    <comp ref="S36">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S36" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix1"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix1.kicad_sch"/>
+      <sheetpath names="/matrix1/" tstamps="/ba7eacf9-9745-5031-9ce1-a5e697e96585/"/>
+      <tstamps>c0b37cb5-347c-5b09-8905-8e85a2d8b2f8</tstamps>
+    </comp>
+    <comp ref="D37">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D37" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>ebbe55c0-da5a-52eb-8798-c53ece25e4f4</tstamps>
+    </comp>
+    <comp ref="D38">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D38" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>044a7206-49c0-5f44-90ad-34bac17970d2</tstamps>
+    </comp>
+    <comp ref="D39">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D39" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>002bd996-6780-5e11-a601-42dfcc698260</tstamps>
+    </comp>
+    <comp ref="D40">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D40" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>e2af73c5-590a-50aa-9664-af07d45c21b8</tstamps>
+    </comp>
+    <comp ref="D41">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D41" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>619a1070-c432-56ca-a1bd-fce5a4987772</tstamps>
+    </comp>
+    <comp ref="D42">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D42" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>352db105-bf70-549d-8e4c-01825baaa093</tstamps>
+    </comp>
+    <comp ref="D43">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D43" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>ee3c010a-b7e5-5eb5-92ac-47f4f1ff250d</tstamps>
+    </comp>
+    <comp ref="D44">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D44" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>6a5a6c74-0aa9-58ca-9d73-818716826886</tstamps>
+    </comp>
+    <comp ref="D45">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D45" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>6879e608-a8bf-5405-b2bf-a5255f872e0b</tstamps>
+    </comp>
+    <comp ref="S37">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S37" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>06291145-d994-522f-8733-ad80e5983366</tstamps>
+    </comp>
+    <comp ref="S38">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S38" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>c53f9b4e-44c0-57a2-a65b-8b852b1343c5</tstamps>
+    </comp>
+    <comp ref="S39">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S39" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>d80bfed7-7521-5221-b581-948eb7643ff6</tstamps>
+    </comp>
+    <comp ref="S40">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S40" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>f252cb9a-c26e-5694-ad7a-6ede935dc947</tstamps>
+    </comp>
+    <comp ref="S41">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S41" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>6686a412-37c0-5f62-9701-9c5963d61ec3</tstamps>
+    </comp>
+    <comp ref="S42">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S42" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>e3908a68-06bc-58c8-9032-a0d767932017</tstamps>
+    </comp>
+    <comp ref="S43">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S43" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>a3926253-77c2-5810-95b2-b53e36ce325f</tstamps>
+    </comp>
+    <comp ref="S44">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S44" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>a28f2e3d-cd81-599d-8bb6-98ebc15531cf</tstamps>
+    </comp>
+    <comp ref="S45">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S45" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix2"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix2.kicad_sch"/>
+      <sheetpath names="/matrix2/" tstamps="/99ab68cb-2912-5770-b399-480541bb1e19/"/>
+      <tstamps>a144fee8-e38a-5cdb-9a6a-86a1e27a0ec0</tstamps>
+    </comp>
+    <comp ref="D46">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D46" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>e62e856f-d3b1-5cb8-96cd-be742ebc6e12</tstamps>
+    </comp>
+    <comp ref="D47">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D47" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>3c580125-e841-5445-903c-c5ff72692749</tstamps>
+    </comp>
+    <comp ref="D48">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D48" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>bad990c7-18a1-5c5e-90bc-2648e3f33c14</tstamps>
+    </comp>
+    <comp ref="D49">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D49" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>bafe1355-afcd-57f6-a846-afa01a4af347</tstamps>
+    </comp>
+    <comp ref="D50">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D50" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>f2722edb-a89d-565e-9f46-5068d12a65ac</tstamps>
+    </comp>
+    <comp ref="D51">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D51" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>5b3cb644-d1ca-50c8-8506-78974031c1bc</tstamps>
+    </comp>
+    <comp ref="D52">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D52" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>c0441d94-665f-5f2b-be80-7ae975b86d3d</tstamps>
+    </comp>
+    <comp ref="D53">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D53" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>cc4ad243-890f-5d03-85cf-25cce0120bde</tstamps>
+    </comp>
+    <comp ref="D54">
+      <value>Schottky diode; K to row</value>
+      <footprint>Knuckles:diode_tht_sod123</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:diode_tht_sod123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="D54" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>39cb6d82-d715-5bf4-952e-7ca790f66816</tstamps>
+    </comp>
+    <comp ref="S46">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S46" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>bf1be0a7-f88d-5681-a942-6a817ec8ef85</tstamps>
+    </comp>
+    <comp ref="S47">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S47" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>7aa4b5f8-c1d9-5a0c-92a8-d449301acb1f</tstamps>
+    </comp>
+    <comp ref="S48">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S48" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>313ba23c-917e-50e6-9797-63543afe6b20</tstamps>
+    </comp>
+    <comp ref="S49">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S49" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>94ffedb6-2ddf-51c4-8609-f4c35b957b6e</tstamps>
+    </comp>
+    <comp ref="S50">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S50" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>ab9e15e0-edea-5d8f-8de0-73b8c5cdf0c6</tstamps>
+    </comp>
+    <comp ref="S51">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S51" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>a570b74b-a543-562c-98e1-d6e39c83ef7d</tstamps>
+    </comp>
+    <comp ref="S52">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S52" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>ed8f80ac-290e-5465-94b5-436ae779fdd0</tstamps>
+    </comp>
+    <comp ref="S53">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S53" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>65241fc2-83f9-51d2-96ca-cef2bbb85215</tstamps>
+    </comp>
+    <comp ref="S54">
+      <value>Choc switch</value>
+      <footprint>Knuckles:CPG1316S01D02</footprint>
+      <fields>
+        <field name="LCSC"/>
+        <field name="Footprint">Knuckles:CPG1316S01D02</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Knuckles" part="S54" description=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value="matrix3"/>
+      <property name="Sheetfile" value="knuckles_integrated_left-matrix3.kicad_sch"/>
+      <sheetpath names="/matrix3/" tstamps="/a1c22f2e-48e8-58ae-966b-038e3c2a3f7c/"/>
+      <tstamps>d063855e-a449-5a52-aa59-fd359b89e3b6</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Knuckles" part="C1">
+      <fields>
+        <field name="Reference">C1</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="C1" type="passive"/>
+        <pin num="2" name="C2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="C10">
+      <fields>
+        <field name="Reference">C10</field>
+        <field name="Value">22uF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="C1" type="passive"/>
+        <pin num="2" name="C2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="C11">
+      <fields>
+        <field name="Reference">C11</field>
+        <field name="Value">22uF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="C1" type="passive"/>
+        <pin num="2" name="C2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="C12">
+      <fields>
+        <field name="Reference">C12</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="C1" type="passive"/>
+        <pin num="2" name="C2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="C13">
+      <fields>
+        <field name="Reference">C13</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="C1" type="passive"/>
+        <pin num="2" name="C2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="C2">
+      <fields>
+        <field name="Reference">C2</field>
+        <field name="Value">22uF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="C1" type="passive"/>
+        <pin num="2" name="C2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="C3">
+      <fields>
+        <field name="Reference">C3</field>
+        <field name="Value">4.7uF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="C1" type="passive"/>
+        <pin num="2" name="C2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="C4">
+      <fields>
+        <field name="Reference">C4</field>
+        <field name="Value">2.2uF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="C1" type="passive"/>
+        <pin num="2" name="C2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="C5">
+      <fields>
+        <field name="Reference">C5</field>
+        <field name="Value">2.2uF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="C1" type="passive"/>
+        <pin num="2" name="C2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="C6">
+      <fields>
+        <field name="Reference">C6</field>
+        <field name="Value">22uF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="C1" type="passive"/>
+        <pin num="2" name="C2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="C8">
+      <fields>
+        <field name="Reference">C8</field>
+        <field name="Value">22uF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="C1" type="passive"/>
+        <pin num="2" name="C2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="C9">
+      <fields>
+        <field name="Reference">C9</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="C1" type="passive"/>
+        <pin num="2" name="C2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D28">
+      <fields>
+        <field name="Reference">D28</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D29">
+      <fields>
+        <field name="Reference">D29</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D30">
+      <fields>
+        <field name="Reference">D30</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D31">
+      <fields>
+        <field name="Reference">D31</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D32">
+      <fields>
+        <field name="Reference">D32</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D33">
+      <fields>
+        <field name="Reference">D33</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D34">
+      <fields>
+        <field name="Reference">D34</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D35">
+      <fields>
+        <field name="Reference">D35</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D36">
+      <fields>
+        <field name="Reference">D36</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D37">
+      <fields>
+        <field name="Reference">D37</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D38">
+      <fields>
+        <field name="Reference">D38</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D39">
+      <fields>
+        <field name="Reference">D39</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D40">
+      <fields>
+        <field name="Reference">D40</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D41">
+      <fields>
+        <field name="Reference">D41</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D42">
+      <fields>
+        <field name="Reference">D42</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D43">
+      <fields>
+        <field name="Reference">D43</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D44">
+      <fields>
+        <field name="Reference">D44</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D45">
+      <fields>
+        <field name="Reference">D45</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D46">
+      <fields>
+        <field name="Reference">D46</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D47">
+      <fields>
+        <field name="Reference">D47</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D48">
+      <fields>
+        <field name="Reference">D48</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D49">
+      <fields>
+        <field name="Reference">D49</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D50">
+      <fields>
+        <field name="Reference">D50</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D51">
+      <fields>
+        <field name="Reference">D51</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D52">
+      <fields>
+        <field name="Reference">D52</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D53">
+      <fields>
+        <field name="Reference">D53</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="D54">
+      <fields>
+        <field name="Reference">D54</field>
+        <field name="Value">Schottky diode; K to row</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="J1">
+      <fields>
+        <field name="Reference">J1</field>
+        <field name="Value">TYPE-C-31-M-12</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="A1" name="A1" type="passive"/>
+        <pin num="A4" name="A4" type="passive"/>
+        <pin num="A5" name="A5" type="passive"/>
+        <pin num="A6" name="A6" type="passive"/>
+        <pin num="A7" name="A7" type="passive"/>
+        <pin num="A8" name="A8" type="passive"/>
+        <pin num="A9" name="A9" type="passive"/>
+        <pin num="A12" name="A12" type="passive"/>
+        <pin num="B1" name="B1" type="passive"/>
+        <pin num="B4" name="B4" type="passive"/>
+        <pin num="B5" name="B5" type="passive"/>
+        <pin num="B6" name="B6" type="passive"/>
+        <pin num="B7" name="B7" type="passive"/>
+        <pin num="B8" name="B8" type="passive"/>
+        <pin num="B9" name="B9" type="passive"/>
+        <pin num="B12" name="B12" type="passive"/>
+        <pin num="S1" name="S1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="J2">
+      <fields>
+        <field name="Reference">J2</field>
+        <field name="Value">S2B-PH-SM4-TB(LF)(SN)</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="BAT+" type="passive"/>
+        <pin num="2" name="BAT-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="J5">
+      <fields>
+        <field name="Reference">J5</field>
+        <field name="Value">SWD pogo interface</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VTREF" type="passive"/>
+        <pin num="2" name="SWDIO" type="passive"/>
+        <pin num="3" name="GND" type="passive"/>
+        <pin num="4" name="SWDCLK" type="passive"/>
+        <pin num="5" name="RESET_N" type="passive"/>
+        <pin num="6" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="J6">
+      <fields>
+        <field name="Reference">J6</field>
+        <field name="Value">External 10k NTC pads</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="NTC" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="L1">
+      <fields>
+        <field name="Reference">L1</field>
+        <field name="Value">1.5uH SWPA3015S1R5MT</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="Q1">
+      <fields>
+        <field name="Reference">Q1</field>
+        <field name="Value">AO3401A</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="passive"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="Q2">
+      <fields>
+        <field name="Reference">Q2</field>
+        <field name="Value">2N7002</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="passive"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="Q3">
+      <fields>
+        <field name="Reference">Q3</field>
+        <field name="Value">2N7002</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="passive"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R1">
+      <fields>
+        <field name="Reference">R1</field>
+        <field name="Value">5.1k</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R10">
+      <fields>
+        <field name="Reference">R10</field>
+        <field name="Value">100k</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R11">
+      <fields>
+        <field name="Reference">R11</field>
+        <field name="Value">100k</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R12">
+      <fields>
+        <field name="Reference">R12</field>
+        <field name="Value">0R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R13">
+      <fields>
+        <field name="Reference">R13</field>
+        <field name="Value">1M</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R14">
+      <fields>
+        <field name="Reference">R14</field>
+        <field name="Value">1M</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R15">
+      <fields>
+        <field name="Reference">R15</field>
+        <field name="Value">10k</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R16">
+      <fields>
+        <field name="Reference">R16</field>
+        <field name="Value">10k</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R17">
+      <fields>
+        <field name="Reference">R17</field>
+        <field name="Value">1M</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R18">
+      <fields>
+        <field name="Reference">R18</field>
+        <field name="Value">27R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R19">
+      <fields>
+        <field name="Reference">R19</field>
+        <field name="Value">27R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R2">
+      <fields>
+        <field name="Reference">R2</field>
+        <field name="Value">5.1k</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R3">
+      <fields>
+        <field name="Reference">R3</field>
+        <field name="Value">10k</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R6">
+      <fields>
+        <field name="Reference">R6</field>
+        <field name="Value">10k</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R7">
+      <fields>
+        <field name="Reference">R7</field>
+        <field name="Value">10k</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R8">
+      <fields>
+        <field name="Reference">R8</field>
+        <field name="Value">10k</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="R9">
+      <fields>
+        <field name="Reference">R9</field>
+        <field name="Value">10k</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="R1" type="passive"/>
+        <pin num="2" name="R2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S28">
+      <fields>
+        <field name="Reference">S28</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S29">
+      <fields>
+        <field name="Reference">S29</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S30">
+      <fields>
+        <field name="Reference">S30</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S31">
+      <fields>
+        <field name="Reference">S31</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S32">
+      <fields>
+        <field name="Reference">S32</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S33">
+      <fields>
+        <field name="Reference">S33</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S34">
+      <fields>
+        <field name="Reference">S34</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S35">
+      <fields>
+        <field name="Reference">S35</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S36">
+      <fields>
+        <field name="Reference">S36</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S37">
+      <fields>
+        <field name="Reference">S37</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S38">
+      <fields>
+        <field name="Reference">S38</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S39">
+      <fields>
+        <field name="Reference">S39</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S40">
+      <fields>
+        <field name="Reference">S40</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S41">
+      <fields>
+        <field name="Reference">S41</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S42">
+      <fields>
+        <field name="Reference">S42</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S43">
+      <fields>
+        <field name="Reference">S43</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S44">
+      <fields>
+        <field name="Reference">S44</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S45">
+      <fields>
+        <field name="Reference">S45</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S46">
+      <fields>
+        <field name="Reference">S46</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S47">
+      <fields>
+        <field name="Reference">S47</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S48">
+      <fields>
+        <field name="Reference">S48</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S49">
+      <fields>
+        <field name="Reference">S49</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S50">
+      <fields>
+        <field name="Reference">S50</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S51">
+      <fields>
+        <field name="Reference">S51</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S52">
+      <fields>
+        <field name="Reference">S52</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S53">
+      <fields>
+        <field name="Reference">S53</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="S54">
+      <fields>
+        <field name="Reference">S54</field>
+        <field name="Value">Choc switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Column" type="passive"/>
+        <pin num="2" name="Diode" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="SW1">
+      <fields>
+        <field name="Reference">SW1</field>
+        <field name="Value">SSSS811101</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="OFF" type="passive"/>
+        <pin num="2" name="COM" type="passive"/>
+        <pin num="3" name="ON" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="SW2">
+      <fields>
+        <field name="Reference">SW2</field>
+        <field name="Value">SKRPANE010</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="A1" type="passive"/>
+        <pin num="2" name="A2" type="passive"/>
+        <pin num="3" name="B1" type="passive"/>
+        <pin num="4" name="B2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="U1">
+      <fields>
+        <field name="Reference">U1</field>
+        <field name="Value">MDBT50Q-1MV2</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="P1.10" type="bidirectional"/>
+        <pin num="4" name="P1.11" type="bidirectional"/>
+        <pin num="5" name="P1.12" type="bidirectional"/>
+        <pin num="6" name="P1.13" type="bidirectional"/>
+        <pin num="7" name="P1.14" type="bidirectional"/>
+        <pin num="8" name="P1.15" type="bidirectional"/>
+        <pin num="9" name="P0.03" type="bidirectional"/>
+        <pin num="10" name="P0.29" type="bidirectional"/>
+        <pin num="11" name="P0.02" type="bidirectional"/>
+        <pin num="12" name="P0.31" type="bidirectional"/>
+        <pin num="13" name="P0.28" type="bidirectional"/>
+        <pin num="14" name="P0.30" type="bidirectional"/>
+        <pin num="15" name="GND" type="power_in"/>
+        <pin num="16" name="P0.27" type="bidirectional"/>
+        <pin num="17" name="P0.00" type="bidirectional"/>
+        <pin num="18" name="P0.01" type="bidirectional"/>
+        <pin num="19" name="P0.26" type="bidirectional"/>
+        <pin num="20" name="P0.04" type="bidirectional"/>
+        <pin num="21" name="P0.05" type="bidirectional"/>
+        <pin num="22" name="P0.06" type="bidirectional"/>
+        <pin num="23" name="P0.07" type="bidirectional"/>
+        <pin num="24" name="P0.08" type="bidirectional"/>
+        <pin num="25" name="P1.08" type="bidirectional"/>
+        <pin num="26" name="P1.09" type="bidirectional"/>
+        <pin num="27" name="P0.11" type="bidirectional"/>
+        <pin num="28" name="VDD" type="power_in"/>
+        <pin num="29" name="P0.12" type="bidirectional"/>
+        <pin num="30" name="VDDH" type="power_in"/>
+        <pin num="31" name="DCCH" type="bidirectional"/>
+        <pin num="32" name="VBUS" type="power_in"/>
+        <pin num="33" name="GND" type="power_in"/>
+        <pin num="34" name="D-" type="bidirectional"/>
+        <pin num="35" name="D+" type="bidirectional"/>
+        <pin num="36" name="P0.14" type="bidirectional"/>
+        <pin num="37" name="P0.13" type="bidirectional"/>
+        <pin num="38" name="P0.16" type="bidirectional"/>
+        <pin num="39" name="P0.15" type="bidirectional"/>
+        <pin num="40" name="P0.18" type="bidirectional"/>
+        <pin num="41" name="P0.17" type="bidirectional"/>
+        <pin num="42" name="P0.19" type="bidirectional"/>
+        <pin num="43" name="P0.21" type="bidirectional"/>
+        <pin num="44" name="P0.20" type="bidirectional"/>
+        <pin num="45" name="P0.23" type="bidirectional"/>
+        <pin num="46" name="P0.22" type="bidirectional"/>
+        <pin num="47" name="P1.00" type="bidirectional"/>
+        <pin num="48" name="P0.24" type="bidirectional"/>
+        <pin num="49" name="P0.25" type="bidirectional"/>
+        <pin num="50" name="P1.02" type="bidirectional"/>
+        <pin num="51" name="SWDIO" type="bidirectional"/>
+        <pin num="52" name="P0.09" type="bidirectional"/>
+        <pin num="53" name="SWDCLK" type="bidirectional"/>
+        <pin num="54" name="P0.10" type="bidirectional"/>
+        <pin num="55" name="GND" type="power_in"/>
+        <pin num="56" name="P1.04" type="bidirectional"/>
+        <pin num="57" name="P1.06" type="bidirectional"/>
+        <pin num="58" name="P1.07" type="bidirectional"/>
+        <pin num="59" name="P1.05" type="bidirectional"/>
+        <pin num="60" name="P1.03" type="bidirectional"/>
+        <pin num="61" name="P1.01" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="U2">
+      <fields>
+        <field name="Reference">U2</field>
+        <field name="Value">BQ25186DLHR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="SYS" type="power_out"/>
+        <pin num="2" name="BAT" type="power_in"/>
+        <pin num="3" name="PG_N" type="open_collector"/>
+        <pin num="4" name="CE_N" type="input"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="TS_MR" type="input"/>
+        <pin num="7" name="SDA" type="bidirectional"/>
+        <pin num="8" name="SCL" type="bidirectional"/>
+        <pin num="9" name="INT_N" type="open_collector"/>
+        <pin num="10" name="IN" type="power_in"/>
+        <pin num="11" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="U3">
+      <fields>
+        <field name="Reference">U3</field>
+        <field name="Value">TPS63031DSKR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VOUT" type="power_out"/>
+        <pin num="2" name="L2" type="passive"/>
+        <pin num="3" name="PGND" type="power_in"/>
+        <pin num="4" name="L1" type="passive"/>
+        <pin num="5" name="VIN" type="power_in"/>
+        <pin num="6" name="EN" type="input"/>
+        <pin num="7" name="PS_SYNC" type="input"/>
+        <pin num="8" name="VINA" type="power_in"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="FB" type="input"/>
+        <pin num="11" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Knuckles" part="U4">
+      <fields>
+        <field name="Reference">U4</field>
+        <field name="Value">USBLC6-2SC6</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="I/O1" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="I/O2" type="passive"/>
+        <pin num="4" name="I/O2" type="passive"/>
+        <pin num="5" name="VBUS" type="passive"/>
+        <pin num="6" name="I/O1" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Knuckles">
+      <uri>/repo/hardware/integrated-controller/output/integrated/19.5/../../../libraries/KnucklesKeyboard.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3">
+      <node ref="C1" pin="1" pinfunction="C1" pintype="passive"/>
+      <node ref="C10" pin="1" pinfunction="C1" pintype="passive"/>
+      <node ref="C11" pin="1" pinfunction="C1" pintype="passive"/>
+      <node ref="C2" pin="1" pinfunction="C1" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="VTREF" pintype="passive"/>
+      <node ref="R3" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="R6" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="R7" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="R8" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="R9" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="U1" pin="28" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U1" pin="30" pinfunction="VDDH" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="VOUT" pintype="power_out"/>
+      <node ref="U3" pin="10" pinfunction="FB" pintype="input"/>
+    </net>
+    <net code="2" name="BATT_ADC">
+      <node ref="C12" pin="1" pinfunction="C1" pintype="passive"/>
+      <node ref="R15" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="R16" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="P0.04" pintype="bidirectional"/>
+    </net>
+    <net code="3" name="BATT_DIV_TOP">
+      <node ref="Q1" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R15" pin="1" pinfunction="R1" pintype="passive"/>
+    </net>
+    <net code="4" name="BATT_GATE">
+      <node ref="Q1" pin="1" pinfunction="G" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R14" pin="2" pinfunction="R2" pintype="passive"/>
+    </net>
+    <net code="5" name="BATT_SENSE_EN">
+      <node ref="Q2" pin="1" pinfunction="G" pintype="passive"/>
+      <node ref="R17" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="P0.05" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="BAT_NTC">
+      <node ref="J6" pin="1" pinfunction="NTC" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="TS_MR" pintype="input"/>
+    </net>
+    <net code="7" name="C0">
+      <node ref="S28" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S29" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S30" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S31" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="P0.31" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="C1">
+      <node ref="S32" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S33" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S34" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S35" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="P0.29" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="C2">
+      <node ref="S36" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S37" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S38" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S39" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="P0.02" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="C3">
+      <node ref="S40" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S41" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S42" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S43" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S52" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="P1.15" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="C4">
+      <node ref="S44" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S45" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S46" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S47" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S53" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="P1.13" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="C5">
+      <node ref="S48" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S49" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S50" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S51" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="S54" pin="1" pinfunction="Column" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="P1.11" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="CHG_ALLOW">
+      <node ref="Q3" pin="1" pinfunction="G" pintype="passive"/>
+      <node ref="R10" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="U1" pin="24" pinfunction="P0.08" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="CHG_DRAIN">
+      <node ref="Q3" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R12" pin="2" pinfunction="R2" pintype="passive"/>
+    </net>
+    <net code="15" name="CHG_EN_N">
+      <node ref="R11" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="R12" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="CE_N" pintype="input"/>
+    </net>
+    <net code="16" name="CHG_INT_N">
+      <node ref="R6" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="U1" pin="22" pinfunction="P0.06" pintype="bidirectional"/>
+      <node ref="U2" pin="9" pinfunction="INT_N" pintype="open_collector"/>
+    </net>
+    <net code="17" name="CHG_PG_N">
+      <node ref="R7" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="U1" pin="23" pinfunction="P0.07" pintype="bidirectional"/>
+      <node ref="U2" pin="3" pinfunction="PG_N" pintype="open_collector"/>
+    </net>
+    <net code="18" name="GND">
+      <node ref="C1" pin="2" pinfunction="C2" pintype="passive"/>
+      <node ref="C10" pin="2" pinfunction="C2" pintype="passive"/>
+      <node ref="C11" pin="2" pinfunction="C2" pintype="passive"/>
+      <node ref="C12" pin="2" pinfunction="C2" pintype="passive"/>
+      <node ref="C13" pin="2" pinfunction="C2" pintype="passive"/>
+      <node ref="C2" pin="2" pinfunction="C2" pintype="passive"/>
+      <node ref="C3" pin="2" pinfunction="C2" pintype="passive"/>
+      <node ref="C4" pin="2" pinfunction="C2" pintype="passive"/>
+      <node ref="C5" pin="2" pinfunction="C2" pintype="passive"/>
+      <node ref="C6" pin="2" pinfunction="C2" pintype="passive"/>
+      <node ref="C8" pin="2" pinfunction="C2" pintype="passive"/>
+      <node ref="C9" pin="2" pinfunction="C2" pintype="passive"/>
+      <node ref="J1" pin="A1" pinfunction="A1" pintype="passive"/>
+      <node ref="J1" pin="A12" pinfunction="A12" pintype="passive"/>
+      <node ref="J1" pin="B1" pinfunction="B1" pintype="passive"/>
+      <node ref="J1" pin="B12" pinfunction="B12" pintype="passive"/>
+      <node ref="J1" pin="S1" pinfunction="S1" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="BAT-" pintype="passive"/>
+      <node ref="J5" pin="3" pinfunction="GND" pintype="passive"/>
+      <node ref="J5" pin="6" pinfunction="GND" pintype="passive"/>
+      <node ref="J6" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="Q3" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="R1" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="R10" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="R13" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="R16" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="R17" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="R2" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="OFF" pintype="passive"/>
+      <node ref="SW2" pin="3" pinfunction="B1" pintype="passive"/>
+      <node ref="SW2" pin="4" pinfunction="B2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="15" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="33" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="55" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="11" pinfunction="EP" pintype="power_in"/>
+      <node ref="U2" pin="5" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="11" pinfunction="EP" pintype="power_in"/>
+      <node ref="U3" pin="3" pinfunction="PGND" pintype="power_in"/>
+      <node ref="U3" pin="7" pinfunction="PS_SYNC" pintype="input"/>
+      <node ref="U3" pin="9" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="2" pinfunction="GND" pintype="passive"/>
+    </net>
+    <net code="19" name="PMIC_SCL">
+      <node ref="R9" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="P0.27" pintype="bidirectional"/>
+      <node ref="U2" pin="8" pinfunction="SCL" pintype="bidirectional"/>
+    </net>
+    <net code="20" name="PMIC_SDA">
+      <node ref="R8" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="U1" pin="19" pinfunction="P0.26" pintype="bidirectional"/>
+      <node ref="U2" pin="7" pinfunction="SDA" pintype="bidirectional"/>
+    </net>
+    <net code="21" name="R0">
+      <node ref="D31" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D35" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D39" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D43" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D47" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D51" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="U1" pin="48" pinfunction="P0.24" pintype="bidirectional"/>
+    </net>
+    <net code="22" name="R1">
+      <node ref="D30" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D34" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D38" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D42" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D46" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D50" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="U1" pin="47" pinfunction="P1.00" pintype="bidirectional"/>
+    </net>
+    <net code="23" name="R2">
+      <node ref="D29" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D33" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D37" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D41" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D45" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D49" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="U1" pin="27" pinfunction="P0.11" pintype="bidirectional"/>
+    </net>
+    <net code="24" name="R3">
+      <node ref="D28" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D32" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D36" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D40" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D44" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D48" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="U1" pin="56" pinfunction="P1.04" pintype="bidirectional"/>
+    </net>
+    <net code="25" name="R4">
+      <node ref="D52" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D53" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D54" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="U1" pin="57" pinfunction="P1.06" pintype="bidirectional"/>
+    </net>
+    <net code="26" name="REG_EN">
+      <node ref="R13" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="COM" pintype="passive"/>
+      <node ref="U3" pin="6" pinfunction="EN" pintype="input"/>
+    </net>
+    <net code="27" name="RESET_N">
+      <node ref="J5" pin="5" pinfunction="RESET_N" pintype="passive"/>
+      <node ref="R3" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="SW2" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="SW2" pin="2" pinfunction="A2" pintype="passive"/>
+      <node ref="U1" pin="40" pinfunction="P0.18" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="SWDCLK">
+      <node ref="J5" pin="4" pinfunction="SWDCLK" pintype="passive"/>
+      <node ref="U1" pin="53" pinfunction="SWDCLK" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="SWDIO">
+      <node ref="J5" pin="2" pinfunction="SWDIO" pintype="passive"/>
+      <node ref="U1" pin="51" pinfunction="SWDIO" pintype="bidirectional"/>
+    </net>
+    <net code="30" name="SW_L1">
+      <node ref="L1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="L1" pintype="passive"/>
+    </net>
+    <net code="31" name="SW_L2">
+      <node ref="L1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U3" pin="2" pinfunction="L2" pintype="passive"/>
+    </net>
+    <net code="32" name="SYS">
+      <node ref="C6" pin="1" pinfunction="C1" pintype="passive"/>
+      <node ref="C8" pin="1" pinfunction="C1" pintype="passive"/>
+      <node ref="C9" pin="1" pinfunction="C1" pintype="passive"/>
+      <node ref="SW1" pin="3" pinfunction="ON" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="SYS" pintype="power_out"/>
+      <node ref="U3" pin="5" pinfunction="VIN" pintype="power_in"/>
+      <node ref="U3" pin="8" pinfunction="VINA" pintype="power_in"/>
+    </net>
+    <net code="33" name="USB_CC1">
+      <node ref="J1" pin="A5" pinfunction="A5" pintype="passive"/>
+      <node ref="R1" pin="1" pinfunction="R1" pintype="passive"/>
+    </net>
+    <net code="34" name="USB_CC2">
+      <node ref="J1" pin="B5" pinfunction="B5" pintype="passive"/>
+      <node ref="R2" pin="1" pinfunction="R1" pintype="passive"/>
+    </net>
+    <net code="35" name="USB_DN">
+      <node ref="J1" pin="A7" pinfunction="A7" pintype="passive"/>
+      <node ref="J1" pin="B7" pinfunction="B7" pintype="passive"/>
+      <node ref="R19" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="U4" pin="3" pinfunction="I/O2" pintype="passive"/>
+      <node ref="U4" pin="4" pinfunction="I/O2" pintype="passive"/>
+    </net>
+    <net code="36" name="USB_DP">
+      <node ref="J1" pin="A6" pinfunction="A6" pintype="passive"/>
+      <node ref="J1" pin="B6" pinfunction="B6" pintype="passive"/>
+      <node ref="R18" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="U4" pin="1" pinfunction="I/O1" pintype="passive"/>
+      <node ref="U4" pin="6" pinfunction="I/O1" pintype="passive"/>
+    </net>
+    <net code="37" name="USB_MCU_DN">
+      <node ref="R19" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="U1" pin="34" pinfunction="D-" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="USB_MCU_DP">
+      <node ref="R18" pin="2" pinfunction="R2" pintype="passive"/>
+      <node ref="U1" pin="35" pinfunction="D+" pintype="bidirectional"/>
+    </net>
+    <net code="39" name="VBAT">
+      <node ref="C5" pin="1" pinfunction="C1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="BAT+" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="R14" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="BAT" pintype="power_in"/>
+    </net>
+    <net code="40" name="VBUS">
+      <node ref="C13" pin="1" pinfunction="C1" pintype="passive"/>
+      <node ref="C3" pin="1" pinfunction="C1" pintype="passive"/>
+      <node ref="C4" pin="1" pinfunction="C1" pintype="passive"/>
+      <node ref="J1" pin="A4" pinfunction="A4" pintype="passive"/>
+      <node ref="J1" pin="A9" pinfunction="A9" pintype="passive"/>
+      <node ref="J1" pin="B4" pinfunction="B4" pintype="passive"/>
+      <node ref="J1" pin="B9" pinfunction="B9" pintype="passive"/>
+      <node ref="R11" pin="1" pinfunction="R1" pintype="passive"/>
+      <node ref="U1" pin="32" pinfunction="VBUS" pintype="power_in"/>
+      <node ref="U2" pin="10" pinfunction="IN" pintype="power_in"/>
+      <node ref="U4" pin="5" pinfunction="VBUS" pintype="passive"/>
+    </net>
+    <net code="41" name="far_home_F">
+      <node ref="D54" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S54" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="42" name="index_bottom_F">
+      <node ref="D44" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S44" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="43" name="index_home_F">
+      <node ref="D45" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S45" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="44" name="index_numbers_F">
+      <node ref="D47" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S47" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="45" name="index_top_F">
+      <node ref="D46" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S46" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="46" name="inner_bottom_F">
+      <node ref="D48" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S48" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="47" name="inner_home_F">
+      <node ref="D49" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S49" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="48" name="inner_numbers_F">
+      <node ref="D51" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S51" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="49" name="inner_top_F">
+      <node ref="D50" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S50" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="50" name="mid_home_F">
+      <node ref="D53" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S53" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="51" name="middle_bottom_F">
+      <node ref="D40" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S40" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="52" name="middle_home_F">
+      <node ref="D41" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S41" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="53" name="middle_numbers_F">
+      <node ref="D43" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S43" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="54" name="middle_top_F">
+      <node ref="D42" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S42" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="55" name="near_home_F">
+      <node ref="D52" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S52" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="56" name="outer_bottom_F">
+      <node ref="D28" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S28" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="57" name="outer_home_F">
+      <node ref="D29" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S29" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="58" name="outer_numbers_F">
+      <node ref="D31" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S31" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="59" name="outer_top_F">
+      <node ref="D30" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S30" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="60" name="pinky_bottom_F">
+      <node ref="D32" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S32" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="61" name="pinky_home_F">
+      <node ref="D33" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S33" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="62" name="pinky_numbers_F">
+      <node ref="D35" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S35" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="63" name="pinky_top_F">
+      <node ref="D34" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S34" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="64" name="ring_bottom_F">
+      <node ref="D36" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S36" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="65" name="ring_home_F">
+      <node ref="D37" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S37" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="66" name="ring_numbers_F">
+      <node ref="D39" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S39" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="67" name="ring_top_F">
+      <node ref="D38" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="S38" pin="2" pinfunction="Diode" pintype="passive"/>
+    </net>
+    <net code="68" name="unconnected-(J1-PadA8)">
+      <node ref="J1" pin="A8" pinfunction="A8" pintype="passive+no_connect"/>
+    </net>
+    <net code="69" name="unconnected-(J1-PadB8)">
+      <node ref="J1" pin="B8" pinfunction="B8" pintype="passive+no_connect"/>
+    </net>
+    <net code="70" name="unconnected-(S28-NC-Pad3)">
+      <node ref="S28" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="71" name="unconnected-(S29-NC-Pad3)">
+      <node ref="S29" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="72" name="unconnected-(S30-NC-Pad3)">
+      <node ref="S30" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="73" name="unconnected-(S31-NC-Pad3)">
+      <node ref="S31" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="74" name="unconnected-(S32-NC-Pad3)">
+      <node ref="S32" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(S33-NC-Pad3)">
+      <node ref="S33" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(S34-NC-Pad3)">
+      <node ref="S34" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="77" name="unconnected-(S35-NC-Pad3)">
+      <node ref="S35" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="78" name="unconnected-(S36-NC-Pad3)">
+      <node ref="S36" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="79" name="unconnected-(S37-NC-Pad3)">
+      <node ref="S37" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="80" name="unconnected-(S38-NC-Pad3)">
+      <node ref="S38" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="81" name="unconnected-(S39-NC-Pad3)">
+      <node ref="S39" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="82" name="unconnected-(S40-NC-Pad3)">
+      <node ref="S40" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="83" name="unconnected-(S41-NC-Pad3)">
+      <node ref="S41" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="84" name="unconnected-(S42-NC-Pad3)">
+      <node ref="S42" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="85" name="unconnected-(S43-NC-Pad3)">
+      <node ref="S43" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="86" name="unconnected-(S44-NC-Pad3)">
+      <node ref="S44" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="87" name="unconnected-(S45-NC-Pad3)">
+      <node ref="S45" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="88" name="unconnected-(S46-NC-Pad3)">
+      <node ref="S46" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="89" name="unconnected-(S47-NC-Pad3)">
+      <node ref="S47" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="90" name="unconnected-(S48-NC-Pad3)">
+      <node ref="S48" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="91" name="unconnected-(S49-NC-Pad3)">
+      <node ref="S49" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="92" name="unconnected-(S50-NC-Pad3)">
+      <node ref="S50" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="93" name="unconnected-(S51-NC-Pad3)">
+      <node ref="S51" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="94" name="unconnected-(S52-NC-Pad3)">
+      <node ref="S52" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="95" name="unconnected-(S53-NC-Pad3)">
+      <node ref="S53" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="96" name="unconnected-(S54-NC-Pad3)">
+      <node ref="S54" pin="3" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="97" name="unconnected-(U1-DCCH-Pad31)">
+      <node ref="U1" pin="31" pinfunction="DCCH" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="98" name="unconnected-(U1-P0.00-Pad17)">
+      <node ref="U1" pin="17" pinfunction="P0.00" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="99" name="unconnected-(U1-P0.01-Pad18)">
+      <node ref="U1" pin="18" pinfunction="P0.01" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="100" name="unconnected-(U1-P0.03-Pad9)">
+      <node ref="U1" pin="9" pinfunction="P0.03" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="101" name="unconnected-(U1-P0.09-Pad52)">
+      <node ref="U1" pin="52" pinfunction="P0.09" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="102" name="unconnected-(U1-P0.10-Pad54)">
+      <node ref="U1" pin="54" pinfunction="P0.10" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="103" name="unconnected-(U1-P0.12-Pad29)">
+      <node ref="U1" pin="29" pinfunction="P0.12" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="104" name="unconnected-(U1-P0.13-Pad37)">
+      <node ref="U1" pin="37" pinfunction="P0.13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="105" name="unconnected-(U1-P0.14-Pad36)">
+      <node ref="U1" pin="36" pinfunction="P0.14" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="106" name="unconnected-(U1-P0.15-Pad39)">
+      <node ref="U1" pin="39" pinfunction="P0.15" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="107" name="unconnected-(U1-P0.16-Pad38)">
+      <node ref="U1" pin="38" pinfunction="P0.16" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="108" name="unconnected-(U1-P0.17-Pad41)">
+      <node ref="U1" pin="41" pinfunction="P0.17" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="109" name="unconnected-(U1-P0.19-Pad42)">
+      <node ref="U1" pin="42" pinfunction="P0.19" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="110" name="unconnected-(U1-P0.20-Pad44)">
+      <node ref="U1" pin="44" pinfunction="P0.20" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="111" name="unconnected-(U1-P0.21-Pad43)">
+      <node ref="U1" pin="43" pinfunction="P0.21" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="112" name="unconnected-(U1-P0.22-Pad46)">
+      <node ref="U1" pin="46" pinfunction="P0.22" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="113" name="unconnected-(U1-P0.23-Pad45)">
+      <node ref="U1" pin="45" pinfunction="P0.23" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="114" name="unconnected-(U1-P0.25-Pad49)">
+      <node ref="U1" pin="49" pinfunction="P0.25" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="115" name="unconnected-(U1-P0.28-Pad13)">
+      <node ref="U1" pin="13" pinfunction="P0.28" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="116" name="unconnected-(U1-P0.30-Pad14)">
+      <node ref="U1" pin="14" pinfunction="P0.30" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="117" name="unconnected-(U1-P1.01-Pad61)">
+      <node ref="U1" pin="61" pinfunction="P1.01" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="118" name="unconnected-(U1-P1.02-Pad50)">
+      <node ref="U1" pin="50" pinfunction="P1.02" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="119" name="unconnected-(U1-P1.03-Pad60)">
+      <node ref="U1" pin="60" pinfunction="P1.03" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="120" name="unconnected-(U1-P1.05-Pad59)">
+      <node ref="U1" pin="59" pinfunction="P1.05" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="121" name="unconnected-(U1-P1.07-Pad58)">
+      <node ref="U1" pin="58" pinfunction="P1.07" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="122" name="unconnected-(U1-P1.08-Pad25)">
+      <node ref="U1" pin="25" pinfunction="P1.08" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="123" name="unconnected-(U1-P1.09-Pad26)">
+      <node ref="U1" pin="26" pinfunction="P1.09" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="124" name="unconnected-(U1-P1.10-Pad3)">
+      <node ref="U1" pin="3" pinfunction="P1.10" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="125" name="unconnected-(U1-P1.12-Pad5)">
+      <node ref="U1" pin="5" pinfunction="P1.12" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="126" name="unconnected-(U1-P1.14-Pad7)">
+      <node ref="U1" pin="7" pinfunction="P1.14" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

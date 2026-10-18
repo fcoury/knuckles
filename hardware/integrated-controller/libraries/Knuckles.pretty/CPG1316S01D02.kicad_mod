@@ -1,0 +1,215 @@
+(footprint "CPG1316S01D02"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "S54"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "e7309baa-ee7a-4459-8001-7a1d8936cc8b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "ca77beae-3329-4a5a-972c-6f8cbfeef924")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "02d2010d-73e9-4837-9229-29c3c7f00afe")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e89b16dd-22e4-48b9-a9de-8ac3728579d8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b64e4e1c-83b7-4560-b35d-a7634d2c73e1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2 0)
+		(end 2 0)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "4ac37c50-493a-4a86-bb42-3cd62774110d")
+	)
+	(fp_line
+		(start 0 -2)
+		(end 0 2)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "1a79da2d-6a5d-437a-971f-abec845806ba")
+	)
+	(fp_poly
+		(pts
+			(xy -8 -8) (xy 8 -8) (xy 8 8) (xy -8 8)
+		)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "62f09371-1f5d-470b-ae30-757ee5b06553")
+	)
+	(fp_poly
+		(pts
+			(xy -8 8) (xy 8 8) (xy 8 -8) (xy -8 -8)
+		)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "32f6299c-0e24-4337-a7e9-86bd51a2ea43")
+	)
+	(fp_poly
+		(pts
+			(xy -6.75 -6.5) (xy 6.75 -6.5) (xy 6.75 6.5) (xy -6.75 6.5)
+		)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "fc7ffab5-b320-4f98-b4c8-02ac6dc2e689")
+	)
+	(fp_poly
+		(pts
+			(xy 3.8 -3.5) (xy 3.8 -1.65) (xy 3.3 -1.15) (xy -2.2 -1.15) (xy -2.2 -3.9) (xy 2.2 -3.9) (xy 2.2 -3.5)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "d9f5385b-4b2b-4c8b-abea-479315eec5bb")
+	)
+	(pad "" np_thru_hole circle
+		(at -5.8 2.75)
+		(size 1 1)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(uuid "70d5ff38-a14d-4988-a8fd-529ceb387644")
+	)
+	(pad "" np_thru_hole circle
+		(at -5.781 -2.773)
+		(size 1.2 1.2)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(uuid "6a4f67ea-41ff-4729-9ce6-4c62a9cd8a6c")
+	)
+	(pad "" np_thru_hole circle
+		(at 5.8 -2.75)
+		(size 1.2 1.2)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(uuid "30051671-dfdd-4a0a-8e9d-4c6f92263185")
+	)
+	(pad "" np_thru_hole circle
+		(at 5.819 2.727)
+		(size 1 1)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(uuid "6b6469c6-eb7b-430a-86b4-1eed16ca65de")
+	)
+	(pad "1" smd rect
+		(at -2.500001 2.65)
+		(size 1.55 2)
+		(layers "F.Cu" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "aaaac534-e0d8-4b5a-8026-1f87a5fe965a")
+	)
+	(pad "2" smd rect
+		(at 2.5 2.649999)
+		(size 1.55 2)
+		(layers "F.Cu" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "2906296d-3145-4245-9294-1e5b8d2c19dd")
+	)
+	(pad "3" smd rect
+		(at -6.35 -6)
+		(size 2 2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "8a647d02-9d15-4c4b-a0b4-7aaf962ddb6d")
+	)
+	(pad "3" smd rect
+		(at -6.35 5.999999)
+		(size 2 2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "67ba2fc0-1ccd-49d7-add8-3ea606bc0eac")
+	)
+	(pad "3" smd rect
+		(at 6.35 -5.999999)
+		(size 2 2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "186ac887-2852-4735-9922-a60de550fc74")
+	)
+	(pad "3" smd rect
+		(at 6.35 6)
+		(size 2 2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "cd044303-d343-45eb-83e7-40ab8590a5aa")
+	)
+	(model "${KIPRJMOD}/../../../../../../../../Users/fcoury/code/knuckles.feat-integrated-controller/models/PG1316S.step"
+		(offset
+			(xyz -4.75 -6.25 -10.25)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

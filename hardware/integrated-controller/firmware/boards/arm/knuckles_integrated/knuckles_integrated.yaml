@@ -1,0 +1,14 @@
+identifier: knuckles_integrated
+name: Knuckles integrated
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+ram: 256
+flash: 1024
+supported:
+  - adc
+  - ble
+  - gpio
+  - i2c
+  - usb_device

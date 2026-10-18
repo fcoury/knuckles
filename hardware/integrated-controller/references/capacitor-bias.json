@@ -1,0 +1,36 @@
+[
+  {
+    "part": "CL10A106KP8NNN",
+    "source": "https://product.samsungsem.com/mlcc/CL10A106KP8NNN.do",
+    "checked_at": "2026-10-18",
+    "html_sha256": "33a61a8c650e3b2c41f7e0e74a03304fad018381f5ecb37a3ad6cbaa4595e96a",
+    "method": "Linear interpolation of manufacturer typical DC bias data at 25 C; not a guaranteed minimum",
+    "values": {
+      "3.3": {
+        "typical_delta_percent": -55.71168912559489,
+        "typical_capacitance_uF": 4.4288310874405115
+      },
+      "4.5": {
+        "typical_delta_percent": -68.03684927209999,
+        "typical_capacitance_uF": 3.1963150727900014
+      }
+    }
+  },
+  {
+    "part": "CL21A226MAQNNN",
+    "source": "https://product.samsungsem.com/mlcc/CL21A226MAQNNN.do",
+    "checked_at": "2026-10-18",
+    "html_sha256": "a83ffa9dcca71b953afa3081a6cf2e3d2511c19d91077371a03b49d6f6a931d7",
+    "method": "Linear interpolation of manufacturer typical DC bias data at 25 C; not a guaranteed minimum",
+    "values": {
+      "3.3": {
+        "typical_delta_percent": -32.2897819832586,
+        "typical_capacitance_uF": 14.896247963683107
+      },
+      "4.5": {
+        "typical_delta_percent": -46.5169990852202,
+        "typical_capacitance_uF": 11.766260201251555
+      }
+    }
+  }
+]

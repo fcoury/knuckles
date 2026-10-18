@@ -1,0 +1,12 @@
+#include "knuckles.dtsi"
+
+&kscan0 {
+    col-gpios
+        = <&gpio0 31 GPIO_ACTIVE_HIGH> // Col 0
+        , <&gpio0 29 GPIO_ACTIVE_HIGH> // Col 1
+        , <&gpio0 2  GPIO_ACTIVE_HIGH> // Col 2
+        , <&gpio1 15 GPIO_ACTIVE_HIGH> // Col 3
+        , <&gpio1 13 GPIO_ACTIVE_HIGH> // Col 4
+        , <&gpio1 11 GPIO_ACTIVE_HIGH> // Col 5
+        ;
+};

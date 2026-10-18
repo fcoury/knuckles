@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-18T03:39:40+0000",
+    "kicad_version": "8.0.8",
+    "sheets": [
+        {
+            "path": "/core/",
+            "uuid_path": "/51bf04a4-7d74-5427-946a-251745e0b2d2/1281b226-18d3-5876-b61f-4e44626436e2",
+            "violations": []
+        },
+        {
+            "path": "/power/",
+            "uuid_path": "/51bf04a4-7d74-5427-946a-251745e0b2d2/f2e48b4a-a3f8-52ae-9add-d435f7ddbf96",
+            "violations": []
+        },
+        {
+            "path": "/",
+            "uuid_path": "/51bf04a4-7d74-5427-946a-251745e0b2d2",
+            "violations": []
+        }
+    ],
+    "source": "knuckles_controller.kicad_sch"
+}

@@ -1,0 +1,24 @@
+{
+  "hand": "left",
+  "spacing_mm": 18.5,
+  "controller_origin": [
+    203,
+    54
+  ],
+  "mirror_axis_x": 160.784,
+  "switch_count": 27,
+  "controller_components": 43,
+  "copper_layers": 4,
+  "routed": false,
+  "antenna_keepout": [
+    217,
+    95.5,
+    227,
+    106.5
+  ],
+  "touchpad_center_y": 65,
+  "touchpad_width_mm": 46.96,
+  "touchpad_length_mm": 43.95,
+  "touchpad_placement": "Proposed 7mm forward shift; physical fit needs verification",
+  "battery_placement": "External pack; keep clear of the antenna region on either side of PCB"
+}

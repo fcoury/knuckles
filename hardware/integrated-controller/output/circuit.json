@@ -76,8 +76,8 @@
       "28": "+3V3",
       "30": "+3V3",
       "32": "VBUS",
-      "34": "USB_DN",
-      "35": "USB_DP",
+      "34": "USB_MCU_DN",
+      "35": "USB_MCU_DP",
       "40": "RESET_N",
       "51": "SWDIO",
       "53": "SWDCLK",
@@ -85,8 +85,11 @@
       "44": "TPS_SCL",
       "20": "BATT_ADC",
       "21": "BATT_SENSE_EN",
-      "22": "CHG_STAT1",
-      "23": "CHG_STAT2",
+      "22": "CHG_INT_N",
+      "23": "CHG_PG_N",
+      "24": "CHG_ALLOW",
+      "19": "PMIC_SDA",
+      "16": "PMIC_SCL",
       "48": "R0",
       "47": "R1",
       "27": "R2",
@@ -160,8 +163,8 @@
     ],
     "pcb": [
       22.5,
-      50,
-      180
+      52,
+      0
     ],
     "dnp": false,
     "note": ""
@@ -194,7 +197,7 @@
     ],
     "pcb": [
       22.5,
-      42,
+      43.5,
       0
     ],
     "dnp": false,
@@ -219,8 +222,8 @@
       95
     ],
     "pcb": [
-      28,
-      46,
+      15,
+      47,
       90
     ],
     "dnp": false,
@@ -245,8 +248,8 @@
       110
     ],
     "pcb": [
-      31,
-      46,
+      15,
+      51,
       90
     ],
     "dnp": false,
@@ -358,7 +361,7 @@
     "ref": "J5",
     "value": "SWD pogo interface",
     "lcsc": "",
-    "footprint": "Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical",
+    "footprint": "SWD_2x3_P1.27_NoHoles",
     "pins": {
       "1": "VTREF",
       "2": "SWDIO",
@@ -386,13 +389,13 @@
       0
     ],
     "dnp": true,
-    "note": "Bare PCB programming pads, not a purchased populated part."
+    "note": "Six bare pads on 1.27mm pitch; custom pogo fixture, not a mechanically compatible Tag-Connect connector. Pin 1 is target voltage sense, not external power input."
   },
   {
     "ref": "SW1",
-    "value": "MSK12C02",
-    "lcsc": "C431540",
-    "footprint": "MSK12C02",
+    "value": "SSSS811101",
+    "lcsc": "C109335",
+    "footprint": "SSSS811101",
     "pins": {
       "1": "OFF",
       "2": "COM",
@@ -414,7 +417,7 @@
       0
     ],
     "dnp": false,
-    "note": ""
+    "note": "ALPS SSSS811101; pad dimensions checked against manufacturer mounting drawing."
   },
   {
     "ref": "SW2",
@@ -535,7 +538,7 @@
     },
     "nets": {
       "1": "+3V3",
-      "2": "CHG_STAT1"
+      "2": "CHG_INT_N"
     },
     "sheet": "core",
     "sch": [
@@ -561,7 +564,7 @@
     },
     "nets": {
       "1": "+3V3",
-      "2": "CHG_STAT2"
+      "2": "CHG_PG_N"
     },
     "sheet": "core",
     "sch": [
@@ -604,9 +607,9 @@
   },
   {
     "ref": "C2",
-    "value": "1uF",
-    "lcsc": "C15849",
-    "footprint": "C_0603_1608Metric",
+    "value": "22uF",
+    "lcsc": "C45783",
+    "footprint": "C_0805_2012Metric",
     "pins": {
       "1": "C1",
       "2": "C2"
@@ -630,8 +633,8 @@
   },
   {
     "ref": "C3",
-    "value": "100nF",
-    "lcsc": "C14663",
+    "value": "4.7uF",
+    "lcsc": "C19666",
     "footprint": "C_0603_1608Metric",
     "pins": {
       "1": "C1",
@@ -647,8 +650,8 @@
       185
     ],
     "pcb": [
-      26,
-      41,
+      31.5,
+      16.5,
       90
     ],
     "dnp": false,
@@ -656,32 +659,32 @@
   },
   {
     "ref": "U2",
-    "value": "BQ25185DLHR",
-    "lcsc": "C19725033",
+    "value": "BQ25186DLHR",
+    "lcsc": "C44639442",
     "footprint": "TI_WSON_DLH0010A",
     "pins": {
       "1": "SYS",
       "2": "BAT",
-      "3": "STAT2",
+      "3": "PG_N",
       "4": "CE_N",
       "5": "GND",
       "6": "TS_MR",
-      "7": "ILIM_VSET",
-      "8": "ISET",
-      "9": "STAT1",
+      "7": "SDA",
+      "8": "SCL",
+      "9": "INT_N",
       "10": "IN",
       "11": "EP"
     },
     "nets": {
       "1": "SYS",
       "2": "VBAT",
-      "3": "CHG_STAT2",
+      "3": "CHG_PG_N",
       "4": "CHG_EN_N",
       "5": "GND",
       "6": "BAT_NTC",
-      "7": "CHG_VSET",
-      "8": "CHG_ISET",
-      "9": "CHG_STAT1",
+      "7": "PMIC_SDA",
+      "8": "PMIC_SCL",
+      "9": "CHG_INT_N",
       "10": "VBUS",
       "11": "GND"
     },
@@ -696,7 +699,7 @@
       0
     ],
     "dnp": false,
-    "note": ""
+    "note": "I2C 0x6A on dedicated bus. CE held disabled until firmware verifies profile and USB state; R12 assembly interlock."
   },
   {
     "ref": "U3",
@@ -766,20 +769,20 @@
       0
     ],
     "dnp": false,
-    "note": ""
+    "note": "Procurement gate: catalog says 1R5MT, public Sunlord table specifies 1R5NT. Obtain exact MT current/tolerance specification before release."
   },
   {
     "ref": "R8",
-    "value": "15k",
-    "lcsc": "C22809",
+    "value": "10k",
+    "lcsc": "C25804",
     "footprint": "R_0603_1608Metric",
     "pins": {
       "1": "R1",
       "2": "R2"
     },
     "nets": {
-      "1": "CHG_ISET",
-      "2": "GND"
+      "1": "+3V3",
+      "2": "PMIC_SDA"
     },
     "sheet": "power",
     "sch": [
@@ -792,20 +795,20 @@
       0
     ],
     "dnp": false,
-    "note": "20mA nominal: 300 Aohm / 15 kohm. Assembly-selectable resistor; default for 110mAh cell."
+    "note": "Dedicated PMIC bus pull-up; independent of external TPS43 pull-ups."
   },
   {
     "ref": "R9",
-    "value": "12k",
-    "lcsc": "C22790",
+    "value": "10k",
+    "lcsc": "C25804",
     "footprint": "R_0603_1608Metric",
     "pins": {
       "1": "R1",
       "2": "R2"
     },
     "nets": {
-      "1": "CHG_VSET",
-      "2": "VSET_MID"
+      "1": "+3V3",
+      "2": "PMIC_SCL"
     },
     "sheet": "power",
     "sch": [
@@ -818,19 +821,19 @@
       0
     ],
     "dnp": false,
-    "note": "R9+R10 = 24k: 4.2V cell, 100mA input limit."
+    "note": "Dedicated PMIC bus pull-up."
   },
   {
     "ref": "R10",
-    "value": "12k",
-    "lcsc": "C22790",
+    "value": "100k",
+    "lcsc": "C25803",
     "footprint": "R_0603_1608Metric",
     "pins": {
       "1": "R1",
       "2": "R2"
     },
     "nets": {
-      "1": "VSET_MID",
+      "1": "CHG_ALLOW",
       "2": "GND"
     },
     "sheet": "power",
@@ -839,12 +842,12 @@
       125
     ],
     "pcb": [
-      34,
-      43,
+      32,
+      44,
       0
     ],
     "dnp": false,
-    "note": "Series pair gives the specified 24k nominal."
+    "note": "Hardware defaults to disabled charging while MCU is off/reset."
   },
   {
     "ref": "R11",
@@ -865,12 +868,12 @@
       170
     ],
     "pcb": [
-      25,
+      26.3,
       34,
       90
     ],
     "dnp": false,
-    "note": "Charging disabled by default. Fit R12 only after battery/NTC verification."
+    "note": "VBUS-domain CE pull-up. Q3 isolates the MCU GPIO from 5V."
   },
   {
     "ref": "R12",
@@ -883,7 +886,7 @@
     },
     "nets": {
       "1": "CHG_EN_N",
-      "2": "GND"
+      "2": "CHG_DRAIN"
     },
     "sheet": "power",
     "sch": [
@@ -896,7 +899,7 @@
       90
     ],
     "dnp": true,
-    "note": "Charge-enable assembly option: do not fit until selected cell rating and NTC are confirmed."
+    "note": "Assembly charge interlock; fit after selected cell/NTC and firmware validation. Does not bypass firmware control."
   },
   {
     "ref": "R13",
@@ -917,7 +920,7 @@
       130
     ],
     "pcb": [
-      25,
+      27,
       27,
       90
     ],
@@ -926,8 +929,8 @@
   },
   {
     "ref": "C4",
-    "value": "1uF",
-    "lcsc": "C15849",
+    "value": "2.2uF",
+    "lcsc": "C23630",
     "footprint": "C_0603_1608Metric",
     "pins": {
       "1": "C1",
@@ -952,8 +955,8 @@
   },
   {
     "ref": "C5",
-    "value": "1uF",
-    "lcsc": "C15849",
+    "value": "2.2uF",
+    "lcsc": "C23630",
     "footprint": "C_0603_1608Metric",
     "pins": {
       "1": "C1",
@@ -969,8 +972,8 @@
       95
     ],
     "pcb": [
-      34,
-      36,
+      32,
+      39,
       90
     ],
     "dnp": false,
@@ -978,9 +981,9 @@
   },
   {
     "ref": "C6",
-    "value": "10uF",
-    "lcsc": "C19702",
-    "footprint": "C_0603_1608Metric",
+    "value": "22uF",
+    "lcsc": "C45783",
+    "footprint": "C_0805_2012Metric",
     "pins": {
       "1": "C1",
       "2": "C2"
@@ -1003,36 +1006,10 @@
     "note": ""
   },
   {
-    "ref": "C7",
-    "value": "47pF",
-    "lcsc": "C1671",
-    "footprint": "C_0603_1608Metric",
-    "pins": {
-      "1": "C1",
-      "2": "C2"
-    },
-    "nets": {
-      "1": "CHG_ISET",
-      "2": "GND"
-    },
-    "sheet": "power",
-    "sch": [
-      45,
-      145
-    ],
-    "pcb": [
-      25,
-      39,
-      0
-    ],
-    "dnp": false,
-    "note": ""
-  },
-  {
     "ref": "C8",
-    "value": "10uF",
-    "lcsc": "C19702",
-    "footprint": "C_0603_1608Metric",
+    "value": "22uF",
+    "lcsc": "C45783",
+    "footprint": "C_0805_2012Metric",
     "pins": {
       "1": "C1",
       "2": "C2"
@@ -1082,9 +1059,9 @@
   },
   {
     "ref": "C10",
-    "value": "10uF",
-    "lcsc": "C19702",
-    "footprint": "C_0603_1608Metric",
+    "value": "22uF",
+    "lcsc": "C45783",
+    "footprint": "C_0805_2012Metric",
     "pins": {
       "1": "C1",
       "2": "C2"
@@ -1108,9 +1085,9 @@
   },
   {
     "ref": "C11",
-    "value": "10uF",
-    "lcsc": "C19702",
-    "footprint": "C_0603_1608Metric",
+    "value": "22uF",
+    "lcsc": "C45783",
+    "footprint": "C_0805_2012Metric",
     "pins": {
       "1": "C1",
       "2": "C2"
@@ -1152,7 +1129,7 @@
     ],
     "pcb": [
       38,
-      27,
+      53,
       0
     ],
     "dnp": true,
@@ -1242,8 +1219,8 @@
   },
   {
     "ref": "R15",
-    "value": "1M",
-    "lcsc": "C22935",
+    "value": "10k",
+    "lcsc": "C25804",
     "footprint": "R_0603_1608Metric",
     "pins": {
       "1": "R1",
@@ -1268,8 +1245,8 @@
   },
   {
     "ref": "R16",
-    "value": "1M",
-    "lcsc": "C22935",
+    "value": "10k",
+    "lcsc": "C25804",
     "footprint": "R_0603_1608Metric",
     "pins": {
       "1": "R1",
@@ -1340,6 +1317,112 @@
       14,
       35,
       0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "Q3",
+    "value": "2N7002",
+    "lcsc": "C8545",
+    "footprint": "SOT-23",
+    "pins": {
+      "1": "G",
+      "2": "S",
+      "3": "D"
+    },
+    "nets": {
+      "1": "CHG_ALLOW",
+      "2": "GND",
+      "3": "CHG_DRAIN"
+    },
+    "sheet": "power",
+    "sch": [
+      100,
+      205
+    ],
+    "pcb": [
+      25,
+      39,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "R18",
+    "value": "27R",
+    "lcsc": "C25190",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "USB_DP",
+      "2": "USB_MCU_DP"
+    },
+    "sheet": "core",
+    "sch": [
+      210,
+      175
+    ],
+    "pcb": [
+      26,
+      18.5,
+      90
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "R19",
+    "value": "27R",
+    "lcsc": "C25190",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "USB_DN",
+      "2": "USB_MCU_DN"
+    },
+    "sheet": "core",
+    "sch": [
+      210,
+      195
+    ],
+    "pcb": [
+      29,
+      18.5,
+      90
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "C13",
+    "value": "100nF",
+    "lcsc": "C14663",
+    "footprint": "C_0603_1608Metric",
+    "pins": {
+      "1": "C1",
+      "2": "C2"
+    },
+    "nets": {
+      "1": "VBUS",
+      "2": "GND"
+    },
+    "sheet": "core",
+    "sch": [
+      165,
+      225
+    ],
+    "pcb": [
+      26,
+      43.5,
+      90
     ],
     "dnp": false,
     "note": ""

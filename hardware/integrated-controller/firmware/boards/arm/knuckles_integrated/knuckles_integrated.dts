@@ -1,0 +1,67 @@
+/dts-v1/;
+#include <nordic/nrf52840_qiaa.dtsi>
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/pinctrl/nrf-pinctrl.h>
+/ {
+    model = "Knuckles integrated prototype";
+    compatible = "knuckles,integrated";
+    chosen {
+        zephyr,code-partition = &code_partition;
+        zephyr,sram = &sram0;
+        zephyr,flash = &flash0;
+        zmk,battery = &vbatt;
+    };
+    vbatt: vbatt {
+        compatible = "zmk,battery-voltage-divider";
+        io-channels = <&adc 2>;
+        output-ohms = <10000>;
+        full-ohms = <20000>;
+        power-gpios = <&gpio0 5 GPIO_ACTIVE_HIGH>;
+    };
+    power_control: power_control {
+        compatible = "knuckles,power-control";
+        enable-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+        interrupt-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+    };
+};
+&adc { status = "okay"; };
+&gpiote { status = "okay"; };
+&gpio0 { status = "okay"; };
+&gpio1 { status = "okay"; };
+&uart0 { status = "disabled"; };
+&pinctrl {
+    tps_default: tps_default { group1 { psels = <NRF_PSEL(TWIM_SDA,0,17)>, <NRF_PSEL(TWIM_SCL,0,20)>; }; };
+    tps_sleep: tps_sleep { group1 { psels = <NRF_PSEL(TWIM_SDA,0,17)>, <NRF_PSEL(TWIM_SCL,0,20)>; low-power-enable; }; };
+    pmic_default: pmic_default { group1 { psels = <NRF_PSEL(TWIM_SDA,0,26)>, <NRF_PSEL(TWIM_SCL,0,27)>; }; };
+    pmic_sleep: pmic_sleep { group1 { psels = <NRF_PSEL(TWIM_SDA,0,26)>, <NRF_PSEL(TWIM_SCL,0,27)>; low-power-enable; }; };
+};
+// Label retained for the existing Knuckles shield; no Pro Micro connector.
+pro_micro_i2c: &i2c0 {
+    compatible = "nordic,nrf-twi";
+    clock-frequency = <100000>;
+    pinctrl-0 = <&tps_default>; pinctrl-1 = <&tps_sleep>;
+    pinctrl-names = "default", "sleep";
+};
+&i2c1 {
+    compatible = "nordic,nrf-twi";
+    status = "okay";
+    clock-frequency = <100000>;
+    pinctrl-0 = <&pmic_default>; pinctrl-1 = <&pmic_sleep>;
+    pinctrl-names = "default", "sleep";
+};
+zephyr_udc0: &usbd {
+    status = "okay";
+    cdc_acm_uart0: cdc_acm_uart0 { compatible = "zephyr,cdc-acm-uart"; };
+};
+&flash0 {
+    partitions {
+        compatible = "fixed-partitions";
+        #address-cells = <1>; #size-cells = <1>;
+        sd_partition: partition@0 { reg = <0x0 0x26000>; };
+        code_partition: partition@26000 { reg = <0x26000 0xc6000>; };
+        storage_partition: partition@ec000 { reg = <0xec000 0x8000>; };
+        boot_partition: partition@f4000 { reg = <0xf4000 0xc000>; };
+    };
+};
+
+&uicr { gpio-as-nreset; };

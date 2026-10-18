@@ -1,0 +1,32 @@
+if SHIELD_KNUCKLES_TPS43_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Knuckles TPS43"
+
+endif
+
+if SHIELD_KNUCKLES_TPS43_LEFT || SHIELD_KNUCKLES_TPS43_RIGHT
+
+config ZMK_SPLIT
+	default y
+
+endif
+
+if SHIELD_KNUCKLES_TPS43_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "Knuckles TPS43"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+
+config ZMK_POINTING
+	default y
+
+config INPUT
+	default y
+
+config INPUT_AZOTEQ_IQS5XX
+	default y
+
+endif

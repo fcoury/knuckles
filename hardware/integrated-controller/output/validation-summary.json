@@ -1,0 +1,42 @@
+[
+  {
+    "board": "output/knuckles_controller.kicad_pcb",
+    "physical_errors": 0,
+    "drc_warnings": 3,
+    "unconnected": 139,
+    "erc_errors": 0,
+    "erc_warnings": 0
+  },
+  {
+    "board": "output/integrated/18.5/knuckles_integrated_left.kicad_pcb",
+    "physical_errors": 0,
+    "drc_warnings": 18,
+    "unconnected": 200,
+    "erc_errors": 0,
+    "erc_warnings": 0
+  },
+  {
+    "board": "output/integrated/18.5/knuckles_integrated_right.kicad_pcb",
+    "physical_errors": 0,
+    "drc_warnings": 18,
+    "unconnected": 208,
+    "erc_errors": 0,
+    "erc_warnings": 0
+  },
+  {
+    "board": "output/integrated/19.5/knuckles_integrated_left.kicad_pcb",
+    "physical_errors": 0,
+    "drc_warnings": 9,
+    "unconnected": 200,
+    "erc_errors": 0,
+    "erc_warnings": 0
+  },
+  {
+    "board": "output/integrated/19.5/knuckles_integrated_right.kicad_pcb",
+    "physical_errors": 0,
+    "drc_warnings": 9,
+    "unconnected": 208,
+    "erc_errors": 0,
+    "erc_warnings": 0
+  }
+]

@@ -30,6 +30,7 @@ for p in parts:
     fp.SetPosition(pcbnew.VECTOR2I(pcbnew.FromMM(p['pcb'][0]),pcbnew.FromMM(p['pcb'][1])))
     fp.SetOrientationDegrees(p['pcb'][2])
     fp.Reference().SetVisible(True)
+    fp.Reference().SetLayer(pcbnew.F_Fab)
     fp.Reference().SetTextSize(pcbnew.VECTOR2I(pcbnew.FromMM(.8),pcbnew.FromMM(.8)))
     fp.Reference().SetTextThickness(pcbnew.FromMM(.12))
     if p['dnp']:fp.SetAttributes(fp.GetAttributes()|pcbnew.FP_EXCLUDE_FROM_BOM|pcbnew.FP_EXCLUDE_FROM_POS_FILES)
@@ -47,7 +48,7 @@ zone.SetDoNotAllowPads(True);zone.SetDoNotAllowFootprints(False)
 zone.Outline().NewOutline()
 for x,y in [(0,0),(45,0),(45,4.05),(0,4.05)]:zone.Outline().Append(pcbnew.FromMM(x),pcbnew.FromMM(y))
 board.Add(zone)
-for text,pos,layer in [('KNUCKLES CTRL 0.1',(22.5,18.5),pcbnew.F_SilkS),('UNROUTED ENGINEERING DRAFT',(22.5,7),pcbnew.B_SilkS),('ANTENNA: NO COPPER / BATTERY / METAL',(22.5,2),pcbnew.Dwgs_User)]:
+for text,pos,layer in [('KNUCKLES CTRL 0.2',(22.5,18.5),pcbnew.F_Fab),('UNROUTED ENGINEERING DRAFT',(22.5,7),pcbnew.B_SilkS),('ANTENNA: NO COPPER / BATTERY / METAL',(22.5,2),pcbnew.Dwgs_User)]:
     t=pcbnew.PCB_TEXT(board);t.SetText(text);t.SetPosition(pcbnew.VECTOR2I(pcbnew.FromMM(pos[0]),pcbnew.FromMM(pos[1])))
     t.SetTextSize(pcbnew.VECTOR2I(pcbnew.FromMM(.8),pcbnew.FromMM(.8)));t.SetTextThickness(pcbnew.FromMM(.12));t.SetLayer(layer);board.Add(t)
 pcbnew.SaveBoard(str(OUT/'knuckles_controller.kicad_pcb'),board)

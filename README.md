@@ -16,6 +16,10 @@ The wireless board includes a Knuckles-inspired badge and wordmark on both
 silkscreen faces. See [the artwork and PCB previews](artwork/knuckles/README.md)
 for source assets, placement, and regeneration instructions.
 
+A separate [integrated nRF52840 revision](hardware/integrated-controller/README.md)
+adds on-board USB, charging and radio circuitry in dedicated left/right layouts.
+It is an unrouted engineering study with experimental firmware.
+
 **Images**
 
 - Front plate: `images/frontplate-top.png`, `images/frontplate-bottom.png`

@@ -5,3 +5,7 @@ libraries/Raytac_MDBT50Q.kicad_mod
 !output/knuckles_controller.kicad_pro
 !output/bom-review.csv
 !output/knuckles_controller.net.xml
+
+!output/integrated/*/*.kicad_pro
+!output/integrated/*/*.net.xml
+firmware/artifacts/

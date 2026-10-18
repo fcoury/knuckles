@@ -8,9 +8,8 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-CODES = ['C5118826','C19725033','C15516','C7519','C165948','C160404','C295747',
-         'C14663','C15849','C19702','C22935','C23186','C22809','C22790','C25804',
-         'C25803','C23162','C21189','C1671','C15127','C8545','C470426','C431540','C83434']
+from circuit import PARTS
+CODES = sorted({p['lcsc'] for p in PARTS if p['lcsc']})
 
 def fetch(code):
     url = 'https://jlcpcb.com/partdetail/' + code

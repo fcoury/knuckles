@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-18T03:39:45+0000",
+    "kicad_version": "8.0.8",
+    "sheets": [
+        {
+            "path": "/core/",
+            "uuid_path": "/6a33886a-dfd2-5989-942e-087d3d71811b/2ce19b09-398d-5056-b45b-5969aa492175",
+            "violations": []
+        },
+        {
+            "path": "/power/",
+            "uuid_path": "/6a33886a-dfd2-5989-942e-087d3d71811b/a275efe2-6745-523e-8cb1-fbdbb65ac07f",
+            "violations": []
+        },
+        {
+            "path": "/matrix1/",
+            "uuid_path": "/6a33886a-dfd2-5989-942e-087d3d71811b/7f9cecaa-acdb-5eca-98f6-191b7556c1f0",
+            "violations": []
+        },
+        {
+            "path": "/matrix2/",
+            "uuid_path": "/6a33886a-dfd2-5989-942e-087d3d71811b/4d20d2b5-05de-55d3-8413-0397ffc036e8",
+            "violations": []
+        },
+        {
+            "path": "/matrix3/",
+            "uuid_path": "/6a33886a-dfd2-5989-942e-087d3d71811b/0ba5ca15-0329-55cf-9708-70b5d9c411c6",
+            "violations": []
+        },
+        {
+            "path": "/",
+            "uuid_path": "/6a33886a-dfd2-5989-942e-087d3d71811b",
+            "violations": []
+        }
+    ],
+    "source": "knuckles_integrated_right.kicad_sch"
+}

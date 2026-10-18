@@ -50,7 +50,7 @@ def pin_type(part,num):
         if num=='1':return 'power_out'
         if num in ('2','5','10','11'):return 'power_in'
         if num in ('3','9'):return 'open_collector'
-        return 'input'
+        return 'bidirectional' if num in ('7','8') else 'input'
     if part['ref']=='U3':
         if num=='1':return 'power_out'
         if num in ('3','5','8','9','11'):return 'power_in'
@@ -74,10 +74,10 @@ def symbol(part):
 FLAG = '(symbol "Knuckles:PWR_FLAG" (power) (pin_numbers hide) (pin_names (offset 0) hide) (in_bom no) (on_board no) (property "Reference" "#FLG" (at 0 2 0) (effects (font (size 1 1)) hide)) (property "Value" "PWR_FLAG" (at 0 4 0) (effects (font (size 1 1)))) (symbol "PWR_FLAG_0_1" (polyline (pts (xy 0 0)(xy 0 1.27)(xy -1.27 1.27)(xy 0 2.54)(xy 1.27 1.27)(xy 0 1.27)) (stroke (width 0) (type default)) (fill (type none)))) (symbol "PWR_FLAG_1_1" (pin power_out line (at 0 0 90) (length 0) (name "pwr" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))'
 
 
-def sheet(name):
-    selected=[p for p in PARTS if p['sheet']==name]
-    sid=uid('sheet-'+name)
-    text=f'(kicad_sch (version 20231120) (generator eeschema) (uuid {sid}) (paper "A3") (title_block (title {q("Knuckles integrated controller — "+name)}) (rev "0.1 REVIEW") (company "Knuckles")) (lib_symbols '+''.join(symbol(p) for p in selected)+FLAG+')'
+def sheet(name, parts=PARTS, project=PROJECT, root_id=ROOT_ID, sheet_id=None):
+    selected=[p for p in parts if p['sheet']==name]
+    sid=sheet_id or uid('sheet-'+name)
+    text=f'(kicad_sch (version 20231120) (generator eeschema) (uuid {sid}) (paper "A3") (title_block (title {q("Knuckles integrated controller — "+name)}) (rev "0.2 REVIEW") (company "Knuckles")) (lib_symbols '+''.join(symbol(p) for p in selected)+FLAG+')'
     text+=f'(text "REVIEW DESIGN — NOT RELEASED FOR FABRICATION" (at 20 20 0) (effects (font (size 2 2)) (justify left)) (uuid {uid(name+"-notice")}))'
     for part in selected:
         x,y=[round(round(v/1.27)*1.27,4) for v in part['sch']];pins,w,h=pin_layout(part);ref=part['ref'];part_id=uid(ref)
@@ -85,7 +85,7 @@ def sheet(name):
         text+=prop('Reference',ref,x,y-h-4)+prop('Value',part['value'],x,y-h-2)
         text+=prop('Footprint','Knuckles:'+part['footprint'],x,y,True)+prop('LCSC',part['lcsc'],x,y,True)
         for num,*_ in pins:text+=f'(pin {q(num)} (uuid {uid(ref+"-pin-"+num)}))'
-        text+=f'(instances (project {q(PROJECT)} (path {q("/"+ROOT_ID+"/"+sid)} (reference {q(ref)}) (unit 1)))))'
+        text+=f'(instances (project {q(project)} (path {q("/"+root_id+"/"+sid)} (reference {q(ref)}) (unit 1)))))'
         for num,label,px,py,angle in pins:
             sx=round(x+px,4);sy=round(y-py,4)
             net=part['nets'].get(num)
@@ -102,7 +102,7 @@ def sheet(name):
         for i,net in enumerate(['GND','VBAT','VBUS']):
             x=round(round((35+i*60)/1.27)*1.27,4);y=round(round(265/1.27)*1.27,4)
             ref='#FLG0'+str(i+1)
-            text+=f'(symbol (lib_id "Knuckles:PWR_FLAG") (at {x} {y} 0) (unit 1) (in_bom no) (on_board no) (uuid {uid(ref)}) {prop("Reference",ref,x,y,True)} {prop("Value","PWR_FLAG",x,y-4)} (pin "1" (uuid {uid(ref+"pin")})) (instances (project {q(PROJECT)} (path {q("/"+ROOT_ID+"/"+sid)} (reference {q(ref)}) (unit 1)))))'
+            text+=f'(symbol (lib_id "Knuckles:PWR_FLAG") (at {x} {y} 0) (unit 1) (in_bom no) (on_board no) (uuid {uid(ref)}) {prop("Reference",ref,x,y,True)} {prop("Value","PWR_FLAG",x,y-4)} (pin "1" (uuid {uid(ref+"pin")})) (instances (project {q(project)} (path {q("/"+root_id+"/"+sid)} (reference {q(ref)}) (unit 1)))))'
             text+=f'(global_label {q(net)} (shape bidirectional) (at {x} {y} 0) (effects (font (size 1 1)) (justify left)) (uuid {uid(ref+"label")}))'
     return text+')\n'
 
@@ -129,16 +129,18 @@ def custom_footprints():
     body=''
     for num,x,y in [('1',-2.075,-1.075),('2',2.075,-1.075),('3',-2.075,1.075),('4',2.075,1.075)]:body+=pad(num,x,y,1.05,.65)
     (LIB/'SKRPANE010.kicad_mod').write_text(footprint('SKRPANE010',body,5.2,3.2))
-    # PROVISIONAL: derived from ceoloide/power_switch_smd_side.js (Alps
+    # Derived from ceoloide/power_switch_smd_side.js (Alps
     # SSSS811101), CC-BY-NC-SA-4.0, Marco Massarelli 2023; infused-kim/ceoloide.
-    # This is NOT a verified MSK12C02 land pattern. Resolve before fabrication.
+    # Dimensions and common terminal 2 checked against the ALPS SSSS8 drawing.
     body=''
     for n,y in [('1',2.25),('2',-.75),('3',-2.25)]:body+=pad(n,-1.735,y,1.5,.7)
     for x in [-1.085,1.125]:
         for y in [-3.65,3.65]:body+=pad('',x,y,.8,1)
     for y in [-1.5,1.5]:body+=f'(pad "" np_thru_hole circle (at .025 {y}) (size .9 .9) (drill .9) (layers "*.Cu" "*.Mask"))'
-    (LIB/'MSK12C02.kicad_mod').write_text(footprint('MSK12C02',body,6.2,8.8))
+    (LIB/'SSSS811101.kicad_mod').write_text(footprint('SSSS811101',body,6.2,8.8))
     (LIB/'NTC_WirePads.kicad_mod').write_text(footprint('NTC_WirePads',pad('1',-1.5,0,1.5,2)+pad('2',1.5,0,1.5,2),5,3))
+    body=''.join(pad(str(1+2*row+col),(col-.5)*1.27,(row-1)*1.27,.9,.9,'"F.Cu" "F.Mask"') for row in range(3) for col in range(2))
+    (LIB/'SWD_2x3_P1.27_NoHoles.kicad_mod').write_text(footprint('SWD_2x3_P1.27_NoHoles',body,2.2,3.5))
 
 
 def main():
@@ -149,11 +151,11 @@ def main():
     (OUT/'sym-lib-table').write_text('(sym_lib_table (lib (name "Knuckles") (type "KiCad") (uri "${KIPRJMOD}/../libraries/Knuckles.kicad_sym") (options "") (descr "Integrated controller review symbols")))\n')
     (OUT/'circuit.json').write_text(json.dumps(PARTS,indent=2)+'\n')
     for name in ['core','power']:(OUT/(name+'.kicad_sch')).write_text(sheet(name))
-    root=f'(kicad_sch (version 20231120) (generator eeschema) (uuid {ROOT_ID}) (paper "A4") (title_block (title "Knuckles integrated nRF52840 controller") (rev "0.1 REVIEW")) (lib_symbols)'
+    root=f'(kicad_sch (version 20231120) (generator eeschema) (uuid {ROOT_ID}) (paper "A4") (title_block (title "Knuckles integrated nRF52840 controller") (rev "0.2 REVIEW")) (lib_symbols)'
     for i,name in enumerate(['core','power']):
         x=40+i*125;y=65;sid=uid('sheet-'+name)
         root+=f'(sheet (at {x} {y}) (size 80 45) (fields_autoplaced) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid {sid}) {prop("Sheetname",name,x,y-2)} {prop("Sheetfile",name+".kicad_sch",x,y+47)} (instances (project {q(PROJECT)} (path {q("/"+ROOT_ID)} (page {q(str(i+2))})))))'
-    for y,line in [(30,'Knuckles integrated controller — engineering review'),(130,'1S 4.2V LiPo • 110mAh baseline; larger capacities supported'),(140,'Default charge target 20mA; 100mA input limit'),(150,'CHARGING DISABLED: fit charge-enable R12 only after cell/NTC checks'),(160,'Prototype circuitry; not a fabrication release or a complete keyboard layout')]:root+=f'(text {q(line)} (at 30 {y} 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid {uid(line)}))'
+    for y,line in [(30,'Knuckles integrated controller — engineering review'),(130,'1S 4.2V LiPo • 110–500mAh with matching firmware battery profile'),(140,'BQ25186: programmable current / 12-hour timer / USB suspend'),(150,'CHARGING DISABLED: R12 interlock + firmware control; verify cell/NTC'),(160,'Prototype circuitry; not a fabrication release')]:root+=f'(text {q(line)} (at 30 {y} 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid {uid(line)}))'
     (OUT/(PROJECT+'.kicad_sch')).write_text(root+')\n')
     (OUT/'fp-lib-table').write_text('(fp_lib_table (lib (name "Knuckles") (type "KiCad") (uri "${KIPRJMOD}/../libraries/Knuckles.pretty") (options "") (descr "Vendored KiCad 8 plus reviewed custom lands")))\n')
     (OUT/'knuckles_controller.kicad_pro').write_text(json.dumps({'board':{'design_settings':{'rules':{'min_copper_edge_clearance':.25}}},'meta':{'filename':'knuckles_controller.kicad_pro','version':1}},indent=2)+'\n')
@@ -163,7 +165,7 @@ def main():
         for p in PARTS:
             stock=snapshot.get(p['lcsc'],{})
             w.writerow([p['ref'],p['value'],p['footprint'],p['lcsc'],'DNP' if p['dnp'] else 'yes',stock.get('componentModelEn',''),stock.get('overseasStockCount','unknown'),p['note']])
-    (OUT/'pin-map.json').write_text(json.dumps({'matrix':{net:{'gpio':gpio,'module_pad':pin} for net,(gpio,pin) in GPIO.items()},'touchpad':{'SDA':'P0.17','SCL':'P0.20'},'battery':{'adc':'P0.04/AIN2','enable':'P0.05'},'reset':'P0.18','lf_clock':'internal RC, calibrate'},indent=2)+'\n')
+    (OUT/'pin-map.json').write_text(json.dumps({'matrix':{net:{'gpio':gpio,'module_pad':pin} for net,(gpio,pin) in GPIO.items()},'touchpad':{'SDA':'P0.17','SCL':'P0.20'},'battery':{'adc':'P0.04/AIN2','enable':'P0.05'},'charger':{'SDA':'P0.26','SCL':'P0.27','enable':'P0.08','interrupt':'P0.06','power_good':'P0.07','address':'0x6a'},'reset':'P0.18','lf_clock':'internal RC, calibrate'},indent=2)+'\n')
     print(f'Generated {len(PARTS)} components, 3 schematic sheets, BOM, and pad/GPIO map in {OUT}')
 
 if __name__=='__main__':main()

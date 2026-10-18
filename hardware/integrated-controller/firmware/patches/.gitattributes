@@ -1,0 +1,2 @@
+# Unified diff context markers on blank lines are intentional data.
+*.patch -whitespace
