@@ -1,0 +1,5 @@
+config SHIELD_KNUCKLES_TPS43_LEFT
+	def_bool $(shields_list_contains,knuckles_tps43_left)
+
+config SHIELD_KNUCKLES_TPS43_RIGHT
+	def_bool $(shields_list_contains,knuckles_tps43_right)

@@ -1,0 +1,10 @@
+description: Board charging interlock and BQ25186 interrupt
+compatible: "knuckles,power-control"
+include: base.yaml
+properties:
+  enable-gpios:
+    type: phandle-array
+    required: true
+  interrupt-gpios:
+    type: phandle-array
+    required: true

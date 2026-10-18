@@ -1,0 +1,44 @@
+#include "../knuckles/knuckles.dtsi"
+
+/ {
+	tps43_listener: tps43_listener {
+		compatible = "zmk,input-listener";
+		device = <&tps43>;
+	};
+};
+
+&default_transform {
+	col-offset = <6>;
+};
+
+&kscan0 {
+	col-gpios
+		= <&gpio1 11 GPIO_ACTIVE_HIGH> // Col 5
+		, <&gpio1 13 GPIO_ACTIVE_HIGH> // Col 5
+		, <&gpio1 15 GPIO_ACTIVE_HIGH> // Col 4
+		, <&gpio0 2  GPIO_ACTIVE_HIGH> // Col 2
+		, <&gpio0 29 GPIO_ACTIVE_HIGH> // Col 1
+		, <&gpio0 31 GPIO_ACTIVE_HIGH> // Col 0
+		;
+};
+
+&pro_micro_i2c {
+	status = "okay";
+
+	tps43: iqs5xx@74 {
+		status = "okay";
+		compatible = "azoteq,iqs5xx";
+		reg = <0x74>;
+
+		/* The HolyKeebs adapter exposes I2C and power, but not RDY. */
+		switch-xy;
+		flip-x;
+		flip-y;
+		one-finger-tap;
+		two-finger-tap;
+		press-and-hold;
+		scroll;
+		natural-scroll-x;
+		natural-scroll-y;
+	};
+};

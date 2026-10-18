@@ -25,6 +25,12 @@ are archived in [`manufacturing/`](manufacturing/2026-10-18-knuckles-wireless-18
 (TRRS, small display). It's no longer supported. `knuckles_wireless` is the
 board to build.
 
+A separate [integrated nRF52840 revision](hardware/integrated-controller/README.md)
+adds on-board USB, charging and radio circuitry in dedicated left/right layouts.
+Its retained routed layouts and experimental firmware are engineering prototypes;
+module sourcing, manufacturing review and bench validation remain release gates.
+The normal build continues to use the nice!nano design.
+
 ## Build it
 
 You'll need Node.js 18+ (CI uses Node 20) and Git. Footprints live in a
@@ -140,6 +146,7 @@ The silkscreen badge and wordmark are documented in
 | `kicad/projects/` | Canonical KiCad project settings |
 | `kibot/` | KiBot configs and DSN/SES helper scripts |
 | `freerouting/` | Autorouter rules and JAR |
+| `hardware/integrated-controller/` | Opt-in integrated controller PCB and firmware prototypes, routed layouts and engineering checks |
 | `manufacturing/` | Archived files for each ordered board |
 | `artwork/` | Badge and wordmark sources and PCB renders |
 | `images/` | Reference renders of the plates and controller overlay |

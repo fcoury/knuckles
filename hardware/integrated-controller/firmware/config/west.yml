@@ -1,0 +1,16 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: suchobits
+      url-base: https://github.com/suchobits
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: v0.3.0
+      import: app/west.yml
+    - name: zmk-driver-azoteq-iqs5xx
+      remote: suchobits
+      revision: e19e55deaf8eeb0d32d9c2fe17e3f87f5287a5a5
+  self:
+    path: config

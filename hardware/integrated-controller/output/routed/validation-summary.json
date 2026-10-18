@@ -1,0 +1,58 @@
+[
+  {
+    "board": "output/routed/18.5/left/knuckles_integrated_left.kicad_pcb",
+    "physical_errors": 0,
+    "warnings": 27,
+    "unconnected": 0,
+    "board_sha256": "88788dfd56e366ebc788a7d51dac107a9d66f9b1f0c8fe16125060604e489924",
+    "source_board_sha256": "ff76dbee3be585faa4d16056929db814ca23cd77d4ef989ccd292fbd46bdbce7",
+    "preserved_footprints_and_fixed_routes": true,
+    "reference_pass": true,
+    "assembly_screen_pass": true,
+    "mode": "native-kicad-layout",
+    "manufacturing_release": false,
+    "routing_pass": true
+  },
+  {
+    "board": "output/routed/18.5/right/knuckles_integrated_right.kicad_pcb",
+    "physical_errors": 0,
+    "warnings": 22,
+    "unconnected": 0,
+    "board_sha256": "8a1b9dfab955a491efd92512e1ffccb933d1dd1a71661bac9a7041e9874dfffd",
+    "source_board_sha256": "eef926420903c873df0f16b4ba8f1e420153c6bcd73e678cf752b2af890154ee",
+    "preserved_footprints_and_fixed_routes": true,
+    "reference_pass": true,
+    "assembly_screen_pass": true,
+    "mode": "native-kicad-layout",
+    "manufacturing_release": false,
+    "routing_pass": true
+  },
+  {
+    "board": "output/routed/19.5/left/knuckles_integrated_left.kicad_pcb",
+    "physical_errors": 0,
+    "warnings": 12,
+    "unconnected": 0,
+    "board_sha256": "efc032e4ea046fff2dd0a9ec790eb807ae38133ed3032bf644523fdb70d4793f",
+    "source_board_sha256": "bd87a2a930106bcc5c9c35bd1fc01574a855fabe27856401ba9ccfafcef9b483",
+    "preserved_footprints_and_fixed_routes": true,
+    "reference_pass": true,
+    "assembly_screen_pass": true,
+    "mode": "native-kicad-layout",
+    "manufacturing_release": false,
+    "routing_pass": true
+  },
+  {
+    "board": "output/routed/19.5/right/knuckles_integrated_right.kicad_pcb",
+    "physical_errors": 0,
+    "warnings": 13,
+    "unconnected": 0,
+    "board_sha256": "a47fed21265e76af0cfda658424684307b09b7f2879c2433dea7c674fdba2fc5",
+    "source_board_sha256": "76e5c14d747f30e0ba1bb2290be564d128f4f75b14727ff14ca283e25e28e976",
+    "preserved_footprints_and_fixed_routes": true,
+    "reference_pass": true,
+    "assembly_screen_pass": true,
+    "mode": "native-kicad-layout",
+    "manufacturing_release": false,
+    "routing_pass": true
+  }
+]

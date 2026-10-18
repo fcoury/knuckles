@@ -69,3 +69,6 @@ node_modules
 # gerbers
 gerbers/*/*
 !gerbers/*/*.zip
+
+# Generated routing trials; finished native layouts are tracked separately.
+hardware/integrated-controller/output/candidates/

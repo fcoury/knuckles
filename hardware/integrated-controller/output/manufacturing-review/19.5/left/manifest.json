@@ -1,0 +1,260 @@
+{
+  "board": "hardware/integrated-controller/output/routed/19.5/left/knuckles_integrated_left.kicad_pcb",
+  "sha256": "efc032e4ea046fff2dd0a9ec790eb807ae38133ed3032bf644523fdb70d4793f",
+  "physical_errors": 0,
+  "unconnected": 0,
+  "warnings": [
+    {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [CHG_INT_N] on F.Cu - B.Cu",
+          "pos": {
+            "x": 216.079999,
+            "y": 69.125
+          },
+          "uuid": "82a3e867-d6ca-4055-a606-038cf82fcb6c"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    },
+    {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [CHG_PG_N] on F.Cu - B.Cu",
+          "pos": {
+            "x": 211.211999,
+            "y": 69.625
+          },
+          "uuid": "2bcd1e72-cb6b-498f-9ff6-07e530e05564"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    },
+    {
+      "description": "Silkscreen clipped by board edge",
+      "items": [
+        {
+          "description": "Segment on Edge.Cuts",
+          "pos": {
+            "x": 207.347381,
+            "y": 51.7525
+          },
+          "uuid": "6f2e0539-20cd-4553-b14c-08ef34e61095"
+        },
+        {
+          "description": "Segment on F.Silkscreen",
+          "pos": {
+            "x": 212.83,
+            "y": 52.625
+          },
+          "uuid": "094f477d-5d77-49ce-97c9-80cb9bc7a4ef"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_edge_clearance"
+    },
+    {
+      "description": "Silkscreen clipped by board edge",
+      "items": [
+        {
+          "description": "Segment on Edge.Cuts",
+          "pos": {
+            "x": 207.347381,
+            "y": 51.7525
+          },
+          "uuid": "6f2e0539-20cd-4553-b14c-08ef34e61095"
+        },
+        {
+          "description": "Segment on F.Silkscreen",
+          "pos": {
+            "x": 222.23,
+            "y": 52.625
+          },
+          "uuid": "9a09853f-b234-4e17-9a03-2474aca268e9"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_edge_clearance"
+    },
+    {
+      "description": "The current configuration does not include the library 'ceoloide'.",
+      "items": [
+        {
+          "description": "Footprint MH6",
+          "pos": {
+            "x": 154.157,
+            "y": 107.865
+          },
+          "uuid": "1c26fbc6-b477-4962-ac61-e194e88f5fac"
+        }
+      ],
+      "severity": "warning",
+      "type": "lib_footprint_issues"
+    },
+    {
+      "description": "The current configuration does not include the library 'ceoloide'.",
+      "items": [
+        {
+          "description": "Footprint MH3",
+          "pos": {
+            "x": 109.75,
+            "y": 51.25
+          },
+          "uuid": "3ab08e6a-c785-4c19-ae6f-f26fd4f1186b"
+        }
+      ],
+      "severity": "warning",
+      "type": "lib_footprint_issues"
+    },
+    {
+      "description": "The current configuration does not include the library 'ceoloide'.",
+      "items": [
+        {
+          "description": "Footprint MH7",
+          "pos": {
+            "x": 201.7575,
+            "y": 115.6406
+          },
+          "uuid": "518f8fad-970a-4381-9412-e0b9d9950b7f"
+        }
+      ],
+      "severity": "warning",
+      "type": "lib_footprint_issues"
+    },
+    {
+      "description": "The current configuration does not include the library 'ceoloide'.",
+      "items": [
+        {
+          "description": "Footprint MH4",
+          "pos": {
+            "x": 109.75,
+            "y": 90.25
+          },
+          "uuid": "767dc260-0b07-493c-9196-eaad06f2a140"
+        }
+      ],
+      "severity": "warning",
+      "type": "lib_footprint_issues"
+    },
+    {
+      "description": "Footprint 'Raytac_MDBT50Q' does not match copy in library 'Knuckles'.",
+      "items": [
+        {
+          "description": "Footprint U1",
+          "pos": {
+            "x": 218.53,
+            "y": 98.525
+          },
+          "uuid": "9398c28d-e02e-4884-bd04-7264f556e6d7"
+        }
+      ],
+      "severity": "warning",
+      "type": "lib_footprint_mismatch"
+    },
+    {
+      "description": "The current configuration does not include the library 'ceoloide'.",
+      "items": [
+        {
+          "description": "Footprint MH5",
+          "pos": {
+            "x": 187.718,
+            "y": 47.6735
+          },
+          "uuid": "fd502350-d49a-4297-a498-0bc1efe135b0"
+        }
+      ],
+      "severity": "warning",
+      "type": "lib_footprint_issues"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Rectangle on F.Silkscreen",
+          "pos": {
+            "x": 170.0,
+            "y": 48.125
+          },
+          "uuid": "b49dabfc-8ea8-40ab-84d8-5c8957a6b1c3"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Polygon on F.Silkscreen",
+          "pos": {
+            "x": 211.73,
+            "y": 86.225
+          },
+          "uuid": "d3673c22-c948-44a0-b3c8-68cece3d3fea"
+        },
+        {
+          "description": "Segment on F.Silkscreen",
+          "pos": {
+            "x": 211.49,
+            "y": 89.285
+          },
+          "uuid": "8f94ff85-5575-4f51-aeec-c80467b78749"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    }
+  ],
+  "manufacturing_release": false,
+  "controller_population": [
+    "U1",
+    "J1",
+    "U4",
+    "R1",
+    "R2",
+    "J2",
+    "SW1",
+    "SW2",
+    "R3",
+    "R6",
+    "R7",
+    "C1",
+    "C2",
+    "C3",
+    "U2",
+    "U3",
+    "L1",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R13",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9",
+    "C10",
+    "C11",
+    "Q1",
+    "Q2",
+    "R14",
+    "R15",
+    "R16",
+    "R17",
+    "C12",
+    "Q3",
+    "R18",
+    "R19",
+    "C13"
+  ],
+  "dnp": [
+    "J5",
+    "R12",
+    "J6"
+  ]
+}

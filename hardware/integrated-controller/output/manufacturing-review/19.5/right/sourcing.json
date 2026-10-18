@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-18",
+  "ordering_authorized": false,
+  "inductor": {
+    "mpn": "SWPA3015S1R5NT",
+    "jlc": "C56594",
+    "reason": "Exact published Sunlord variant, replacing ambiguous MT listing",
+    "inductance_uH": 1.5,
+    "tolerance_percent": 30,
+    "saturation_A": 2.3,
+    "thermal_current_A": 1.7,
+    "dcr_max_ohm": 0.065,
+    "footprint_mm": [
+      3,
+      3,
+      1.5
+    ],
+    "stock_snapshot": {
+      "componentCode": "C56594",
+      "componentModelEn": "SWPA3015S1R5NT",
+      "componentBrandEn": "Sunlord",
+      "componentSpecificationEn": "SMD,3x3mm",
+      "overseasStockCount": 3825,
+      "canPresaleNumber": 3659,
+      "preMinPurchaseNum": 228,
+      "leastPatchNumber": 5,
+      "lossNumber": 4,
+      "dataManualUrl": "https://datasheet.lcsc.com/szlcsc/1810230920_Sunlord-SWPA3015S1R5NT_C56594.pdf",
+      "initialPrice": 0.048,
+      "url": "https://jlcpcb.com/partdetail/C56594",
+      "checked_at": "2026-10-18T04:14:54.025213+00:00"
+    }
+  },
+  "module": {
+    "mpn": "MDBT50Q-1MV2",
+    "jlc": "C5118826",
+    "jlc_stock": 0,
+    "alternate_listing": "https://www.digikey.com/en/products/detail/raytac/MDBT50Q-1MV2/13677591",
+    "listing_observation": "14 units listed, Raytac marketplace seller; availability is not reserved or an assembly commitment",
+    "assembly_route": "Request JLC global sourcing or consignment acceptance for the exact module; no quote/order submitted",
+    "release_gate": true
+  }
+}

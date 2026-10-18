@@ -1,0 +1,54 @@
+diff --git a/drivers/input/iqs5xx.c b/drivers/input/iqs5xx.c
+index f8ee1dd..96b88c9 100644
+--- a/drivers/input/iqs5xx.c
++++ b/drivers/input/iqs5xx.c
+@@ -54,6 +54,20 @@ static int iqs5xx_write_reg8(const struct device *dev, uint16_t reg, uint8_t val
+     return i2c_write_dt(&config->i2c, buf, sizeof(buf));
+ }
+ 
++static int iqs5xx_begin_comm_window(const struct device *dev, uint8_t *sys_info_0) {
++    const struct iqs5xx_config *config = dev->config;
++    int ret = iqs5xx_read_reg8(dev, IQS5XX_SYSTEM_INFO_0, sys_info_0);
++
++    if (ret < 0 && !config->rdy_gpio.port) {
++        // IQS5xx-B000 datasheet section 8.8.2: a low-power device NACKs
++        // the wake request. Retry at least 150 us after its STOP.
++        k_usleep(200);
++        ret = iqs5xx_read_reg8(dev, IQS5XX_SYSTEM_INFO_0, sys_info_0);
++    }
++
++    return ret;
++}
++
+ static int iqs5xx_end_comm_window(const struct device *dev) {
+     const struct iqs5xx_config *config = dev->config;
+     uint8_t buf[3] = {IQS5XX_END_COMM_WINDOW >> 8, IQS5XX_END_COMM_WINDOW & 0xFF, 0x00};
+@@ -86,10 +100,12 @@ static void iqs5xx_work_handler(struct k_work *work) {
+     int ret;
+ 
+     // Read system info registers.
+-    ret = iqs5xx_read_reg8(dev, IQS5XX_SYSTEM_INFO_0, &sys_info_0);
++    ret = iqs5xx_begin_comm_window(dev, &sys_info_0);
+     if (ret < 0) {
+         LOG_ERR("Failed to read system info 0: %d", ret);
+-        goto end_comm;
++        // No session was opened; an end command could close the window
++        // that the wake request just made available.
++        return;
+     }
+ 
+     ret = iqs5xx_read_reg8(dev, IQS5XX_SYSTEM_INFO_1, &sys_info_1);
+@@ -408,6 +424,13 @@ static int iqs5xx_init(const struct device *dev) {
+     k_msleep(100);
+ 
+     // Setup device configuration.
++    uint8_t sys_info_0;
++    ret = iqs5xx_begin_comm_window(dev, &sys_info_0);
++    if (ret < 0) {
++        LOG_ERR("Failed to open setup communication window: %d", ret);
++        return ret;
++    }
++
+     ret = iqs5xx_setup_device(dev);
+     if (ret < 0) {
+         LOG_ERR("Failed to setup device: %d", ret);

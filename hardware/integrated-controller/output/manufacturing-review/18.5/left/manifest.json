@@ -1,0 +1,485 @@
+{
+  "board": "hardware/integrated-controller/output/routed/18.5/left/knuckles_integrated_left.kicad_pcb",
+  "sha256": "88788dfd56e366ebc788a7d51dac107a9d66f9b1f0c8fe16125060604e489924",
+  "physical_errors": 0,
+  "unconnected": 0,
+  "warnings": [
+    {
+      "description": "Track has unconnected end",
+      "items": [
+        {
+          "description": "Track [C1] on B.Cu, length 0.8997 mm",
+          "pos": {
+            "x": 198.533,
+            "y": 99.177
+          },
+          "uuid": "6c29ee24-0084-482b-9148-bfcff5a308d5"
+        }
+      ],
+      "severity": "warning",
+      "type": "track_dangling"
+    },
+    {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [C2] on F.Cu - B.Cu",
+          "pos": {
+            "x": 210.45,
+            "y": 98.0536
+          },
+          "uuid": "8dc3dc0f-23f2-4b7f-9910-4fb6ba8e8554"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    },
+    {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [C3] on F.Cu - B.Cu",
+          "pos": {
+            "x": 154.302,
+            "y": 95.8465
+          },
+          "uuid": "e616365d-1c73-4f6a-803c-911d00468959"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    },
+    {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [R1] on F.Cu - B.Cu",
+          "pos": {
+            "x": 211.4162,
+            "y": 102.9153
+          },
+          "uuid": "ff8f7ef1-7e3d-41d5-82eb-515174eafb6d"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    },
+    {
+      "description": "Track has unconnected end",
+      "items": [
+        {
+          "description": "Track [R0] on F.Cu, length 0.1830 mm",
+          "pos": {
+            "x": 198.034,
+            "y": 56.2635
+          },
+          "uuid": "a8d94d0a-69bd-4e0c-9cbb-34e9f8bf5a62"
+        }
+      ],
+      "severity": "warning",
+      "type": "track_dangling"
+    },
+    {
+      "description": "Track has unconnected end",
+      "items": [
+        {
+          "description": "Track [+3V3] on F.Cu, length 0.0000 mm",
+          "pos": {
+            "x": 221.0,
+            "y": 77.6
+          },
+          "uuid": "0b883c24-10a3-4d76-9f09-f382d6ed0e72"
+        }
+      ],
+      "severity": "warning",
+      "type": "track_dangling"
+    },
+    {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [CHG_INT_N] on F.Cu - B.Cu",
+          "pos": {
+            "x": 210.549999,
+            "y": 71.6
+          },
+          "uuid": "30819bd4-3ebf-4072-b807-86ddf9f5ac0e"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    },
+    {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [CHG_PG_N] on F.Cu - B.Cu",
+          "pos": {
+            "x": 205.681999,
+            "y": 72.1
+          },
+          "uuid": "4862362e-956f-4468-8587-163a39188c71"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    },
+    {
+      "description": "Silkscreen clipped by board edge",
+      "items": [
+        {
+          "description": "Segment on Edge.Cuts",
+          "pos": {
+            "x": 201.818604,
+            "y": 54.2275
+          },
+          "uuid": "fc992b8f-3ac3-446b-9be1-857f9a76db10"
+        },
+        {
+          "description": "Segment on F.Silkscreen",
+          "pos": {
+            "x": 207.3,
+            "y": 55.1
+          },
+          "uuid": "c1ba7220-b839-48d2-8241-e1650681b986"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_edge_clearance"
+    },
+    {
+      "description": "Silkscreen clipped by board edge",
+      "items": [
+        {
+          "description": "Segment on Edge.Cuts",
+          "pos": {
+            "x": 201.818604,
+            "y": 54.2275
+          },
+          "uuid": "fc992b8f-3ac3-446b-9be1-857f9a76db10"
+        },
+        {
+          "description": "Segment on F.Silkscreen",
+          "pos": {
+            "x": 216.7,
+            "y": 55.1
+          },
+          "uuid": "ebc18262-e4e1-447d-a45e-4707a3c00302"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_edge_clearance"
+    },
+    {
+      "description": "The current configuration does not include the library 'ceoloide'.",
+      "items": [
+        {
+          "description": "Footprint MH4",
+          "pos": {
+            "x": 109.25,
+            "y": 90.75
+          },
+          "uuid": "34a9d87e-1d55-4688-8ec3-090ccf1dbb6a"
+        }
+      ],
+      "severity": "warning",
+      "type": "lib_footprint_issues"
+    },
+    {
+      "description": "The current configuration does not include the library 'ceoloide'.",
+      "items": [
+        {
+          "description": "Footprint MH7",
+          "pos": {
+            "x": 196.7246,
+            "y": 115.0067
+          },
+          "uuid": "6f4d679e-df1f-49b5-9b62-0a921cb13a84"
+        }
+      ],
+      "severity": "warning",
+      "type": "lib_footprint_issues"
+    },
+    {
+      "description": "Footprint 'Raytac_MDBT50Q' does not match copy in library 'Knuckles'.",
+      "items": [
+        {
+          "description": "Footprint U1",
+          "pos": {
+            "x": 213.0,
+            "y": 101.0
+          },
+          "uuid": "8b6eb074-e98d-4a10-8395-29b18f1fb168"
+        }
+      ],
+      "severity": "warning",
+      "type": "lib_footprint_mismatch"
+    },
+    {
+      "description": "The current configuration does not include the library 'ceoloide'.",
+      "items": [
+        {
+          "description": "Footprint MH3",
+          "pos": {
+            "x": 109.25,
+            "y": 53.75
+          },
+          "uuid": "a4a1de8f-6398-48b7-b3ed-f0e792240bee"
+        }
+      ],
+      "severity": "warning",
+      "type": "lib_footprint_issues"
+    },
+    {
+      "description": "The current configuration does not include the library 'ceoloide'.",
+      "items": [
+        {
+          "description": "Footprint MH5",
+          "pos": {
+            "x": 183.218,
+            "y": 50.2985
+          },
+          "uuid": "ada4b82d-7818-4f74-82ab-852273b029cb"
+        }
+      ],
+      "severity": "warning",
+      "type": "lib_footprint_issues"
+    },
+    {
+      "description": "The current configuration does not include the library 'ceoloide'.",
+      "items": [
+        {
+          "description": "Footprint MH6",
+          "pos": {
+            "x": 151.157,
+            "y": 107.615
+          },
+          "uuid": "e609914e-47e9-4bb2-afc9-4cf560d6aedc"
+        }
+      ],
+      "severity": "warning",
+      "type": "lib_footprint_issues"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Rectangle on F.Silkscreen",
+          "pos": {
+            "x": 92.0,
+            "y": 36.5
+          },
+          "uuid": "d5662fbb-9a7b-4221-9bbb-447bf6edfdf6"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Rectangle on F.Silkscreen",
+          "pos": {
+            "x": 110.5,
+            "y": 73.5
+          },
+          "uuid": "b74b1e27-315d-4151-9ec2-54229ac45e06"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Rectangle on F.Silkscreen",
+          "pos": {
+            "x": 110.5,
+            "y": 36.5
+          },
+          "uuid": "acaea659-72a8-43e2-9632-3b103fea695d"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Rectangle on F.Silkscreen",
+          "pos": {
+            "x": 92.0,
+            "y": 73.5
+          },
+          "uuid": "fab24216-3929-4bd6-b7ec-acfc8a5cb1bd"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Rectangle on F.Silkscreen",
+          "pos": {
+            "x": 184.5,
+            "y": 34.1875
+          },
+          "uuid": "a07ee7cf-a19b-4edd-a83d-70dbee08df1f"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Rectangle on F.Silkscreen",
+          "pos": {
+            "x": 92.0,
+            "y": 92.0
+          },
+          "uuid": "8bb6f240-6e9f-476c-bc29-61e06def15f8"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Rectangle on F.Silkscreen",
+          "pos": {
+            "x": 92.0,
+            "y": 55.0
+          },
+          "uuid": "b0ab7274-8deb-44a0-9fc8-33597f00b63c"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Rectangle on F.Silkscreen",
+          "pos": {
+            "x": 110.5,
+            "y": 55.0
+          },
+          "uuid": "9e180a90-110c-42b7-a733-8e8105f67ee4"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Rectangle on F.Silkscreen",
+          "pos": {
+            "x": 110.5,
+            "y": 92.0
+          },
+          "uuid": "400186d2-50d9-4fc4-95cf-36f4e0903fe4"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Rectangle on F.Silkscreen",
+          "pos": {
+            "x": 166.0,
+            "y": 50.375
+          },
+          "uuid": "c6fcb9c1-c845-4ca3-9a4b-fe6e1df5d0a7"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Polygon on F.Silkscreen",
+          "pos": {
+            "x": 206.2,
+            "y": 88.7
+          },
+          "uuid": "b053a74c-bfa5-4cbc-83e2-bde3be527897"
+        },
+        {
+          "description": "Segment on F.Silkscreen",
+          "pos": {
+            "x": 205.96,
+            "y": 91.76
+          },
+          "uuid": "d41d3f94-788a-4c6b-8513-200508f1dd13"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    }
+  ],
+  "manufacturing_release": false,
+  "controller_population": [
+    "U1",
+    "J1",
+    "U4",
+    "R1",
+    "R2",
+    "J2",
+    "SW1",
+    "SW2",
+    "R3",
+    "R6",
+    "R7",
+    "C1",
+    "C2",
+    "C3",
+    "U2",
+    "U3",
+    "L1",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R13",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9",
+    "C10",
+    "C11",
+    "Q1",
+    "Q2",
+    "R14",
+    "R15",
+    "R16",
+    "R17",
+    "C12",
+    "Q3",
+    "R18",
+    "R19",
+    "C13"
+  ],
+  "dnp": [
+    "J5",
+    "R12",
+    "J6"
+  ]
+}

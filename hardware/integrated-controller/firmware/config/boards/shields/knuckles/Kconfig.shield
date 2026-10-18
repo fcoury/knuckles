@@ -1,0 +1,5 @@
+config SHIELD_KNUCKLES_LEFT
+    def_bool $(shields_list_contains,knuckles_left)
+
+config SHIELD_KNUCKLES_RIGHT
+    def_bool $(shields_list_contains,knuckles_right)

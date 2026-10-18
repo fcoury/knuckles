@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "Knuckles") (type "KiCad") (uri "${KIPRJMOD}/../../../../libraries/Knuckles.pretty") (options "") (descr "Controller footprints")))

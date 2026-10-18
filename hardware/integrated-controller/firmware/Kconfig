@@ -1,0 +1,21 @@
+menu "Knuckles integrated controller"
+if BOARD_KNUCKLES_INTEGRATED
+config KNUCKLES_BATTERY_VERIFIED
+    bool "Enable charging for an electrically verified cell and thermistor"
+    default n
+    help
+      Requires a protected 4.2 V cell rated for the selected current and a
+      10k beta-3435 thermistor bonded to the cell. R12 must also be fitted.
+      Keep disabled during initial bring-up.
+choice KNUCKLES_BATTERY_PROFILE
+    prompt "Battery charging profile"
+    default KNUCKLES_BATTERY_110
+config KNUCKLES_BATTERY_110
+    bool "110 mAh / 20 mA"
+config KNUCKLES_BATTERY_250
+    bool "250 mAh / 50 mA"
+config KNUCKLES_BATTERY_500
+    bool "500 mAh / 100 mA"
+endchoice
+endif
+endmenu

@@ -1,0 +1,5 @@
+if(CONFIG_BOARD_KNUCKLES_INTEGRATED)
+  zephyr_library()
+  zephyr_library_include_directories(${APPLICATION_SOURCE_DIR}/include)
+  zephyr_library_sources(src/power.c src/charge_policy.c)
+endif()
