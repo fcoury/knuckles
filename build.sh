@@ -1,4 +1,5 @@
 #!/bin/sh
+set -eu
 container_cmd=docker
 # Ensure we switch to the /board working directory, pointing it
 # at the repo root (when running the script from there)
@@ -22,7 +23,7 @@ rm -rf outlines
 rm -rf pcbs
 rm -rf points
 rm -rf source
-rm -rf cases
+rm -f cases/knuckles_bottom_tray.jscad cases/knuckles_bottom_tray.stl
 
 # Cleanup Freerouting log outpus
 if [ -e freerouting/freerouting.log ]; then

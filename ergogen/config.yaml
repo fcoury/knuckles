@@ -22,6 +22,7 @@ presets:
     # Key and keycap measures
     kx: 13.5 # spacing between key centers (X-axis)
     ky: 13 # spacing between key centers (Y-axis)
+    # Build-time override for this preset: npm run build -- --spacing 18.5
     ks: 19.5 # horizontal center-to-center spacing
     kp: 19.5 # vertical center-to-center spacing
     kpx: ks * 0.5 # x padding for the outline
@@ -968,14 +969,15 @@ pcbs:
     footprints:
       <<: *basepcb_footprints
 
-      # The art is mirrored on B.SilkS so either assembled hand reads correctly.
+      # Mirror B.SilkS for either hand. Compact spacing needs extra clearance
+      # from the board edge, mounting hole, and thumb-key outline.
       knuckles_badge:
         what: knuckles_artwork
         where: matrix_inner_top
         params:
           variant: badge
         adjust:
-          shift: [20, -46.8375]
+          shift: [20 - 1.2 * (19.5 - ks), -46.8375 + 1.75 * (19.5 - ks)]
 
       knuckles_wordmark:
         what: knuckles_artwork
@@ -983,7 +985,7 @@ pcbs:
         params:
           variant: wordmark
         adjust:
-          shift: [1, -10.675]
+          shift: [1, -10.675 + 0.65 * (19.5 - ks)]
 
       jlcpcb_order_number_text:
         what: ceoloide/utility_text
@@ -995,7 +997,7 @@ pcbs:
           thickness: 0.12
           reversible: true
         adjust:
-          shift: [1, -13.475]
+          shift: [1, -13.475 + 0.65 * (19.5 - ks)]
 
       on_off_switch:
         what: ceoloide/power_switch_smd_side

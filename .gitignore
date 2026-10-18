@@ -51,6 +51,8 @@ pcbs/*_preview-drc.rpt
 .DS_Store
 
 # ergogen
+build/
+pcbs/build-info.json
 outlines/_*.*
 outlines/*.yaml
 pcbs/_*.*

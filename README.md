@@ -67,6 +67,47 @@ Notes:
 - If case STL generation fails, check the path in `package.json` (`cases/knuckles_bottom_tray.jscad`) vs the file in `cases/`.
 - Shell scripts expect Docker to be available and will pull/use containers automatically.
 
+## Choosing key spacing
+
+The PG1316S layout supports **18.5 mm** (compact, matching the older key layout)
+and **19.5 mm** center-to-center spacing in both directions. Both builds include
+the updated power switch, TPS43 controller area, and reversible silkscreen.
+The default remains 19.5 mm, as set in `ergogen/config.yaml`.
+
+```sh
+# Generate into the usual pcbs/, outlines/, and cases/ folders.
+npm run build -- --spacing 18.5
+npm run build -- --spacing 19.5
+
+# Keep both sets of boards, plates, and the generated case in separate folders.
+npm run debug -- --spacing 18.5 --output build/18.5
+npm run debug -- --spacing 19.5 --output build/19.5
+
+# Use the same selection with the full Docker routing/export pipeline.
+KNUCKLES_SPACING=18.5 ./build.sh
+```
+
+`--spacing` takes precedence over `KNUCKLES_SPACING`; otherwise the preset default
+is used. The source YAML is never rewritten. Other switch presets retain their
+own spacing. `pcbs/build-info.json` in each output directory records the selected
+spacing. Custom output directories also receive KiCad project settings and a 3D
+model reference pointing back to this checkout's models.
+
+The silkscreen shifts to clear the compact board's edge, mounting hole, and thumb
+keys. Plates, holes, and the generated bottom tray follow the selected layout;
+changing spacing requires matching plates and cases. This selection does not
+alter the separately designed `cases/thin/` prototypes for the older boards.
+
+The full pipeline always uses the usual root output folders. For isolated
+generation, use `npm run build` or `npm run debug` with `--output`; do not mix
+routed boards or Gerbers from different spacing builds. `./rebuild.sh` routes
+the PCB already in `pcbs/` and does not change its spacing. The older
+`ergogen/output/pcbs/` snapshots are not refreshed by builds into the root;
+use the output directory selected by the command.
+
+`KNUCKLES_SPACING=18.5 npm run watch:debug` and `./watch.sh --spacing 18.5`
+also honor the selection. To check the build options, run `npm run build -- --help`.
+
 ## Outputs
 
 - `pcbs/` — KiCad 8 `.kicad_pcb` files for boards and plates.
@@ -96,6 +137,10 @@ After changes, rebuild via Ergogen (`npm run build`) or run the full pipeline (`
 ## CI
 
 A GitHub Actions workflow (`.github/workflows/build.yaml`) reproduces the full pipeline in containers:
+
+The workflow runs both spacings, with separate `knuckles-18.5mm` and
+`knuckles-19.5mm` artifacts. `npm test` checks real builds of both layouts,
+including spacing selection, generated outputs, and invalid-value handling.
 
 - Ergogen generation
 - KiBot renders + Gerbers (plates and board)

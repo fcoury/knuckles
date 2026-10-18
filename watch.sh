@@ -1,20 +1,20 @@
 #!/bin/bash
 
-# set -euo pipefail
+set -euo pipefail
 
-cd ergogen
+cd "$(dirname "$0")"
 
-ergogen --clean .
+npm run debug -- --output ergogen/output "$@"
 killall pcbnew || true
 sleep 1
-open output/pcbs/knuckles_wireless.kicad_pcb
+open ergogen/output/pcbs/knuckles_wireless.kicad_pcb
 
-fswatch -o config.yaml | while read f; do
+fswatch -o ergogen/config.yaml ergogen/footprints | while read f; do
   echo "Generating PCB..."
-  ergogen --clean .
+  npm run debug -- --output ergogen/output "$@"
   killall pcbnew || true
   sleep 1
-  open output/pcbs/knuckles_wireless.kicad_pcb
+  open ergogen/output/pcbs/knuckles_wireless.kicad_pcb
 done
 # watchexec --exts yaml -- 'ergogen . && open output/pcbs/left.kicad_pcb'
 

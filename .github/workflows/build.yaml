@@ -9,12 +9,19 @@ on:
       - "kibot/*"
       - "freerouting/*"
       - "package.json"
+      - "package-lock.json"
+      - "scripts/**"
+      - "build.sh"
 
 name: Build
 jobs:
   board:
+    strategy:
+      fail-fast: false
+      matrix:
+        spacing: ["18.5", "19.5"]
     runs-on: ubuntu-latest
-    name: Generate
+    name: Generate (${{ matrix.spacing }} mm)
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,8 +38,11 @@ jobs:
           cache: "npm"
       - name: Install dependencies
         run: npm install
+      - name: Test spacing selection
+        if: matrix.spacing == '19.5'
+        run: npm test
       - name: Generate unrouted PCBs with Ergogen (definition in package.json)
-        run: npm run build
+        run: npm run build -- --spacing ${{ matrix.spacing }}
       - name: Run KiBot to generate images, gerbers for the plates
         uses: ./.github/actions/kibot
         with:
@@ -53,7 +63,7 @@ jobs:
       - name: Persist output
         uses: actions/upload-artifact@v4
         with:
-          name: knuckles
+          name: knuckles-${{ matrix.spacing }}mm
           path: |
             cases
             gerbers

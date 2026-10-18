@@ -1,13 +1,15 @@
 {
   "scripts": {
-    "build": "ergogen ./ergogen/ --output ./ --clear && npm run sync:kicad-projects && npx @jscad/cli cases/knuckles_bottom_tray.jscad -of stla -o cases/knuckles_bottom_tray.stl",
-    "debug": "ergogen ./ergogen/ --output ./ --clear --debug && npm run sync:kicad-projects && npx @jscad/cli cases/knuckles_bottom_tray.jscad -of stla -o cases/knuckles_bottom_tray.stl",
+    "test": "node --test scripts/build.test.mjs",
+    "build": "node scripts/build.mjs",
+    "debug": "node scripts/build.mjs --debug",
     "route": "./scripts/autoroute.sh knuckles_wireless",
     "sync:kicad-projects": "node scripts/sync-kicad-projects.mjs",
-    "watch:build": "nodemon -e yaml,js -x \"npm run build\"",
-    "watch:debug": "nodemon -e yaml,js -x \"npm run debug\""
+    "watch:build": "nodemon -e yaml,js,mjs -x \"npm run build\"",
+    "watch:debug": "nodemon -e yaml,js,mjs -x \"npm run debug\""
   },
   "dependencies": {
+    "js-yaml": "^3.14.1",
     "ergogen": "^4.1.0",
     "nodemon": "^3.0.1",
     "@jscad/cli": "1.10.0"

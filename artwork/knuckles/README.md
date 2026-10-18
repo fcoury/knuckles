@@ -9,6 +9,7 @@ forward-slanted wordmark, and paired speed stripes around the revision label.
 - `pcb-front.svg` / `pcb-back.svg`: actual silkscreen, mask openings, and board
   outline exported from KiCad. The back preview is viewed from the back.
 - `pcb-render.png`: KiCad top-view render of the updated PCB.
+- `pcb-18.5-render.png`: KiCad top-view render of the compact spacing option.
 
 The wireless board places the badge between the battery connector and thumb
 keys. The larger wordmark occupies the lower edge below the ring-finger column.
@@ -48,5 +49,20 @@ This is the generated **unrouted** board, not a refreshed manufacturing package.
 The routed board and Gerbers must be regenerated through the usual pipeline
 before fabrication. The older `ergogen/output/pcbs/` snapshots were left alone;
 the current updated board is `pcbs/knuckles_wireless.kicad_pcb`.
+
+## Spacing variants
+
+`npm run build -- --spacing 18.5` and `--spacing 19.5` share these assets. The
+compact board moves the badge up and left, and moves the wordmark/revision up,
+to clear its mounting hole, thumb-key outline, and board edge. The default
+19.5 mm artwork placement stays the same. See the repository README for separate
+output folders and full routing/export commands.
+
+KiCad 8 also checked the 18.5 mm generated board against an otherwise identical
+control with the two artwork footprints removed. Both report the same 193
+findings (108 colocated holes, 65 library warnings, and 20 existing mask-clipping
+warnings) and 179 unconnected items. No artwork collisions remain. These are
+checks on unrouted boards; both spacing options still need routing and the
+manufacturing gate before ordering.
 
 Footprint polygons follow the [KiCad S-expression format](https://dev-docs.kicad.org/en/file-formats/sexpr-intro/).
