@@ -1,5 +1,9 @@
 # Knuckles
 
+<p align="center">
+  <img src="artwork/knuckles/concept.png" alt="Knuckles echidna badge and wordmark" width="420">
+</p>
+
 An open-source, column-staggered ergonomic keyboard. This repo contains everything to generate the PCBs, plates, renders/gerbers, and a simple printable bottom case tray.
 
 ![Knuckles with Case](images/photo.png)
@@ -15,6 +19,8 @@ Both variants use reversible footprints and support per-key LEDs (SK6812mini-E) 
 The wireless board includes a Knuckles-inspired badge and wordmark on both
 silkscreen faces. See [the artwork and PCB previews](artwork/knuckles/README.md)
 for source assets, placement, and regeneration instructions.
+
+![Compact 18.5 mm wireless PCB with the Knuckles badge and wordmark](artwork/knuckles/pcb-18.5-render.png)
 
 **Images**
 
