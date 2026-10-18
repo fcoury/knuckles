@@ -10,6 +10,48 @@
   "controller_components": 43,
   "copper_layers": 4,
   "routed": false,
+  "routing": {
+    "stage": "regulator-and-charger-power",
+    "complete_board": false,
+    "locked_tracks": true,
+    "U3_center_mm": [
+      208.0,
+      90.0
+    ],
+    "local_power_nets": [
+      "SW_L1",
+      "SW_L2",
+      "SYS",
+      "+3V3",
+      "GND",
+      "REG_EN"
+    ],
+    "via_mm": {
+      "diameter": 0.6,
+      "drill": 0.3
+    },
+    "thermal_vias": "outside exposed-pad paste apertures",
+    "remaining": "External power distribution, controller/charger control signals and matrix need the separate constrained routing stage"
+  },
+  "usb_routing": {
+    "stage": "locked-left-usb",
+    "complete": true,
+    "width_mm": 0.1356,
+    "gap_mm": 0.1501,
+    "long_run_layer": "B.Cu",
+    "reference_layer": "In2.Cu",
+    "reference_condition": "Verify ground remains continuous under the pair after all power/signal routing",
+    "via_mm": {
+      "diameter": 0.45,
+      "drill": 0.2
+    },
+    "series_resistors": "B.Cu near MCU, 27 ohm"
+  },
+  "secondary_routing": {
+    "applied": true,
+    "inner_signal": "C1 on In2.Cu, west of USB reference corridor",
+    "source": "references/left-18.5-finishing-routes.json"
+  },
   "antenna_keepout": [
     217,
     95.5,

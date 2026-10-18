@@ -20,5 +20,10 @@
   "bootloader": "https://github.com/adafruit/Adafruit_nRF52_Bootloader/tree/0.9.2",
   "private_test_usb_id": "https://pid.codes/1209/0001/",
   "inductor_family": "https://www.sunlordinc.com/uploads/files/20221122/SWPA%20series%20of%20SMD%20Power%20Inductor.pdf",
-  "inductor_limit": "Published table is 1R5NT; confirm exact 1R5MT variant before release"
+  "inductor_limit": "Published table is 1R5NT; confirm exact 1R5MT variant before release",
+  "stackup": "https://jlcpcb.com/impedance",
+  "impedance_calculator": "https://jlcpcb.com/pcb-impedance-calculator",
+  "inductor_exact_variant": "https://www.sunlordinc.com/uploads/files/20221122/SWPA%20series%20of%20SMD%20Power%20Inductor.pdf",
+  "module_alternate_supply": "https://www.digikey.com/en/products/detail/raytac/MDBT50Q-1MV2/13677591",
+  "fabrication_capability": "https://jlcpcb.com/capabilities/pcb-capabilities/"
 }

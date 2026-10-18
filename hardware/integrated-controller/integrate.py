@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Compose dedicated keyboard halves from Ergogen mechanics and controller nets.
 
-Run in pinned KiCad 8. Outputs are unrouted integration studies, not Gerbers.
+Run in pinned KiCad 8. Outputs have fixed local routes; remaining routing is a separate stage.
 """
 import argparse
 from copy import deepcopy
@@ -13,6 +13,11 @@ from pathlib import Path
 import pcbnew as pcb
 from circuit import PARTS, HERE
 import keyboard_schematic
+import route_power
+import route_usb
+import route_ground
+import route_secondary
+import stackup
 
 # Relative to the controller bay's upper-left corner. Angles describe actual
 # component rotations, never mirrored pad geometry. B-side parts are <=1.5mm tall.
@@ -22,20 +27,20 @@ PLACEMENT = {
     'J3': (15,13.5,90), 'U2': (5,18,0), 'C4': (8.5,18,90),
     'C5': (1.5,18,90), 'C6': (5,14.5,0), 'Q3': (14,20,0),
     'R11': (15,16,0), 'R12': (12,16,90), 'R10': (14,24,0),
-    'R6': (1.5,14,90), 'R7': (2,21,0), 'R8': (5,21,0),
-    'R9': (9,21,0), 'SW2': (4,10.5,0), 'J2': (8,26.5,90),
+    'R6': (1.5,14,90), 'R7': (9.568,34,0), 'R8': (5,22,0),
+    'R9': (9,30,0), 'SW2': (4,10.5,0), 'J2': (8,26.5,90),
     'U3': (5,37,0), 'L1': (5,33,0), 'C8': (1.5,37,90),
     'C9': (5,40,0), 'C10': (8.5,37,90), 'C11': (8.5,40,0),
     'R13': (1.5,40,0), 'SW1': (16.5,36,0),
     'C2': (.5,46,90), 'C1': (.5,50,90), 'C3': (3,53,0),
     'R18': (7,54,90), 'R19': (10,54,90),
     'R4': (15,3,90), 'R5': (15,10,90), 'J6': (14,31,0),
-    'J5': (9,11,0), 'Q1': (5,19,0), 'Q2': (5,25,0),
+    'J5': (9,3.5,0), 'Q1': (5,19,0), 'Q2': (5,25,0),
     'R3': (12,39,0), 'R14': (5,15,0), 'R15': (9,19,90), 'R16': (9,23,90),
     'R17': (5,29,0), 'C12': (9,27,90),
 }
-BACK = {'J5','J6','Q1','Q2','Q3','R1','R2','R3','R4','R5','R10','R11','R12',
-        'R14','R15','R16','R17','C12','C2','C3','R18','R19'}
+BACK = {'R13','J5','J6','Q1','Q2','Q3','R1','R2','R3','R4','R5','R10','R11','R12',
+        'R7','R8','R9','R14','R15','R16','R17','C12','C2','C3','R18','R19'}
 TOUCHPAD_ONLY = {'J3','R4','R5'}
 
 def vec(x,y): return pcb.VECTOR2I(pcb.FromMM(x),pcb.FromMM(y))
@@ -112,12 +117,37 @@ def compose(source, out, hand):
     zone.Outline().NewOutline()
     for x,y in [(x0,y0),(x1,y0),(x1,y1),(x0,y1)]:zone.Outline().Append(pcb.FromMM(x),pcb.FromMM(y))
     board.Add(zone)
+    routing=route_power.route(board,hand)
+    usb_routing=route_usb.route(board,hand)
+    route_ground.route(board,hand)
+    secondary=route_secondary.route(board,hand,anchors["spacing_mm"])
     name='knuckles_integrated_'+hand
     out.mkdir(parents=True,exist_ok=True)
     keyboard_schematic.write(out,name,board,selected)
+    pcb.ZONE_FILLER(board).Fill(board.Zones())
     pcb.SaveBoard(str(out/(name+'.kicad_pcb')),board)
+    stackup.apply(out/(name+'.kicad_pcb'))
     project=json.loads((HERE.parents[1]/'kicad/projects/knuckles_wireless.kicad_pro').read_text())
     project['meta']['filename']=name+'.kicad_pro'
+    rules=project['board']['design_settings']['rules']
+    rules['min_via_diameter']=.45
+    rules['min_through_hole_diameter']=.2
+    # This specific inter-pair clearance overrides Default's 0.2mm; all other
+    # net combinations retain the normal board clearance.
+    (out/(name+'.kicad_dru')).write_text('''(version 1)
+(rule "USB differential pair gap"
+ (condition "(A.NetName == 'USB_DP' && B.NetName == 'USB_DN') || (A.NetName == 'USB_DN' && B.NetName == 'USB_DP')")
+ (constraint clearance (min 0.15)))
+''')
+    project['net_settings']={
+        'meta':{'version':3},'net_colors':None,'netclass_assignments':None,
+        'netclass_patterns':[{'netclass':'USB','pattern':'USB_*'}],
+        'classes':[
+            {'name':'Default','clearance':.2,'track_width':.15,'via_diameter':.45,'via_drill':.2,
+             'diff_pair_width':.1356,'diff_pair_gap':.1501,'diff_pair_via_gap':.2},
+            {'name':'USB','clearance':.15,'track_width':.1356,'via_diameter':.45,'via_drill':.2,
+             'diff_pair_width':.1356,'diff_pair_gap':.1501,'diff_pair_via_gap':.2}
+        ]}
     (out/(name+'.kicad_pro')).write_text(json.dumps(project,indent=2)+'\n')
     (out/'fp-lib-table').write_text('(fp_lib_table (lib (name "Knuckles") (type "KiCad") (uri "${KIPRJMOD}/../../../libraries/Knuckles.pretty") (options "") (descr "Controller footprints")))\n')
     # Validate exact physical matrix and controller connections, independently
@@ -132,12 +162,12 @@ def compose(source, out, hand):
             assert any(pad.GetNumber()==pin and pad.GetNetname()==net for pad in fp.Pads()),(hand,p['ref'],pin,net)
     metadata={'hand':hand,'spacing_mm':anchors['spacing_mm'],'controller_origin':origin,
               'mirror_axis_x':axis,'switch_count':27,'controller_components':len(selected),
-              'copper_layers':4,'routed':False,'antenna_keepout':[x0,y0,x1,y1],
+              'copper_layers':4,'routed':False,'routing':routing,'usb_routing':usb_routing,'secondary_routing':secondary,'antenna_keepout':[x0,y0,x1,y1],
               'touchpad_center_y':origin[1]+11,'touchpad_width_mm':46.96,'touchpad_length_mm':43.95,
               'touchpad_placement':'Proposed 7mm forward shift; physical fit needs verification',
               'battery_placement':'External pack; keep clear of the antenna region on either side of PCB'}
     (out/(name+'.json')).write_text(json.dumps(metadata,indent=2)+'\n')
-    print(f'{name}: 27 keys, {len(selected)} controller parts, 4 copper layers; UNROUTED')
+    print(f'{name}: 27 keys, {len(selected)} controller parts, 4 copper layers; FIXED CELLS ROUTED, REMAINDER OPEN')
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--source',type=Path,required=True)

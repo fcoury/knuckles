@@ -1,10 +1,11 @@
 # Engineering review and routing handoff
 
 Reviewed 2026-10-18. This checkpoint establishes the electrical architecture,
-package/pin contracts, buildable firmware and initial mechanical placement.
+package/pin contracts, buildable firmware and complete routing for both halves
+at both spacings. All four native layouts pass the retained physical/connectivity checks.
 It does not establish signal integrity, thermal performance, radio performance,
-USB compliance or hardware operation. Routing and prototype evidence remain
-necessary before ordering an assembled keyboard.
+USB compliance or hardware operation. Manufacturer review and prototype evidence
+remain necessary before ordering an assembled keyboard.
 
 ## Corrections made during review
 
@@ -134,9 +135,10 @@ are still unknown; reserve case space only after selecting the pack.
 ## Routing order and acceptance
 
 1. Select the actual JLC four-layer 1.6 mm stack and fabrication/assembly process.
-   Use F.Cu for the critical local power/USB routes, In1.Cu as a continuous ground
-   reference, In2.Cu for power/secondary signals and B.Cu for matrix/secondary
-   routing. Never pour copper in the antenna area.
+   The pinned JLC04161H-3313 stack uses F.Cu for local power and short USB
+   fanouts, In1.Cu for ground, In2.Cu for a few fixed power feeds and the USB
+   ground reference, and B.Cu for the long USB pair. Remaining routing is
+   restricted to F.Cu/B.Cu. Never pour copper in the antenna area.
 2. Route U3, L1 and local input/output capacitors manually as one small cell.
    Keep L1/L2 switch nodes short and compact; join PGND and capacitor returns
    locally, give the exposed pad a sound ground/thermal connection, and take
@@ -163,12 +165,76 @@ saved JLC snapshot. U2 is the stocked **BQ25186DLHR / C44639442** listing;
 other similarly named listings are not interchangeable procurement evidence.
 Obtain module sourcing and an assembly quote before planning an order.
 
-L1 also needs an exact-variant check: the catalog lists SWPA3015S1R5MT, while
-Sunlord's public table gives SWPA3015S1R5NT (30% tolerance, 2.30 A saturation
-rating and 1.70 A thermal-current rating). Do not silently transfer those
-ratings to the MT variant. Obtain its specification or substitute the exact
-published part after reviewing sourcing, footprint and worst-case peak current.
-This is a procurement/release gate, not a verified rating for C83434.
+L1 is now the exact **SWPA3015S1R5NT / C56594** variant in Sunlord's public
+SWPA table: 1.5 µH ±30%, 2.30 A saturation, 1.70 A thermal rating and 65 mΩ
+maximum DCR. The 3 × 3 × 1.5 mm land/envelope is unchanged. This replaces the
+ambiguous MT listing; no MT rating is inferred. At the prototype's 250 mA
+3.3 V planning load and a 3.0 V battery, even a conservative 80% conversion
+estimate gives 344 mA average input. At the 2.2 MHz minimum oscillator frequency and -30% inductance corner,
+a first-order ideal boost ripple estimate is about 118 mA peak-to-peak, giving
+403 mA peak in continuous PWM. This is a sizing estimate rather than a guaranteed switch-current
+bound: confirm startup, transition-mode and short-circuit behavior on the bench.
+The manufacturer's saturation/thermal figures still require temperature review.
+See [sourcing evidence](references/sourcing.json) and [catalog snapshot](parts-snapshot.json).
+
+## Implemented routing cells
+
+`route_power.py` places and locks the regulator, charger, inductor, local
+capacitors and their power/ground paths. Thermal vias sit outside the exposed
+pad paste apertures. Fixed power/thermal vias are ordinary 0.6/0.3 mm through vias, not assumed
+filled/capped via-in-pad. Assembly must confirm tenting and solder-wicking
+requirements. General signal routing uses 0.45/0.2 mm through vias to leave
+room in the fine-pitch module fanouts; these dimensions are within the saved
+JLC multilayer capability. The charger-to-regulator SYS feed is a fixed 0.5 mm In2 trace.
+VBAT and VBUS use fixed inner-layer feeds inside the controller bay, clear
+of the B.Cu data-pair reference corridor. Both inner layers have ground pours,
+with antenna keepouts and power-track clearances subtracted.
+The quiet VINA branch stays outside the B.Cu USB reference corridor.
+
+`route_ground.py` stitches reset, switch, decoupling and module ground pads
+explicitly. The antenna-end module grounds escape outward along the pad rows;
+no ground trace or plane crosses the antenna keepout.
+
+`route_usb.py` routes the duplicate connector data lands, ESD flow-through
+lands and both module-side data lines. The symmetric 3313 stack's vendor
+calculator gives a 0.1356 mm trace and 0.1501 mm edge gap for a masked,
+non-coplanar 90 Ω differential target. The long coupled run uses B.Cu over
+In2 ground; short fanouts use F.Cu over In1. Connector/ESD/package fanouts
+necessarily spread the pair, so the complete route is not uniformly 90 Ω.
+No outer ground pour is added alongside the pair. The 0.01524 mm KiCad mask
+layer approximates coating over copper; the vendor calculator, not KiCad's
+single mask-thickness field, supplies the impedance geometry.
+
+`check-reference.py` samples actual filled ground below the data traces every
+0.1 mm, excluding the necessary signal-via antipads. Its report retains lengths
+and uncovered samples. It does not simulate impedance, return-current paths or
+USB compliance. Review reference-plane continuity, transitions and package
+fanouts visually and in the manufacturer's impedance/DFM review.
+
+`route-remaining.py` creates separate candidates under `output/candidates/`, leaving
+the generator's fixed-route boards intact. Freerouting 2.5.0's JVM release and
+Java runtime image are pinned by checksum/digest. The native CLI failed on
+missing serialization metadata, and 2.1 produced internal search errors; neither
+failed result is accepted. The 18.5 mm left layout reuses the validated left-controller signal routes
+and GPIO escape paths from the 19.5 mm layout, then reconnects its own matrix.
+The outer 3.3 V rail is brought inward for the narrower bay.
+`route_secondary.py` retains the final 18.5 mm left finishing cell: a fixed
+C1 bridge on In2 west of the USB pair, a VBUS connection below the connector
+pins, and a short CC2 via fanout. The bridge keeps In1 ground continuous and
+is included in the protected-route checks. Named-net transfer
+is available in `reuse-controller.py`; each use still needs DRC against the
+target outline and footprints. The complete native KiCad boards in
+`output/routed/` are authoritative. Validate them with
+`npm run check:integrated:routed`; generator and candidate runs preserve them.
+
+Both net-class layer restrictions and the post-import
+check prevent unplanned inner-layer signal traces. Only the prescribed C1 bridge
+and fixed power feeds are accepted on In2; In1 remains ground. Fixed-route coverage and vias
+must survive import, then KiCad refills ground and runs DRC. `check-assembly.py` rejects via holes
+that intersect solder-paste pads. This screen does not replace stencil review.
+Router completion
+alone is not acceptance. Manufacturing export requires zero airwires and zero
+physical DRC errors, followed by the release reviews above.
 
 ## Bring-up sequence
 

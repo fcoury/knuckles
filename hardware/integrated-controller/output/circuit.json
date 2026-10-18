@@ -747,8 +747,8 @@
   },
   {
     "ref": "L1",
-    "value": "1.5uH SWPA3015S1R5MT",
-    "lcsc": "C83434",
+    "value": "1.5uH SWPA3015S1R5NT",
+    "lcsc": "C56594",
     "footprint": "L_Sunlord_SWPA3015S",
     "pins": {
       "1": "1",
@@ -769,7 +769,7 @@
       0
     ],
     "dnp": false,
-    "note": "Procurement gate: catalog says 1R5MT, public Sunlord table specifies 1R5NT. Obtain exact MT current/tolerance specification before release."
+    "note": "Published NT variant: 1.5uH +/-30%, 2.30A saturation, 1.70A thermal rating. See Sunlord table and sourcing review."
   },
   {
     "ref": "R8",

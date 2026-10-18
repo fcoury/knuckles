@@ -1,0 +1,30 @@
+{
+  "name": "JLC04161H-3313",
+  "nominal_board_mm": 1.6,
+  "vendor_finished_mm": 1.56,
+  "finished_tolerance_percent": 10,
+  "outer_copper_mm": 0.035,
+  "inner_copper_mm": 0.0152,
+  "prepreg_mm": 0.0994,
+  "prepreg_er": 4.1,
+  "core_mm": 1.265,
+  "core_er": 4.6,
+  "usb": {
+    "target_ohms": 90,
+    "width_mm": 0.1356,
+    "gap_mm": 0.1501,
+    "signal_layer": "F.Cu",
+    "reference_layer": "In1.Cu",
+    "model": "Differential Pair (Non coplanar), with solder mask",
+    "same_layer_copper_review_target_mm": 0.5,
+    "review_limit": "Inspect nearby routed pads/vias/traces; geometry alone does not certify impedance"
+  },
+  "sources": [
+    "https://jlcpcb.com/impedance",
+    "https://jlcpcb.com/pcb-impedance-calculator"
+  ],
+  "checked_at": "2026-10-18",
+  "calculator_inputs": "4 layers, 1.6mm, outer 1oz, inner 0.5oz, 90ohm, 0.15mm pair spacing",
+  "kicad_mask_note": "0.01524mm models the mask over copper; substrate coating is thicker. Vendor calculator remains the impedance source.",
+  "source_limit": "Calculator geometry is a design target; vendor stack and impedance control must be selected in the actual order."
+}

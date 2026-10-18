@@ -1,0 +1,14 @@
+{
+  "board": "output/routed/18.5/left/knuckles_integrated_left.kicad_pcb",
+  "physical_errors": 0,
+  "warnings": 27,
+  "unconnected": 0,
+  "board_sha256": "88788dfd56e366ebc788a7d51dac107a9d66f9b1f0c8fe16125060604e489924",
+  "source_board_sha256": "ff76dbee3be585faa4d16056929db814ca23cd77d4ef989ccd292fbd46bdbce7",
+  "preserved_footprints_and_fixed_routes": true,
+  "reference_pass": true,
+  "assembly_screen_pass": true,
+  "mode": "native-kicad-layout",
+  "manufacturing_release": false,
+  "routing_pass": true
+}

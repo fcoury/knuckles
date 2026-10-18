@@ -5,18 +5,29 @@ This revision integrates an nRF52840 radio module, USB-C, battery charging and
 27 keys per half and the right-hand TPS43. The default spacing is **18.5 mm**;
 19.5 mm is generated from the same sources.
 
-**The boards are unrouted and have not been manufactured or tested.** The
+**These are engineering prototypes and have not been manufactured or tested.** The
 firmware artifacts are experimental builds for the new circuit. Do not flash
 them onto the working nice!nano keyboards or order these PCB files.
 
 ## Inspect the design
 
-Open either project in KiCad 8:
+Open the routed boards in KiCad 8:
+
+- [18.5 mm left routed](output/routed/18.5/left/knuckles_integrated_left.kicad_pro)
+- [18.5 mm right routed](output/routed/18.5/right/knuckles_integrated_right.kicad_pro)
+- [19.5 mm left routed](output/routed/19.5/left/knuckles_integrated_left.kicad_pro)
+- [19.5 mm right routed](output/routed/19.5/right/knuckles_integrated_right.kicad_pro)
+
+The complete schematic/generator projects remain separate:
 
 - [18.5 mm left](output/integrated/18.5/knuckles_integrated_left.kicad_pro)
 - [18.5 mm right](output/integrated/18.5/knuckles_integrated_right.kicad_pro)
 - [19.5 mm left](output/integrated/19.5/knuckles_integrated_left.kicad_pro)
 - [19.5 mm right](output/integrated/19.5/knuckles_integrated_right.kicad_pro)
+
+These generator projects contain fixed power/USB/ground cells and open remaining
+connections. The completed native layouts and their measured acceptance state are
+separate under `output/routed/<spacing>/<hand>/summary.json`.
 
 Each project includes the controller, power circuit and complete 27-key matrix
 schematic. The native schematic references match the PCB. The separate
@@ -62,15 +73,17 @@ npm test
 ```
 
 `build:integrated` starts from fresh Ergogen output and composes both halves.
-It does not route, overwrite the normal PCB outputs, or generate Gerbers.
+It adds fixed local power and USB routes, without overwriting the normal PCB
+outputs or generating Gerbers.
 `check:integrated` exports ERC, DRC and netlists using pinned KiCad 8, compares
 schematic nets with physical pads, and checks the matrix/power contracts.
 It deliberately reports unconnected nets separately; passing is a placement
 and electrical-consistency checkpoint, not fabrication clearance.
 
 The retained [validation summary](output/validation-summary.json) records each
-board's errors, warnings and unrouted connections. Warnings currently include
-legacy silkscreen/footprint-library details and must be resolved before release.
+board's errors, warnings and unrouted connections. Retained routed warnings
+include silkscreen/library details and dangling-track/via reports; these need
+review before release, including ground-stitch intent after plane filling.
 
 `circuit.py` is the controller electrical source. `integrate.py` contains the
 initial placement and mechanical policy. `keyboard_schematic.py` adds the matrix
@@ -78,14 +91,51 @@ hierarchy. `generate.py` creates the controller sheets and custom lands.
 `vendor-footprints.py` runs in the pinned KiCad image when adding standard lands.
 `check-parts.py` refreshes catalog snapshots without buying or reserving parts.
 
+Run the remaining outer-layer routing separately (both hands and spacings):
+
+```sh
+python3 hardware/integrated-controller/route-remaining.py --hand right --spacing 18.5
+python3 hardware/integrated-controller/route-remaining.py --hand left --spacing 18.5
+```
+
+Repeat with `--spacing 19.5` for that geometry. `--fanout` enables the SMD
+escape pre-pass; `--resume` continues a candidate. The pinned Freerouting JVM
+writes disposable candidates under `output/candidates/<spacing>/<hand>/`.
+A failed candidate remains available for inspection and exits nonzero.
+Manual routing may still be required. These runs preserve the completed native
+KiCad files under `output/routed/`, which are the authoritative finished layouts;
+the generator rebuilds only the separate partial source projects.
+
+Validate all four native layouts without rerouting:
+
+```sh
+npm run check:integrated:routed
+```
+
+This checks footprint positions/nets, protected routes, physical DRC, airwires,
+USB ground coverage and via/paste intersections. Results are retained in
+[the routed validation summary](output/routed/validation-summary.json).
+The selected 3313 stack and calculator inputs are retained in
+[stackup.json](references/stackup.json).
+
+Export a completed native layout’s engineering-review files with:
+
+```sh
+python3 hardware/integrated-controller/export-review.py --hand right --spacing 18.5
+```
+
+This rechecks DRC, ground coverage and via/paste intersections before writing
+Gerbers/drills, a controller-only BOM and a CPL draft under
+`output/manufacturing-review/`. Rotations, stencil, sourcing, mechanics and bench
+behavior still need review. The package is explicitly not approved for ordering.
+
 ## Remaining release gates
 
 1. Secure the radio module. JLC's saved C5118826 listing has **zero stock**;
    consignment/global sourcing or a reviewed substitute still needs a quote.
-   Confirm L1's exact MT-versus-NT variant rating as documented in ENGINEERING.md.
-2. Finish constrained routing, ground planes, actual stackup/USB impedance,
-   thermal vias and fabrication rules; then require zero unrouted nets and a
-   reviewed final DRC. See ENGINEERING.md for routing order and invariants.
+2. Review the completed routing, ground planes, USB transitions, thermal vias
+   and fabrication rules with the manufacturer. All four retained layouts pass
+   zero-airwire/zero-physical-error checks; impedance and DFM remain review gates.
 3. Confirm the touchpad, battery, connector/cable, switch and keycap clearances
    with a full-size print or mechanical prototype. Battery size is unresolved.
 4. Bench-test supply startup/transients, idle/suspend current, SWD/UF2 recovery,

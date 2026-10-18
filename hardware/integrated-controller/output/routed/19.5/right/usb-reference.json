@@ -1,0 +1,14 @@
+{
+  "board": "knuckles_integrated_right.kicad_pcb",
+  "sample_interval_mm": 0.1,
+  "data_via_exclusion_radius_mm": 0.6,
+  "samples": 940,
+  "unreferenced_samples": [],
+  "track_length_mm": {
+    "USB_DN": 48.187,
+    "USB_DP": 50.948,
+    "USB_MCU_DN": 2.042,
+    "USB_MCU_DP": 2.264
+  },
+  "limitation": "Sampled ground coverage only; not an impedance or USB compliance simulation"
+}

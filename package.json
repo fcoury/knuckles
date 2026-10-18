@@ -8,6 +8,7 @@
     "watch:build": "nodemon -e yaml,js,mjs -x \"npm run build\"",
     "watch:debug": "nodemon -e yaml,js,mjs -x \"npm run debug\"",
     "build:integrated": "node scripts/build-integrated.mjs",
+    "check:integrated:routed": "python3 -B hardware/integrated-controller/validate.py --routed",
     "check:integrated": "python3 -B hardware/integrated-controller/validate.py"
   },
   "dependencies": {

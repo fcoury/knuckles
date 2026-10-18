@@ -1,48 +1,48 @@
 Designator,Value,Footprint,LCSC Part #,Populate,Catalog MPN,Catalog stock snapshot,Notes
 U1,MDBT50Q-1MV2,Raytac_MDBT50Q,C5118826,yes,MDBT50Q-1MV2,0,Normal-voltage mode: VDD and VDDH tied to 3.3V; DCCH NC; LF clock uses calibrated internal RC. JLC stock zero at sourcing snapshot.
-J1,TYPE-C-31-M-12,USB_C_Receptacle_HRO_TYPE-C-31-M-12,C165948,yes,TYPE-C-31-M-12,365013,
-U4,USBLC6-2SC6,SOT-23-6,C7519,yes,USBLC6-2SC6,34307,
-R1,5.1k,R_0603_1608Metric,C23186,yes,0603WAF5101T5E,23523384,
-R2,5.1k,R_0603_1608Metric,C23186,yes,0603WAF5101T5E,23523384,
-J2,S2B-PH-SM4-TB(LF)(SN),JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal,C295747,yes,S2B-PH-SM4-TB(LF)(SN),36008,Protected 1S LiPo only. Verify actual cable polarity; capacity is not a voltage rating.
+J1,TYPE-C-31-M-12,USB_C_Receptacle_HRO_TYPE-C-31-M-12,C165948,yes,TYPE-C-31-M-12,364676,
+U4,USBLC6-2SC6,SOT-23-6,C7519,yes,USBLC6-2SC6,34266,
+R1,5.1k,R_0603_1608Metric,C23186,yes,0603WAF5101T5E,23514694,
+R2,5.1k,R_0603_1608Metric,C23186,yes,0603WAF5101T5E,23514694,
+J2,S2B-PH-SM4-TB(LF)(SN),JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal,C295747,yes,S2B-PH-SM4-TB(LF)(SN),36001,Protected 1S LiPo only. Verify actual cable polarity; capacity is not a voltage rating.
 J3,SM04B-SRSS-TB(LF)(SN),JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal,C160404,yes,SM04B-SRSS-TB(LF)(SN),60361,New custom cable to existing TPS43 adapter; connector is not the raw sensor FPC pinout.
 J4,Matrix bring-up header,PinHeader_1x12_P2.54mm_Vertical,,DNP,,unknown,"Bench connector, manually fitted; replaced by matrix traces in keyboard integration."
 J5,SWD pogo interface,SWD_2x3_P1.27_NoHoles,,DNP,,unknown,"Six bare pads on 1.27mm pitch; custom pogo fixture, not a mechanically compatible Tag-Connect connector. Pin 1 is target voltage sense, not external power input."
 SW1,SSSS811101,SSSS811101,C109335,yes,SSSS811101,37397,ALPS SSSS811101; pad dimensions checked against manufacturer mounting drawing.
 SW2,SKRPANE010,SKRPANE010,C470426,yes,SKRPANE010,11804,
-R3,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137028,
-R4,4.7k,R_0603_1608Metric,C23162,DNP,0603WAF4701T5E,18645826,Fit only if the attached TPS43 adapter lacks pull-ups; confirm effective parallel pull-up resistance.
-R5,4.7k,R_0603_1608Metric,C23162,DNP,0603WAF4701T5E,18645826,Fit only if the attached TPS43 adapter lacks pull-ups; confirm effective parallel pull-up resistance.
-R6,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137028,
-R7,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137028,
-C1,100nF,C_0603_1608Metric,C14663,yes,CC0603KRX7R9BB104,31883181,
-C2,22uF,C_0805_2012Metric,C45783,yes,CL21A226MAQNNNE,3768619,
-C3,4.7uF,C_0603_1608Metric,C19666,yes,CL10A475KO8NNNC,3535356,
+R3,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137295,
+R4,4.7k,R_0603_1608Metric,C23162,DNP,0603WAF4701T5E,18641065,Fit only if the attached TPS43 adapter lacks pull-ups; confirm effective parallel pull-up resistance.
+R5,4.7k,R_0603_1608Metric,C23162,DNP,0603WAF4701T5E,18641065,Fit only if the attached TPS43 adapter lacks pull-ups; confirm effective parallel pull-up resistance.
+R6,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137295,
+R7,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137295,
+C1,100nF,C_0603_1608Metric,C14663,yes,CC0603KRX7R9BB104,31872643,
+C2,22uF,C_0805_2012Metric,C45783,yes,CL21A226MAQNNNE,3768424,
+C3,4.7uF,C_0603_1608Metric,C19666,yes,CL10A475KO8NNNC,3534195,
 U2,BQ25186DLHR,TI_WSON_DLH0010A,C44639442,yes,BQ25186DLHR,264,I2C 0x6A on dedicated bus. CE held disabled until firmware verifies profile and USB state; R12 assembly interlock.
 U3,TPS63031DSKR,WSON-10-1EP_2.5x2.5mm_P0.5mm_EP1.2x2mm,C15516,yes,TPS63031DSKR,5172,
-L1,1.5uH SWPA3015S1R5MT,L_Sunlord_SWPA3015S,C83434,yes,SWPA3015S1R5MT,1079,"Procurement gate: catalog says 1R5MT, public Sunlord table specifies 1R5NT. Obtain exact MT current/tolerance specification before release."
-R8,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137028,Dedicated PMIC bus pull-up; independent of external TPS43 pull-ups.
-R9,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137028,Dedicated PMIC bus pull-up.
-R10,100k,R_0603_1608Metric,C25803,yes,0603WAF1003T5E,19366793,Hardware defaults to disabled charging while MCU is off/reset.
-R11,100k,R_0603_1608Metric,C25803,yes,0603WAF1003T5E,19366793,VBUS-domain CE pull-up. Q3 isolates the MCU GPIO from 5V.
-R12,0R,R_0603_1608Metric,C21189,DNP,0603WAF0000T5E,23654467,Assembly charge interlock; fit after selected cell/NTC and firmware validation. Does not bypass firmware control.
-R13,1M,R_0603_1608Metric,C22935,yes,0603WAF1004T5E,5465298,Keep the regulator disabled while the mechanical switch is between contacts.
-C4,2.2uF,C_0603_1608Metric,C23630,yes,CL10A225KO8NNNC,3395443,
-C5,2.2uF,C_0603_1608Metric,C23630,yes,CL10A225KO8NNNC,3395443,
-C6,22uF,C_0805_2012Metric,C45783,yes,CL21A226MAQNNNE,3768619,
-C8,22uF,C_0805_2012Metric,C45783,yes,CL21A226MAQNNNE,3768619,
-C9,100nF,C_0603_1608Metric,C14663,yes,CC0603KRX7R9BB104,31883181,
-C10,22uF,C_0805_2012Metric,C45783,yes,CL21A226MAQNNNE,3768619,
-C11,22uF,C_0805_2012Metric,C45783,yes,CL21A226MAQNNNE,3768619,
+L1,1.5uH SWPA3015S1R5NT,L_Sunlord_SWPA3015S,C56594,yes,SWPA3015S1R5NT,3825,"Published NT variant: 1.5uH +/-30%, 2.30A saturation, 1.70A thermal rating. See Sunlord table and sourcing review."
+R8,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137295,Dedicated PMIC bus pull-up; independent of external TPS43 pull-ups.
+R9,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137295,Dedicated PMIC bus pull-up.
+R10,100k,R_0603_1608Metric,C25803,yes,0603WAF1003T5E,19364156,Hardware defaults to disabled charging while MCU is off/reset.
+R11,100k,R_0603_1608Metric,C25803,yes,0603WAF1003T5E,19364156,VBUS-domain CE pull-up. Q3 isolates the MCU GPIO from 5V.
+R12,0R,R_0603_1608Metric,C21189,DNP,0603WAF0000T5E,23652384,Assembly charge interlock; fit after selected cell/NTC and firmware validation. Does not bypass firmware control.
+R13,1M,R_0603_1608Metric,C22935,yes,0603WAF1004T5E,5464881,Keep the regulator disabled while the mechanical switch is between contacts.
+C4,2.2uF,C_0603_1608Metric,C23630,yes,,unknown,
+C5,2.2uF,C_0603_1608Metric,C23630,yes,,unknown,
+C6,22uF,C_0805_2012Metric,C45783,yes,CL21A226MAQNNNE,3768424,
+C8,22uF,C_0805_2012Metric,C45783,yes,CL21A226MAQNNNE,3768424,
+C9,100nF,C_0603_1608Metric,C14663,yes,CC0603KRX7R9BB104,31872643,
+C10,22uF,C_0805_2012Metric,C45783,yes,CL21A226MAQNNNE,3768424,
+C11,22uF,C_0805_2012Metric,C45783,yes,CL21A226MAQNNNE,3768424,
 J6,External 10k NTC pads,NTC_WirePads,,DNP,,unknown,"Attach an insulated external 10k NTC, beta 3435K, thermally coupled to the cell before enabling charging. Not simulated with a fixed resistor."
-Q1,AO3401A,SOT-23,C15127,yes,AO3401A,697999,
-Q2,2N7002,SOT-23,C8545,yes,2N7002,2596476,
-R14,1M,R_0603_1608Metric,C22935,yes,0603WAF1004T5E,5465298,
-R15,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137028,
-R16,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137028,
-R17,1M,R_0603_1608Metric,C22935,yes,0603WAF1004T5E,5465298,
-C12,100nF,C_0603_1608Metric,C14663,yes,CC0603KRX7R9BB104,31883181,
-Q3,2N7002,SOT-23,C8545,yes,2N7002,2596476,
+Q1,AO3401A,SOT-23,C15127,yes,AO3401A,697471,
+Q2,2N7002,SOT-23,C8545,yes,2N7002,2596656,
+R14,1M,R_0603_1608Metric,C22935,yes,0603WAF1004T5E,5464881,
+R15,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137295,
+R16,10k,R_0603_1608Metric,C25804,yes,0603WAF1002T5E,31137295,
+R17,1M,R_0603_1608Metric,C22935,yes,0603WAF1004T5E,5464881,
+C12,100nF,C_0603_1608Metric,C14663,yes,CC0603KRX7R9BB104,31872643,
+Q3,2N7002,SOT-23,C8545,yes,2N7002,2596656,
 R18,27R,R_0603_1608Metric,C25190,yes,0603WAF270JT5E,232340,
 R19,27R,R_0603_1608Metric,C25190,yes,0603WAF270JT5E,232340,
-C13,100nF,C_0603_1608Metric,C14663,yes,CC0603KRX7R9BB104,31883181,
+C13,100nF,C_0603_1608Metric,C14663,yes,CC0603KRX7R9BB104,31872643,

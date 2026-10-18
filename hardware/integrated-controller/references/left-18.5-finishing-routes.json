@@ -1,0 +1,307 @@
+{
+  "description": "Fixed routes for the narrow left bay; C1 inner bridge stays west of the USB pair, VBUS passes below connector pins, CC2 uses a short via fanout. Coordinates relative to U3.",
+  "tracks": [
+    {
+      "net": "C1",
+      "layer": "F.Cu",
+      "start_mm": [
+        4.9394,
+        4.1286
+      ],
+      "end_mm": [
+        3.2947,
+        5.7733
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "C1",
+      "layer": "F.Cu",
+      "start_mm": [
+        5.4721,
+        3.2728
+      ],
+      "end_mm": [
+        5.4721,
+        3.7217
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "C1",
+      "layer": "F.Cu",
+      "start_mm": [
+        5.4721,
+        3.7217
+      ],
+      "end_mm": [
+        5.0652,
+        4.1286
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "C1",
+      "layer": "F.Cu",
+      "start_mm": [
+        5.1124,
+        2.9131
+      ],
+      "end_mm": [
+        5.4721,
+        3.2728
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "C1",
+      "layer": "F.Cu",
+      "start_mm": [
+        3.2947,
+        5.7733
+      ],
+      "end_mm": [
+        2.85,
+        5.7733
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "C1",
+      "layer": "F.Cu",
+      "start_mm": [
+        5.0652,
+        4.1286
+      ],
+      "end_mm": [
+        4.9394,
+        4.1286
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "C1",
+      "layer": "F.Cu",
+      "start_mm": [
+        3.8838,
+        2.9131
+      ],
+      "end_mm": [
+        5.1124,
+        2.9131
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "C1",
+      "layer": "F.Cu",
+      "start_mm": [
+        2.2155,
+        4.5814
+      ],
+      "end_mm": [
+        3.8838,
+        2.9131
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "C1",
+      "layer": "F.Cu",
+      "start_mm": [
+        2.85,
+        6.35
+      ],
+      "end_mm": [
+        2.85,
+        5.7733
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "C1",
+      "layer": "In2.Cu",
+      "start_mm": [
+        2.2155,
+        4.5814
+      ],
+      "end_mm": [
+        2.2155,
+        6.3
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "C1",
+      "layer": "In2.Cu",
+      "start_mm": [
+        -5.0,
+        6.3
+      ],
+      "end_mm": [
+        -5.0,
+        6.135
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "C1",
+      "layer": "In2.Cu",
+      "start_mm": [
+        2.2155,
+        6.3
+      ],
+      "end_mm": [
+        -5.0,
+        6.3
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "C1",
+      "layer": "B.Cu",
+      "start_mm": [
+        -5.0,
+        5.9584
+      ],
+      "end_mm": [
+        -5.0,
+        6.135
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "USB_CC2",
+      "layer": "F.Cu",
+      "start_mm": [
+        2.25,
+        -28.855
+      ],
+      "end_mm": [
+        2.25,
+        -28.05
+      ],
+      "width_mm": 0.1356
+    },
+    {
+      "net": "USB_CC2",
+      "layer": "F.Cu",
+      "start_mm": [
+        2.4,
+        -27.9
+      ],
+      "end_mm": [
+        2.4,
+        -27.7
+      ],
+      "width_mm": 0.1356
+    },
+    {
+      "net": "USB_CC2",
+      "layer": "F.Cu",
+      "start_mm": [
+        2.25,
+        -28.05
+      ],
+      "end_mm": [
+        2.4,
+        -27.9
+      ],
+      "width_mm": 0.1356
+    },
+    {
+      "net": "USB_CC2",
+      "layer": "B.Cu",
+      "start_mm": [
+        2.4,
+        -27.7
+      ],
+      "end_mm": [
+        2.4,
+        -28.175
+      ],
+      "width_mm": 0.1356
+    },
+    {
+      "net": "USB_CC2",
+      "layer": "B.Cu",
+      "start_mm": [
+        2.4,
+        -28.175
+      ],
+      "end_mm": [
+        10.0,
+        -28.175
+      ],
+      "width_mm": 0.1356
+    },
+    {
+      "net": "VBUS",
+      "layer": "F.Cu",
+      "start_mm": [
+        1.55,
+        -27.05
+      ],
+      "end_mm": [
+        1.55,
+        -28.855
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "VBUS",
+      "layer": "F.Cu",
+      "start_mm": [
+        6.45,
+        -27.05
+      ],
+      "end_mm": [
+        1.55,
+        -27.05
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "net": "VBUS",
+      "layer": "F.Cu",
+      "start_mm": [
+        6.45,
+        -28.855
+      ],
+      "end_mm": [
+        6.45,
+        -27.05
+      ],
+      "width_mm": 0.15
+    }
+  ],
+  "vias": [
+    {
+      "net": "C1",
+      "position_mm": [
+        -5.0,
+        6.135
+      ],
+      "diameter_mm": 0.45,
+      "drill_mm": 0.2
+    },
+    {
+      "net": "C1",
+      "position_mm": [
+        2.2155,
+        4.5814
+      ],
+      "diameter_mm": 0.45,
+      "drill_mm": 0.2
+    },
+    {
+      "net": "USB_CC2",
+      "position_mm": [
+        2.4,
+        -27.7
+      ],
+      "diameter_mm": 0.45,
+      "drill_mm": 0.2
+    }
+  ]
+}

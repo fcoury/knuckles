@@ -10,33 +10,41 @@
   {
     "board": "output/integrated/18.5/knuckles_integrated_left.kicad_pcb",
     "physical_errors": 0,
-    "drc_warnings": 18,
-    "unconnected": 200,
+    "drc_warnings": 27,
+    "unconnected": 142,
     "erc_errors": 0,
-    "erc_warnings": 0
+    "erc_warnings": 0,
+    "unreferenced_usb_samples": 0,
+    "via_holes_in_paste": 0
   },
   {
     "board": "output/integrated/18.5/knuckles_integrated_right.kicad_pcb",
     "physical_errors": 0,
-    "drc_warnings": 18,
-    "unconnected": 208,
+    "drc_warnings": 27,
+    "unconnected": 153,
     "erc_errors": 0,
-    "erc_warnings": 0
+    "erc_warnings": 0,
+    "unreferenced_usb_samples": 0,
+    "via_holes_in_paste": 0
   },
   {
     "board": "output/integrated/19.5/knuckles_integrated_left.kicad_pcb",
     "physical_errors": 0,
-    "drc_warnings": 9,
-    "unconnected": 200,
+    "drc_warnings": 18,
+    "unconnected": 144,
     "erc_errors": 0,
-    "erc_warnings": 0
+    "erc_warnings": 0,
+    "unreferenced_usb_samples": 0,
+    "via_holes_in_paste": 0
   },
   {
     "board": "output/integrated/19.5/knuckles_integrated_right.kicad_pcb",
     "physical_errors": 0,
-    "drc_warnings": 9,
-    "unconnected": 208,
+    "drc_warnings": 18,
+    "unconnected": 153,
     "erc_errors": 0,
-    "erc_warnings": 0
+    "erc_warnings": 0,
+    "unreferenced_usb_samples": 0,
+    "via_holes_in_paste": 0
   }
 ]

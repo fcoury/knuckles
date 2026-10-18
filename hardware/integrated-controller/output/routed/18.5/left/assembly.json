@@ -1,0 +1,5 @@
+{
+  "via_holes_intersecting_paste_pads": [],
+  "manufacturing_release": false,
+  "limitation": "Pad-shape screen only; assembler must review stencil apertures, thermal vias and tenting."
+}

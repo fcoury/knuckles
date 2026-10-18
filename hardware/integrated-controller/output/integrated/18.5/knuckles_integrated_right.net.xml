@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/repo/hardware/integrated-controller/output/integrated/18.5/knuckles_integrated_right.kicad_sch</source>
-    <date>2026-10-18T03:39:43+0000</date>
+    <date>2026-10-18T05:48:16+0000</date>
     <tool>Eeschema 8.0.8+1</tool>
     <sheet number="1" name="/core/" tstamps="/2ce19b09-398d-5056-b45b-5969aa492175/">
       <title_block>
@@ -583,16 +583,16 @@
       <tstamps>1a603d14-b6dd-5826-9922-9e0ff0023b23</tstamps>
     </comp>
     <comp ref="L1">
-      <value>1.5uH SWPA3015S1R5MT</value>
+      <value>1.5uH SWPA3015S1R5NT</value>
       <footprint>Knuckles:L_Sunlord_SWPA3015S</footprint>
       <fields>
-        <field name="LCSC">C83434</field>
+        <field name="LCSC">C56594</field>
         <field name="Footprint">Knuckles:L_Sunlord_SWPA3015S</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Knuckles" part="L1" description=""/>
-      <property name="LCSC" value="C83434"/>
+      <property name="LCSC" value="C56594"/>
       <property name="Sheetname" value="power"/>
       <property name="Sheetfile" value="knuckles_integrated_right-power.kicad_sch"/>
       <sheetpath names="/power/" tstamps="/a275efe2-6745-523e-8cb1-fbdbb65ac07f/"/>
@@ -2317,7 +2317,7 @@
     <libpart lib="Knuckles" part="L1">
       <fields>
         <field name="Reference">L1</field>
-        <field name="Value">1.5uH SWPA3015S1R5MT</field>
+        <field name="Value">1.5uH SWPA3015S1R5NT</field>
         <field name="Footprint"/>
         <field name="Datasheet"/>
         <field name="Description"/>

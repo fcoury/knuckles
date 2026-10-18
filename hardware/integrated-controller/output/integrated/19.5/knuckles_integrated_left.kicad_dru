@@ -1,0 +1,4 @@
+(version 1)
+(rule "USB differential pair gap"
+ (condition "(A.NetName == 'USB_DP' && B.NetName == 'USB_DN') || (A.NetName == 'USB_DN' && B.NetName == 'USB_DP')")
+ (constraint clearance (min 0.15)))

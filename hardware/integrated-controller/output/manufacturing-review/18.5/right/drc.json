@@ -1,0 +1,365 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-18T05:54:51+0000",
+    "kicad_version": "8.0.8",
+    "schematic_parity": [],
+    "source": "knuckles_integrated_right.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 115.699999,
+                        "y": 71.6
+                    },
+                    "uuid": "dc7e13e9-4a64-4628-bfb1-c584728d5b98"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_PG_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 111.249999,
+                        "y": 72.1
+                    },
+                    "uuid": "0b3ab5f6-52d0-4350-91f3-67dd6860d3e7"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [PMIC_SCL] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 115.699999,
+                        "y": 72.6
+                    },
+                    "uuid": "ebbeed12-e9d1-4dfd-b8ba-afbfa1cca257"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 119.749396,
+                        "y": 54.2275
+                    },
+                    "uuid": "0bb024d8-d07c-462a-bd85-187a8a89458f"
+                },
+                {
+                    "description": "Segment on F.Silkscreen",
+                    "pos": {
+                        "x": 104.868,
+                        "y": 55.1
+                    },
+                    "uuid": "be2cfe45-8732-43c1-9508-2fe092799dbd"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 119.749396,
+                        "y": 54.2275
+                    },
+                    "uuid": "0bb024d8-d07c-462a-bd85-187a8a89458f"
+                },
+                {
+                    "description": "Segment on F.Silkscreen",
+                    "pos": {
+                        "x": 114.268,
+                        "y": 55.1
+                    },
+                    "uuid": "b8f7e238-4c98-4c82-89a0-331551661001"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Footprint 'Raytac_MDBT50Q' does not match copy in library 'Knuckles'.",
+            "items": [
+                {
+                    "description": "Footprint U1",
+                    "pos": {
+                        "x": 108.568,
+                        "y": 101.0
+                    },
+                    "uuid": "0982350d-d9c0-4da1-8f1b-28fc1d811b4f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "The current configuration does not include the library 'ceoloide'.",
+            "items": [
+                {
+                    "description": "Footprint MH3",
+                    "pos": {
+                        "x": 212.318,
+                        "y": 53.75
+                    },
+                    "uuid": "439294f1-9bed-47fc-a087-57f5231e2ee6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the library 'ceoloide'.",
+            "items": [
+                {
+                    "description": "Footprint MH7",
+                    "pos": {
+                        "x": 124.8434,
+                        "y": 115.0067
+                    },
+                    "uuid": "98b7445c-13ea-412f-b3d8-efa69c6b0bdf"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the library 'ceoloide'.",
+            "items": [
+                {
+                    "description": "Footprint MH6",
+                    "pos": {
+                        "x": 170.411,
+                        "y": 107.615
+                    },
+                    "uuid": "a1548048-622f-4e6d-bff0-518807aec676"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the library 'ceoloide'.",
+            "items": [
+                {
+                    "description": "Footprint MH4",
+                    "pos": {
+                        "x": 212.318,
+                        "y": 90.75
+                    },
+                    "uuid": "ca214ca5-0f43-49ab-85e2-1eaf5aebbcef"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the library 'ceoloide'.",
+            "items": [
+                {
+                    "description": "Footprint MH5",
+                    "pos": {
+                        "x": 138.35,
+                        "y": 50.2985
+                    },
+                    "uuid": "d2440c45-3eab-467f-ac93-6cb00bff7f43"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 195.068,
+                        "y": 92.0
+                    },
+                    "uuid": "0032b7f9-2785-4a36-bd2f-e1057cd9f6f2"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 213.568,
+                        "y": 92.0
+                    },
+                    "uuid": "b7c0f475-4743-4cbc-8b28-fc9531e251cf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 213.568,
+                        "y": 55.0
+                    },
+                    "uuid": "93f4987e-41b2-4a9f-860a-7e2655653759"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 121.068,
+                        "y": 34.1875
+                    },
+                    "uuid": "809caa9e-4174-4256-b082-1ec9530a5732"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 213.568,
+                        "y": 73.5
+                    },
+                    "uuid": "fe69f0f1-dd7d-4e7f-b195-afad4b75aee3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 139.568,
+                        "y": 50.375
+                    },
+                    "uuid": "c4c74a57-2640-478d-bb7d-bb1154a860d8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 195.068,
+                        "y": 55.0
+                    },
+                    "uuid": "b13c864d-0e68-4147-82c4-e1e5e92c3b87"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 213.568,
+                        "y": 36.5
+                    },
+                    "uuid": "09975138-f3fa-40e4-9387-6bd7d290c2b1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 195.068,
+                        "y": 36.5
+                    },
+                    "uuid": "6c9c87eb-78ec-4b70-9105-1b3f87886363"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 195.068,
+                        "y": 73.5
+                    },
+                    "uuid": "9d86bbed-2bae-4d57-b692-c7a8fe8be627"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Polygon on F.Silkscreen",
+                    "pos": {
+                        "x": 111.768,
+                        "y": 88.7
+                    },
+                    "uuid": "d537d534-d979-445f-a3fd-b9e464d22433"
+                },
+                {
+                    "description": "Segment on F.Silkscreen",
+                    "pos": {
+                        "x": 111.528,
+                        "y": 91.76
+                    },
+                    "uuid": "93ae344d-48f7-4c78-8f1b-a9b34ce9be5f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}
