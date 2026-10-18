@@ -30,5 +30,5 @@ do
 done
 
 # Docker runs as root and causes issues with file ownership
-sudo chown $USER -R ergogen
-sudo chown $USER -R freerouting
+sudo chown -R "$USER" ergogen
+sudo chown -R "$USER" freerouting
