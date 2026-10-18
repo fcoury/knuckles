@@ -1,0 +1,11 @@
+{
+  "measuredAssemblyAbovePcbTopMm": 8.0,
+  "verticalClearanceMm": 0.5,
+  "roofThicknessMm": 1.2,
+  "wallThicknessMm": 1.35,
+  "outerBoundsLegacyMm": [201.55, -93.0, 224.5, -52.0],
+  "wireOpeningWidthMm": 10.0,
+  "wireOpeningHeightMm": 4.0,
+  "controllerCenterXLegacyMm": 212.204,
+  "fitStatus": "Height measured; horizontal envelope inferred from legacy controller location and photos, requires physical fit check"
+}
