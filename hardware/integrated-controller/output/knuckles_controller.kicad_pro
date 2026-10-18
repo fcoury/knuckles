@@ -1,0 +1,13 @@
+{
+  "board": {
+    "design_settings": {
+      "rules": {
+        "min_copper_edge_clearance": 0.25
+      }
+    }
+  },
+  "meta": {
+    "filename": "knuckles_controller.kicad_pro",
+    "version": 1
+  }
+}

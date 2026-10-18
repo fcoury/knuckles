@@ -1,0 +1,1 @@
+(sym_lib_table (lib (name "Knuckles") (type "KiCad") (uri "${KIPRJMOD}/../libraries/Knuckles.kicad_sym") (options "") (descr "Integrated controller review symbols")))

@@ -1,0 +1,1347 @@
+[
+  {
+    "ref": "U1",
+    "value": "MDBT50Q-1MV2",
+    "lcsc": "C5118826",
+    "footprint": "Raytac_MDBT50Q",
+    "pins": {
+      "1": "GND",
+      "10": "P0.29",
+      "11": "P0.02",
+      "12": "P0.31",
+      "13": "P0.28",
+      "14": "P0.30",
+      "15": "GND",
+      "16": "P0.27",
+      "17": "P0.00",
+      "18": "P0.01",
+      "19": "P0.26",
+      "2": "GND",
+      "20": "P0.04",
+      "21": "P0.05",
+      "22": "P0.06",
+      "23": "P0.07",
+      "24": "P0.08",
+      "25": "P1.08",
+      "26": "P1.09",
+      "27": "P0.11",
+      "28": "VDD",
+      "29": "P0.12",
+      "3": "P1.10",
+      "30": "VDDH",
+      "31": "DCCH",
+      "32": "VBUS",
+      "33": "GND",
+      "34": "D-",
+      "35": "D+",
+      "36": "P0.14",
+      "37": "P0.13",
+      "38": "P0.16",
+      "39": "P0.15",
+      "4": "P1.11",
+      "40": "P0.18",
+      "41": "P0.17",
+      "42": "P0.19",
+      "43": "P0.21",
+      "44": "P0.20",
+      "45": "P0.23",
+      "46": "P0.22",
+      "47": "P1.00",
+      "48": "P0.24",
+      "49": "P0.25",
+      "5": "P1.12",
+      "50": "P1.02",
+      "51": "SWDIO",
+      "52": "P0.09",
+      "53": "SWDCLK",
+      "54": "P0.10",
+      "55": "GND",
+      "56": "P1.04",
+      "57": "P1.06",
+      "58": "P1.07",
+      "59": "P1.05",
+      "6": "P1.13",
+      "60": "P1.03",
+      "61": "P1.01",
+      "7": "P1.14",
+      "8": "P1.15",
+      "9": "P0.03"
+    },
+    "nets": {
+      "1": "GND",
+      "15": "GND",
+      "2": "GND",
+      "33": "GND",
+      "55": "GND",
+      "28": "+3V3",
+      "30": "+3V3",
+      "32": "VBUS",
+      "34": "USB_DN",
+      "35": "USB_DP",
+      "40": "RESET_N",
+      "51": "SWDIO",
+      "53": "SWDCLK",
+      "41": "TPS_SDA",
+      "44": "TPS_SCL",
+      "20": "BATT_ADC",
+      "21": "BATT_SENSE_EN",
+      "22": "CHG_STAT1",
+      "23": "CHG_STAT2",
+      "48": "R0",
+      "47": "R1",
+      "27": "R2",
+      "56": "R3",
+      "57": "R4",
+      "12": "C0",
+      "10": "C1",
+      "11": "C2",
+      "8": "C3",
+      "6": "C4",
+      "4": "C5"
+    },
+    "sheet": "core",
+    "sch": [
+      105,
+      105
+    ],
+    "pcb": [
+      22.5,
+      8,
+      0
+    ],
+    "dnp": false,
+    "note": "Normal-voltage mode: VDD and VDDH tied to 3.3V; DCCH NC; LF clock uses calibrated internal RC. JLC stock zero at sourcing snapshot."
+  },
+  {
+    "ref": "J1",
+    "value": "TYPE-C-31-M-12",
+    "lcsc": "C165948",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "pins": {
+      "A1": "A1",
+      "A4": "A4",
+      "A5": "A5",
+      "A6": "A6",
+      "A7": "A7",
+      "A8": "A8",
+      "A9": "A9",
+      "A12": "A12",
+      "B1": "B1",
+      "B4": "B4",
+      "B5": "B5",
+      "B6": "B6",
+      "B7": "B7",
+      "B8": "B8",
+      "B9": "B9",
+      "B12": "B12",
+      "S1": "S1"
+    },
+    "nets": {
+      "A1": "GND",
+      "A12": "GND",
+      "B1": "GND",
+      "B12": "GND",
+      "S1": "GND",
+      "A4": "VBUS",
+      "A9": "VBUS",
+      "B4": "VBUS",
+      "B9": "VBUS",
+      "A5": "USB_CC1",
+      "B5": "USB_CC2",
+      "A6": "USB_DP",
+      "B6": "USB_DP",
+      "A7": "USB_DN",
+      "B7": "USB_DN"
+    },
+    "sheet": "core",
+    "sch": [
+      215,
+      55
+    ],
+    "pcb": [
+      22.5,
+      50,
+      180
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "U4",
+    "value": "USBLC6-2SC6",
+    "lcsc": "C7519",
+    "footprint": "SOT-23-6",
+    "pins": {
+      "1": "I/O1",
+      "2": "GND",
+      "3": "I/O2",
+      "4": "I/O2",
+      "5": "VBUS",
+      "6": "I/O1"
+    },
+    "nets": {
+      "1": "USB_DP",
+      "6": "USB_DP",
+      "3": "USB_DN",
+      "4": "USB_DN",
+      "2": "GND",
+      "5": "VBUS"
+    },
+    "sheet": "core",
+    "sch": [
+      215,
+      135
+    ],
+    "pcb": [
+      22.5,
+      42,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "R1",
+    "value": "5.1k",
+    "lcsc": "C23186",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "USB_CC1",
+      "2": "GND"
+    },
+    "sheet": "core",
+    "sch": [
+      215,
+      95
+    ],
+    "pcb": [
+      28,
+      46,
+      90
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "R2",
+    "value": "5.1k",
+    "lcsc": "C23186",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "USB_CC2",
+      "2": "GND"
+    },
+    "sheet": "core",
+    "sch": [
+      215,
+      110
+    ],
+    "pcb": [
+      31,
+      46,
+      90
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "J2",
+    "value": "S2B-PH-SM4-TB(LF)(SN)",
+    "lcsc": "C295747",
+    "footprint": "JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal",
+    "pins": {
+      "1": "BAT+",
+      "2": "BAT-"
+    },
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      40,
+      45
+    ],
+    "pcb": [
+      39,
+      34,
+      90
+    ],
+    "dnp": false,
+    "note": "Protected 1S LiPo only. Verify actual cable polarity; capacity is not a voltage rating."
+  },
+  {
+    "ref": "J3",
+    "value": "SM04B-SRSS-TB(LF)(SN)",
+    "lcsc": "C160404",
+    "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+    "pins": {
+      "1": "3V3",
+      "2": "GND",
+      "3": "SDA",
+      "4": "SCL"
+    },
+    "nets": {
+      "1": "+3V3",
+      "2": "GND",
+      "3": "TPS_SDA",
+      "4": "TPS_SCL"
+    },
+    "sheet": "core",
+    "sch": [
+      310,
+      190
+    ],
+    "pcb": [
+      39.5,
+      22,
+      90
+    ],
+    "dnp": false,
+    "note": "New custom cable to existing TPS43 adapter; connector is not the raw sensor FPC pinout."
+  },
+  {
+    "ref": "J4",
+    "value": "Matrix bring-up header",
+    "lcsc": "",
+    "footprint": "PinHeader_1x12_P2.54mm_Vertical",
+    "pins": {
+      "1": "GND",
+      "2": "R0",
+      "3": "R1",
+      "4": "R2",
+      "5": "R3",
+      "6": "R4",
+      "7": "C0",
+      "8": "C1",
+      "9": "C2",
+      "10": "C3",
+      "11": "C4",
+      "12": "C5"
+    },
+    "nets": {
+      "1": "GND",
+      "2": "R0",
+      "3": "R1",
+      "4": "R2",
+      "5": "R3",
+      "6": "R4",
+      "7": "C0",
+      "8": "C1",
+      "9": "C2",
+      "10": "C3",
+      "11": "C4",
+      "12": "C5"
+    },
+    "sheet": "core",
+    "sch": [
+      310,
+      120
+    ],
+    "pcb": [
+      3,
+      15,
+      0
+    ],
+    "dnp": true,
+    "note": "Bench connector, manually fitted; replaced by matrix traces in keyboard integration."
+  },
+  {
+    "ref": "J5",
+    "value": "SWD pogo interface",
+    "lcsc": "",
+    "footprint": "Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical",
+    "pins": {
+      "1": "VTREF",
+      "2": "SWDIO",
+      "3": "GND",
+      "4": "SWDCLK",
+      "5": "RESET_N",
+      "6": "GND"
+    },
+    "nets": {
+      "1": "+3V3",
+      "2": "SWDIO",
+      "3": "GND",
+      "4": "SWDCLK",
+      "5": "RESET_N",
+      "6": "GND"
+    },
+    "sheet": "core",
+    "sch": [
+      310,
+      50
+    ],
+    "pcb": [
+      37,
+      10,
+      0
+    ],
+    "dnp": true,
+    "note": "Bare PCB programming pads, not a purchased populated part."
+  },
+  {
+    "ref": "SW1",
+    "value": "MSK12C02",
+    "lcsc": "C431540",
+    "footprint": "MSK12C02",
+    "pins": {
+      "1": "OFF",
+      "2": "COM",
+      "3": "ON"
+    },
+    "nets": {
+      "1": "GND",
+      "2": "REG_EN",
+      "3": "SYS"
+    },
+    "sheet": "power",
+    "sch": [
+      210,
+      130
+    ],
+    "pcb": [
+      41.5,
+      46,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "SW2",
+    "value": "SKRPANE010",
+    "lcsc": "C470426",
+    "footprint": "SKRPANE010",
+    "pins": {
+      "1": "A1",
+      "2": "A2",
+      "3": "B1",
+      "4": "B2"
+    },
+    "nets": {
+      "1": "RESET_N",
+      "2": "RESET_N",
+      "3": "GND",
+      "4": "GND"
+    },
+    "sheet": "core",
+    "sch": [
+      55,
+      205
+    ],
+    "pcb": [
+      35,
+      48,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "R3",
+    "value": "10k",
+    "lcsc": "C25804",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "+3V3",
+      "2": "RESET_N"
+    },
+    "sheet": "core",
+    "sch": [
+      55,
+      185
+    ],
+    "pcb": [
+      36,
+      44,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "R4",
+    "value": "4.7k",
+    "lcsc": "C23162",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "+3V3",
+      "2": "TPS_SDA"
+    },
+    "sheet": "core",
+    "sch": [
+      270,
+      220
+    ],
+    "pcb": [
+      35,
+      20,
+      90
+    ],
+    "dnp": true,
+    "note": "Fit only if the attached TPS43 adapter lacks pull-ups; confirm effective parallel pull-up resistance."
+  },
+  {
+    "ref": "R5",
+    "value": "4.7k",
+    "lcsc": "C23162",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "+3V3",
+      "2": "TPS_SCL"
+    },
+    "sheet": "core",
+    "sch": [
+      320,
+      220
+    ],
+    "pcb": [
+      35,
+      24,
+      90
+    ],
+    "dnp": true,
+    "note": "Fit only if the attached TPS43 adapter lacks pull-ups; confirm effective parallel pull-up resistance."
+  },
+  {
+    "ref": "R6",
+    "value": "10k",
+    "lcsc": "C25804",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "+3V3",
+      "2": "CHG_STAT1"
+    },
+    "sheet": "core",
+    "sch": [
+      45,
+      245
+    ],
+    "pcb": [
+      32,
+      28,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "R7",
+    "value": "10k",
+    "lcsc": "C25804",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "+3V3",
+      "2": "CHG_STAT2"
+    },
+    "sheet": "core",
+    "sch": [
+      105,
+      245
+    ],
+    "pcb": [
+      32,
+      31,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "C1",
+    "value": "100nF",
+    "lcsc": "C14663",
+    "footprint": "C_0603_1608Metric",
+    "pins": {
+      "1": "C1",
+      "2": "C2"
+    },
+    "nets": {
+      "1": "+3V3",
+      "2": "GND"
+    },
+    "sheet": "core",
+    "sch": [
+      45,
+      155
+    ],
+    "pcb": [
+      15,
+      16.5,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "C2",
+    "value": "1uF",
+    "lcsc": "C15849",
+    "footprint": "C_0603_1608Metric",
+    "pins": {
+      "1": "C1",
+      "2": "C2"
+    },
+    "nets": {
+      "1": "+3V3",
+      "2": "GND"
+    },
+    "sheet": "core",
+    "sch": [
+      105,
+      155
+    ],
+    "pcb": [
+      19,
+      17.5,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "C3",
+    "value": "100nF",
+    "lcsc": "C14663",
+    "footprint": "C_0603_1608Metric",
+    "pins": {
+      "1": "C1",
+      "2": "C2"
+    },
+    "nets": {
+      "1": "VBUS",
+      "2": "GND"
+    },
+    "sheet": "core",
+    "sch": [
+      165,
+      185
+    ],
+    "pcb": [
+      26,
+      41,
+      90
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "U2",
+    "value": "BQ25185DLHR",
+    "lcsc": "C19725033",
+    "footprint": "TI_WSON_DLH0010A",
+    "pins": {
+      "1": "SYS",
+      "2": "BAT",
+      "3": "STAT2",
+      "4": "CE_N",
+      "5": "GND",
+      "6": "TS_MR",
+      "7": "ILIM_VSET",
+      "8": "ISET",
+      "9": "STAT1",
+      "10": "IN",
+      "11": "EP"
+    },
+    "nets": {
+      "1": "SYS",
+      "2": "VBAT",
+      "3": "CHG_STAT2",
+      "4": "CHG_EN_N",
+      "5": "GND",
+      "6": "BAT_NTC",
+      "7": "CHG_VSET",
+      "8": "CHG_ISET",
+      "9": "CHG_STAT1",
+      "10": "VBUS",
+      "11": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      90,
+      75
+    ],
+    "pcb": [
+      32,
+      36,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "U3",
+    "value": "TPS63031DSKR",
+    "lcsc": "C15516",
+    "footprint": "WSON-10-1EP_2.5x2.5mm_P0.5mm_EP1.2x2mm",
+    "pins": {
+      "1": "VOUT",
+      "2": "L2",
+      "3": "PGND",
+      "4": "L1",
+      "5": "VIN",
+      "6": "EN",
+      "7": "PS_SYNC",
+      "8": "VINA",
+      "9": "GND",
+      "10": "FB",
+      "11": "EP"
+    },
+    "nets": {
+      "1": "+3V3",
+      "2": "SW_L2",
+      "3": "GND",
+      "4": "SW_L1",
+      "5": "SYS",
+      "6": "REG_EN",
+      "7": "GND",
+      "8": "SYS",
+      "9": "GND",
+      "10": "+3V3",
+      "11": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      240,
+      65
+    ],
+    "pcb": [
+      20,
+      27,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "L1",
+    "value": "1.5uH SWPA3015S1R5MT",
+    "lcsc": "C83434",
+    "footprint": "L_Sunlord_SWPA3015S",
+    "pins": {
+      "1": "1",
+      "2": "2"
+    },
+    "nets": {
+      "1": "SW_L1",
+      "2": "SW_L2"
+    },
+    "sheet": "power",
+    "sch": [
+      240,
+      35
+    ],
+    "pcb": [
+      20,
+      22.5,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "R8",
+    "value": "15k",
+    "lcsc": "C22809",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "CHG_ISET",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      45,
+      125
+    ],
+    "pcb": [
+      29,
+      39,
+      0
+    ],
+    "dnp": false,
+    "note": "20mA nominal: 300 Aohm / 15 kohm. Assembly-selectable resistor; default for 110mAh cell."
+  },
+  {
+    "ref": "R9",
+    "value": "12k",
+    "lcsc": "C22790",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "CHG_VSET",
+      "2": "VSET_MID"
+    },
+    "sheet": "power",
+    "sch": [
+      90,
+      125
+    ],
+    "pcb": [
+      30,
+      42,
+      0
+    ],
+    "dnp": false,
+    "note": "R9+R10 = 24k: 4.2V cell, 100mA input limit."
+  },
+  {
+    "ref": "R10",
+    "value": "12k",
+    "lcsc": "C22790",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "VSET_MID",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      145,
+      125
+    ],
+    "pcb": [
+      34,
+      43,
+      0
+    ],
+    "dnp": false,
+    "note": "Series pair gives the specified 24k nominal."
+  },
+  {
+    "ref": "R11",
+    "value": "100k",
+    "lcsc": "C25803",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "VBUS",
+      "2": "CHG_EN_N"
+    },
+    "sheet": "power",
+    "sch": [
+      40,
+      170
+    ],
+    "pcb": [
+      25,
+      34,
+      90
+    ],
+    "dnp": false,
+    "note": "Charging disabled by default. Fit R12 only after battery/NTC verification."
+  },
+  {
+    "ref": "R12",
+    "value": "0R",
+    "lcsc": "C21189",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "CHG_EN_N",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      100,
+      170
+    ],
+    "pcb": [
+      29,
+      31,
+      90
+    ],
+    "dnp": true,
+    "note": "Charge-enable assembly option: do not fit until selected cell rating and NTC are confirmed."
+  },
+  {
+    "ref": "R13",
+    "value": "1M",
+    "lcsc": "C22935",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "REG_EN",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      270,
+      130
+    ],
+    "pcb": [
+      25,
+      27,
+      90
+    ],
+    "dnp": false,
+    "note": "Keep the regulator disabled while the mechanical switch is between contacts."
+  },
+  {
+    "ref": "C4",
+    "value": "1uF",
+    "lcsc": "C15849",
+    "footprint": "C_0603_1608Metric",
+    "pins": {
+      "1": "C1",
+      "2": "C2"
+    },
+    "nets": {
+      "1": "VBUS",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      35,
+      95
+    ],
+    "pcb": [
+      32,
+      33,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "C5",
+    "value": "1uF",
+    "lcsc": "C15849",
+    "footprint": "C_0603_1608Metric",
+    "pins": {
+      "1": "C1",
+      "2": "C2"
+    },
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      145,
+      95
+    ],
+    "pcb": [
+      34,
+      36,
+      90
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "C6",
+    "value": "10uF",
+    "lcsc": "C19702",
+    "footprint": "C_0603_1608Metric",
+    "pins": {
+      "1": "C1",
+      "2": "C2"
+    },
+    "nets": {
+      "1": "SYS",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      145,
+      60
+    ],
+    "pcb": [
+      28.5,
+      35,
+      90
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "C7",
+    "value": "47pF",
+    "lcsc": "C1671",
+    "footprint": "C_0603_1608Metric",
+    "pins": {
+      "1": "C1",
+      "2": "C2"
+    },
+    "nets": {
+      "1": "CHG_ISET",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      45,
+      145
+    ],
+    "pcb": [
+      25,
+      39,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "C8",
+    "value": "10uF",
+    "lcsc": "C19702",
+    "footprint": "C_0603_1608Metric",
+    "pins": {
+      "1": "C1",
+      "2": "C2"
+    },
+    "nets": {
+      "1": "SYS",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      190,
+      95
+    ],
+    "pcb": [
+      16.5,
+      27,
+      90
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "C9",
+    "value": "100nF",
+    "lcsc": "C14663",
+    "footprint": "C_0603_1608Metric",
+    "pins": {
+      "1": "C1",
+      "2": "C2"
+    },
+    "nets": {
+      "1": "SYS",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      240,
+      95
+    ],
+    "pcb": [
+      20,
+      31,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "C10",
+    "value": "10uF",
+    "lcsc": "C19702",
+    "footprint": "C_0603_1608Metric",
+    "pins": {
+      "1": "C1",
+      "2": "C2"
+    },
+    "nets": {
+      "1": "+3V3",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      295,
+      55
+    ],
+    "pcb": [
+      23.5,
+      27,
+      90
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "C11",
+    "value": "10uF",
+    "lcsc": "C19702",
+    "footprint": "C_0603_1608Metric",
+    "pins": {
+      "1": "C1",
+      "2": "C2"
+    },
+    "nets": {
+      "1": "+3V3",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      295,
+      85
+    ],
+    "pcb": [
+      23.5,
+      31,
+      90
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "J6",
+    "value": "External 10k NTC pads",
+    "lcsc": "",
+    "footprint": "NTC_WirePads",
+    "pins": {
+      "1": "NTC",
+      "2": "GND"
+    },
+    "nets": {
+      "1": "BAT_NTC",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      40,
+      210
+    ],
+    "pcb": [
+      38,
+      27,
+      0
+    ],
+    "dnp": true,
+    "note": "Attach an insulated external 10k NTC, beta 3435K, thermally coupled to the cell before enabling charging. Not simulated with a fixed resistor."
+  },
+  {
+    "ref": "Q1",
+    "value": "AO3401A",
+    "lcsc": "C15127",
+    "footprint": "SOT-23",
+    "pins": {
+      "1": "G",
+      "2": "S",
+      "3": "D"
+    },
+    "nets": {
+      "1": "BATT_GATE",
+      "2": "VBAT",
+      "3": "BATT_DIV_TOP"
+    },
+    "sheet": "power",
+    "sch": [
+      210,
+      190
+    ],
+    "pcb": [
+      10,
+      28,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "Q2",
+    "value": "2N7002",
+    "lcsc": "C8545",
+    "footprint": "SOT-23",
+    "pins": {
+      "1": "G",
+      "2": "S",
+      "3": "D"
+    },
+    "nets": {
+      "1": "BATT_SENSE_EN",
+      "2": "GND",
+      "3": "BATT_GATE"
+    },
+    "sheet": "power",
+    "sch": [
+      210,
+      225
+    ],
+    "pcb": [
+      10,
+      34,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "R14",
+    "value": "1M",
+    "lcsc": "C22935",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "VBAT",
+      "2": "BATT_GATE"
+    },
+    "sheet": "power",
+    "sch": [
+      160,
+      190
+    ],
+    "pcb": [
+      10,
+      24,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "R15",
+    "value": "1M",
+    "lcsc": "C22935",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "BATT_DIV_TOP",
+      "2": "BATT_ADC"
+    },
+    "sheet": "power",
+    "sch": [
+      265,
+      190
+    ],
+    "pcb": [
+      14,
+      29,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "R16",
+    "value": "1M",
+    "lcsc": "C22935",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "BATT_ADC",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      320,
+      190
+    ],
+    "pcb": [
+      14,
+      32,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "R17",
+    "value": "1M",
+    "lcsc": "C22935",
+    "footprint": "R_0603_1608Metric",
+    "pins": {
+      "1": "R1",
+      "2": "R2"
+    },
+    "nets": {
+      "1": "BATT_SENSE_EN",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      160,
+      225
+    ],
+    "pcb": [
+      10,
+      38,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  },
+  {
+    "ref": "C12",
+    "value": "100nF",
+    "lcsc": "C14663",
+    "footprint": "C_0603_1608Metric",
+    "pins": {
+      "1": "C1",
+      "2": "C2"
+    },
+    "nets": {
+      "1": "BATT_ADC",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "sch": [
+      320,
+      225
+    ],
+    "pcb": [
+      14,
+      35,
+      0
+    ],
+    "dnp": false,
+    "note": ""
+  }
+]

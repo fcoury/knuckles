@@ -1,0 +1,10 @@
+{
+  "charger": "https://www.ti.com/lit/ds/symlink/bq25185.pdf",
+  "regulator": "https://www.ti.com/lit/ds/symlink/tps63031.pdf",
+  "module_catalog": "https://jlcpcb.com/partdetail/RAYTAC-MDBT50Q1MV2/C5118826",
+  "reset_switch": "https://tech.alpsalpine.com/e/products/detail/SKRPANE010/",
+  "reset_land_pattern": "https://tech.alpsalpine.com/cms.media/product_detail_fig_skrp_d_2_en_a9d8e26402.gif",
+  "reset_internal_connections": "https://tech.alpsalpine.com/cms.media/product_detail_fig_skrp_d_3_en_655beec773.gif",
+  "module_pin_map": "KiCad 8 RF_Module:MDBT50Q-1MV2",
+  "firmware_integration": "https://zmk.dev/docs/hardware-integration"
+}
