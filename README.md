@@ -21,7 +21,7 @@ plus a three-key thumb fan. It uses Kailh PG1316S low-profile switches on
 reversible footprints, a nice!nano controller, a JST-PH battery connector, and a
 power switch. The controller area also fits the HolyKeebs TPS43 touchpad module.
 
-The first wireless PCB was ordered from JLCPCB on 2026-10-18. The exact files
+The first wireless PCB was ordered from JLCPCB on 2025-03-02. The exact files
 are archived in [`manufacturing/`](manufacturing/2026-10-18-knuckles-wireless-18.5mm/README.md).
 
 ![Compact 18.5 mm wireless PCB with the Knuckles badge and wordmark](artwork/knuckles/pcb-18.5-render.png)
@@ -37,6 +37,8 @@ module sourcing, manufacturing review and bench validation remain release gates.
 The normal build continues to use the nice!nano design.
 
 ## Build it
+
+For assembly parts and quantities, see the [bill of materials](docs/bill-of-materials.md).
 
 You'll need Node.js 18+ (CI uses Node 20) and Git. Footprints live in a
 submodule, so clone recursively:
@@ -144,6 +146,7 @@ The silkscreen badge and wordmark are documented in
 
 | Path | Contents |
 | --- | --- |
+| `docs/` | Assembly reference, starting with the bill of materials |
 | `ergogen/` | Ergogen config, footprints submodule, generated images and Gerbers |
 | `pcbs/` | Generated KiCad boards and plates; `autoroute/<board>/` holds DSN, SES, router log, and DRC report |
 | `outlines/` | DXF/SVG outlines for the PCB, plates, and case |
