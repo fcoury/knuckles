@@ -4,12 +4,17 @@
   <img src="artwork/knuckles/concept.png" alt="Knuckles echidna badge and wordmark" width="420">
 </p>
 
+## Human Written TL;DR
+
 There are a lot of split keyboards out there, but most of the ones that piqued
 my interest don't have a number row, and I really like having one. I also
 wanted a slim ergo split that feels somewhat like a Magic Keyboard. Knuckles is
 my attempt at both.
 
 ![Knuckles with case](images/photo.png)
+
+
+## AI Assisted Details
 
 Each half has 27 keys: a column-staggered 6×4 grid that includes the number row,
 plus a three-key thumb fan. It uses Kailh PG1316S low-profile switches on
